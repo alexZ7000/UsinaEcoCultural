@@ -1,0 +1,22 @@
+#p {
+    color: rgb(221, 8, 8);
+}
+.nav {
+    color: rgb(14, 211, 96);
+}
+.donate {
+    color: rgb(199, 205, 34);
+    text-align: center;
+}
+body {
+    background-color: rgb(228, 104, 15);
+    font: normal;
+}
+#footer {
+    color: rgb(169, 141, 101);
+    text-align: end;
+}
+#header {
+    text-align: center;
+    color: aqua;
+}
