@@ -3,55 +3,23 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/alexZ7000/UsinaEcoCultural?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/alexZ7000/UsinaEcoCultural?style=for-the-badge)
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/0ffffa65-ccb1-4942-95f2-9602f81ef48e" alt="Usina Eco-Cultural">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> Projeto universitário, no qual tem-se por objetivo construir um site para a <b>Usina Eco-Cultural</b> de acordo com as demandas requisitadas.
 
-### Ajustes e melhorias
+## 🛠️ Ajustes e melhorias 
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+- [x] BrainStorm🧠 e econtro com o cliente para reunir ideias💡 
+- [ ] Criação do protótipo do projeto e modelagem ✍🏼
+- [ ] Começo do desenvolvimento 👨🏼‍💻
+- [ ] Revisão do Projeto ♾️
+- [ ] Projeto Entregue ✅
 
-## 💻 Pré-requisitos
+## 📫 Contribuindo para Usina Eco-Cultural
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-
-* Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-* Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-* Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
-
-## 🚀 Instalando <nome_do_projeto>
-
-Para instalar o <nome_do_projeto>, siga estas etapas:
-
-Linux e macOS:
-```
-<comando_de_instalação>
-```
-
-Windows:
-```
-<comando_de_instalação>
-```
-
-## ☕ Usando <nome_do_projeto>
-
-Para usar <nome_do_projeto>, siga estas etapas:
-
-```
-<exemplo_de_uso>
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
-
-Para contribuir com <nome_do_projeto>, siga estas etapas:
+Para contribuir com a <b>Usina Eco-Cultural</b>, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
@@ -64,45 +32,69 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/78627928?v=4" width="100px;" alt="era uma foto daora"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <p><b><i>Alessandro Lima:</i></b> <a href="https://github.com/alexZ7000"><i>alexZ7000</i></a></p>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/124106382?v=4" width="100px;" alt="era uma foto daora"/><br>
         <sub>
-          <b>Mark Zuckerberg</b>
+          <p><b><i>Flavio Carvalho:</i></b> <a href="https://github.com/Flavsc"><i>Flavsc</i></a></p>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://avatars.githubusercontent.com/u/133376282?v=4" width="100px;" alt="era uma foto daora"/><br>
         <sub>
-          <b>Steve Jobs</b>
+          <p><b><i>João Martinez:</i></b> <a href="https://github.com/JamizM"><i>JamizM</i></a></p>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/131884837?v=4" width="100px;" alt="era uma foto daora"/><br>
+        <sub>
+          <p><b><i>Laura-Shira:</i></b> <a href="https://github.com/Laura-Shira"><i>Laura-Shira</i></a></p>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/133376215?v=4" width="100px;" alt="era uma foto daora"/><br>
+        <sub>
+          <p><b><i>Victor Codinhoto:</i></b> <a href="https://github.com/VictorCodinhoto"><i>VictorCodinhoto</i></a></p>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/126502239?v=4" width="100px;" alt="era uma foto daora"/><br>
+        <sub>
+          <p><b><i>Matheus Chinen:</i></b> <a href="https://github.com/Matz34231"><i>Matz34231</i></a></p>
         </sub>
       </a>
     </td>
   </tr>
 </table>
 
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-
-Sites Para Ler:
-https://ipirangafeelings.com.br/antigo-incinerador-vergueiro-em-obras/
+<br><br>
+links para a <b>Usina Eco-Cultural:</b><br>
+https://www.instagram.com/usinaecocultural/<br>
+https://www.facebook.com/usinaecocultural/<br>
+https://linktr.ee/usinaecocultural
+<br><br>
+Sites Para Ler:<br>
+https://ipirangafeelings.com.br/antigo-incinerador-vergueiro-em-obras/ <br>
 https://pt.wikipedia.org/wiki/Incinerador_Vergueiro
