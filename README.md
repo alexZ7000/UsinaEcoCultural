@@ -62,7 +62,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/131884837?v=4" width="100px;" alt="era uma foto daora"/><br>
         <sub>
-          <p><b><i>Laura-Shira:</i></b> <a href="https://github.com/Laura-Shira"><i>Laura-Shira</i></a></p>
+          <p><b><i>Laura Shira:</i></b> <a href="https://github.com/Laura-Shira"><i>Laura-Shira</i></a></p>
         </sub>
       </a>
     </td>
