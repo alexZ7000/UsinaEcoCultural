@@ -1,4 +1,4 @@
-#p {
+p {
     color: rgb(67, 225, 15);
 }
 .nav {
@@ -11,29 +11,34 @@
     color: rgb(199, 205, 34);
     text-align: center;
 }
-body {
-    background-color: rgb(0, 0, 0);
-    font: normal;
+
+*{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
 }
-#footer {
+
+.footer {
     color: rgb(169, 141, 101);
     text-align: end;
 }
-#header {
+.header {
     text-align: center;
     color: aqua;
     padding: 20px;
     margin: 10px;
     background-color: blueviolet;
 }
-#h1 {
-    color: purple;
+h1 {
+    color: white;
     padding: 15px;
     margin: 15px;
     text-align: center;
     background-color: green;
 }
-#redes {
+.redes {
     text-align: center;
     color: rgb(234, 87, 112);
     padding: 15px;
