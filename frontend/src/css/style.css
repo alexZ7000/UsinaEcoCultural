@@ -1,43 +1,63 @@
-p {
-    color: rgb(67, 225, 15);
-}
-.nav {
-    color: rgb(14, 211, 96);
-    padding: 13px;
-    text-align: center;
-    margin: 18px;
-}
-.donate {
-    color: rgb(199, 205, 34);
-    text-align: center;
-}
-
 *{
-    background-color: black;
+    background-color: #e0afe5;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
 }
 
+p {
+    color: rgb(67, 225, 15);
+}
+
+p strong{
+    background-color: blueviolet;
+}
+
+.nav {
+    color: rgb(255, 0, 234);
+    padding: 13px;
+    text-align: center;
+    margin: 18px;
+}
+
+.nav img{
+    height: 40rem;
+    width: 65rem;
+    margin: 2rem;
+}
+
+.donate {
+    color: rgb(199, 205, 34);
+    text-align: center;
+}
+
+
 .footer {
     color: rgb(169, 141, 101);
     text-align: end;
 }
 .header {
+    display: flex;
     text-align: center;
     color: aqua;
     padding: 20px;
     margin: 10px;
     background-color: blueviolet;
+    align-items: center;
+    flex-direction: column;
 }
 h1 {
     color: white;
-    padding: 15px;
-    margin: 15px;
     text-align: center;
-    background-color: green;
+    font-size: 75px;
+    background-color: #f800ff;
 }
+
+h2{
+    background-color: blueviolet;
+}
+
 .redes {
     text-align: center;
     color: rgb(234, 87, 112);
