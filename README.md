@@ -12,7 +12,7 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] BrainStorm🧠 e econtro com o cliente para reunir ideias💡 
-- [ ] Criação do protótipo do projeto e modelagem ✍🏼
+- [x] Criação do protótipo do projeto e modelagem ✍🏼
 - [ ] Começo do desenvolvimento 👨🏼‍💻
 - [ ] Revisão do Projeto ♾️
 - [ ] Projeto Entregue ✅
