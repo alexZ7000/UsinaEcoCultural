@@ -27,9 +27,27 @@ p strong{
     margin: 2rem;
 }
 
-.donate {
-    color: rgb(199, 205, 34);
-    text-align: center;
+.bottomButtons{
+    background-color: purple;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: unset;
+}
+
+.donate  img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.history img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.nextEvents img{
+    height: 10rem;
+    width: 10rem;
 }
 
 
