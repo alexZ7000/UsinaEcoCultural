@@ -1,84 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&display=swap');
+
 *{
-    background-color: #e0afe5;
+    background-color: #ffffff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
 }
 
+body, html{
+    font-family: 'Merriweather', serif;
+}
+
 p {
-    color: rgb(67, 225, 15);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
-p strong{
-    background-color: blueviolet;
-}
-
-.nav {
-    color: rgb(255, 0, 234);
+.mainImage img{
     padding: 13px;
     text-align: center;
-    margin: 18px;
-}
-
-.nav img{
     height: 40rem;
     width: 65rem;
-    margin: 2rem;
+    margin:2rem 0 3rem 0 ;
+    border-radius: 50px;
+    box-shadow: 20px 20px 30px 2px;
 }
 
-.bottomButtons{
-    background-color: purple;
-    display: flex;
-    width: 100%;
+.bottomButtons p {
+    align-items: center;
     justify-content: center;
-    margin-top: unset;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    background: #e3e3e3;
+    padding: 20px;
 }
 
-.donate  img{
+.bottomButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer {
+    text-align: center;
+    padding: 0 8rem 0 8rem ;
+}
+
+.historyText{
+    margin-bottom: 0.5rem;
+}
+
+.nextEventsImage{
+    height: 13rem;
+    width: 13rem;
+}
+
+.donateImage{
+    height: 12rem;
+    width: 13rem;
+}
+
+.historyImage {
     height: 10rem;
     width: 10rem;
+    padding-bottom: 1rem;
 }
 
-.history img{
-    height: 10rem;
-    width: 10rem;
-}
-
-.nextEvents img{
-    height: 10rem;
-    width: 10rem;
-}
-
-
-.footer {
-    color: rgb(169, 141, 101);
-    text-align: end;
-}
 .header {
     display: flex;
     text-align: center;
-    color: aqua;
+    color: #000000;
     padding: 20px;
     margin: 10px;
-    background-color: blueviolet;
     align-items: center;
     flex-direction: column;
 }
-h1 {
-    color: white;
-    text-align: center;
-    font-size: 75px;
-    background-color: #f800ff;
+
+.mainContent{
+    margin: 10rem;
 }
 
-h2{
-    background-color: blueviolet;
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 75px;
+    flex-wrap: wrap;
 }
+
+
 
 .redes {
     text-align: center;
     color: rgb(234, 87, 112);
     padding: 15px;
     margin: 10px;
+}
+
+.newSection{
+    padding-top: 10rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: #8311a6;
+}
+
+#street{
+    color: blue;
 }
