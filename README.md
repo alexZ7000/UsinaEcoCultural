@@ -13,7 +13,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] BrainStorm🧠 e econtro com o cliente para reunir ideias💡 
 - [x] Criação do protótipo do projeto e modelagem ✍🏼
-- [ ] Começo do desenvolvimento 👨🏼‍💻
+- [x] Começo do desenvolvimento 👨🏼‍💻
 - [ ] Revisão do Projeto ♾️
 - [ ] Projeto Entregue ✅
 
