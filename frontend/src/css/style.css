@@ -31,9 +31,21 @@ p {
     margin: 0 15px;
 }
 
+.bottomButtons p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    background: #e3e3e3;
+    padding: 20px;
+}
+
 .barDiv{
-    align-items: end;
-    padding: 10px 25rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15rem;
+    text-align: center;
 }
 
 .barLogin{
@@ -41,7 +53,49 @@ p {
     padding: 0 5rem 0 0 ;
 }
 
-.upperBar img{
+.closedFist{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 3rem;
+}
+
+.closedFistText{
+
+}
+
+.store{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 3rem;
+    text-align: center;
+}
+
+.storeText{
+
+}
+
+.place{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 3rem;
+}
+
+.placeText{
+
+}
+
+.forum{
+    width: 2rem;
+    height: 2rem;
+}
+
+.forumText{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainImage{
     text-align: center;
     height: 30rem;
     width: 55rem;
@@ -74,6 +128,12 @@ p {
     margin-bottom: 0.5rem;
 }
 
+.historyImage {
+    height: 10rem;
+    width: 10rem;
+    padding-bottom: 1rem;
+}
+
 .nextEventsImage{
     height: 13rem;
     width: 13rem;
@@ -82,12 +142,6 @@ p {
 .donateImage{
     height: 12rem;
     width: 13rem;
-}
-
-.historyImage {
-    height: 10rem;
-    width: 10rem;
-    padding-bottom: 1rem;
 }
 
 .header {
@@ -110,8 +164,6 @@ h1 {
     font-size: 75px;
     flex-wrap: wrap;
 }
-
-
 
 .redes {
     text-align: center;
