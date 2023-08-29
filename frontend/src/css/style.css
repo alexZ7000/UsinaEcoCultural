@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&display=swap');
 
 *{
-    background-color: #ffffff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,11 +16,35 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.mainImage img{
-    padding: 13px;
+.bar{
+    background-color: #0800ff;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar a{
+    text-decoration: underline; /*como vai ficar o texto puro dentro do site */
+    color: #ffffff;
+    background-color: #0800ff;
+    margin: 0 15px;
+}
+
+.barDiv{
+    align-items: end;
+    padding: 10px 25rem;
+}
+
+.barLogin{
+    align-items: end;
+    padding: 0 5rem 0 0 ;
+}
+
+.upperBar img{
     text-align: center;
-    height: 40rem;
-    width: 65rem;
+    height: 30rem;
+    width: 55rem;
     margin:2rem 0 3rem 0 ;
     border-radius: 50px;
     box-shadow: 20px 20px 30px 2px;
