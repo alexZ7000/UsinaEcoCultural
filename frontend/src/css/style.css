@@ -131,6 +131,27 @@ h1 {
     padding: 5rem 5%;
     text-align: center;
     color: #8311a6;
+    align-items: center;
+}
+
+.maps{
+    height: 2rem;
+    width: 2rem;
+}
+
+.socialMedia{
+    height: 2rem;
+    width: 2rem;
+}
+
+.instagramImage{
+    height: 2rem;
+    width: 2rem;
+}
+
+.help{
+    height: 2rem;
+    width: 2rem;
 }
 
 #street {
