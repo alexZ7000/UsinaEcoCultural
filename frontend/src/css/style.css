@@ -120,6 +120,10 @@ h1 {
     font-size: 3rem;
 }
 
+h2{
+    font-size: 2rem;
+}
+
 .redes {
     color: rgb(234, 87, 112);
     padding: 15px;
@@ -154,8 +158,38 @@ h1 {
     width: 2rem;
 }
 
+.historyDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.donateText{
+    margin: 0 10rem 0 10rem;
+}
+
+.mainPageImage{
+    width: 5rem;
+    height: 5rem;
+}
+
+.donateImage2{
+    width: 5rem;
+    height: 5rem;
+}
+
+.nextEventsImage2{
+    width: 5rem;
+    height: 5rem;
+}
+
+#historyText{
+    margin: 0 15rem 10rem 15rem;
+    flex-wrap: nowrap;
+}
+
 #street {
     color: blue;
+
 }
 
 @media screen and (min-width: 768px) {
