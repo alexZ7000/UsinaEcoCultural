@@ -161,6 +161,8 @@ h2{
 .historyDiv{
     display: flex;
     justify-content: center;
+    padding: 10px 5%;
+    background-color: #e8e8e8;
 }
 
 .donateText{
@@ -183,7 +185,7 @@ h2{
 }
 
 #historyText{
-    margin: 0 15rem 10rem 15rem;
+    margin: 0 25rem 10rem 25rem;
     flex-wrap: nowrap;
 }
 
