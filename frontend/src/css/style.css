@@ -122,7 +122,27 @@ h1 {
 
 h2{
     font-size: 2rem;
+    text-align: center;
 }
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+    height: 100%;
+}
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 .redes {
     color: rgb(234, 87, 112);
@@ -184,9 +204,71 @@ h2{
     height: 5rem;
 }
 
-#historyText{
+.futureFaixa{
+    width: 58rem;
+    height: 35rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    box-shadow: 20px 20px 30px 2px rgba(0, 0, 0, 0.2);
+}
+
+.usinaIcon{
+    width: 10rem;
+    height: 10rem;
+}
+
+.googleMaps{
+    border-radius: 2rem;
+}
+
+.inceneratorText{
     margin: 0 25rem 10rem 25rem;
     flex-wrap: nowrap;
+}
+
+.bodyEvents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 450px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+}
+
+header .currentDate{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px 10px;
+}
+
+header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 90%;
+    cursor: pointer;
+    background: #f2f2f2;
+}
+
+.calendar ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
 #street {
