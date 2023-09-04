@@ -229,6 +229,48 @@ body {
     flex-wrap: nowrap;
 }
 
+.bodyEvents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 450px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+}
+
+header .currentDate{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px 10px;
+}
+
+header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 90%;
+    cursor: pointer;
+    background: #f2f2f2;
+}
+
+.calendar ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
 #street {
     color: blue;
 
