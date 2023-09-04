@@ -20,8 +20,53 @@
                 <a href="#"><img class="signUp" src="./Assets/images/add-user.png" alt="sign up">Cadastre-se</a>
             </div>
         </nav>
-        <img src="Assets/images/usina.jpg" alt="Usina" class="mainImage">
-        <p>Com este espaço transformado  a Usina proporcionará um grande acervo cultural, além de ter atividades ao ar livre, como skate, yoga, teatro etc...</p>
+        <nav class="slider">
+            <!-- A classe Slider vai mexer na parte da estruturação do slide em si -->
+
+
+            <div class="slides">
+                <!-- A classe Slides vai mexer nas fotos em si e na conexão com os radios bottons "as bolinhas" -->
+                <!-- Cada botão tem uma configuração unica de margem, por isso varios inputs diferentes -->
+                <input type="radio" class="radio-btn" name="radio-btn " id="radio1">
+                <input type="radio" class="radio-btn" name="radio-btn " id="radio2">
+                <input type="radio" class="radio-btn" name="radio-btn " id="radio3">
+                <input type="radio" class="radio-btn" name="radio-btn " id="radio4">
+
+
+
+
+                <!-- Classe slide para colocar o link das fotos que serão utilizadas -->
+                <div class="slide first">
+                    <img src=".\fotos\antigo-refeitorio.jpg" alt="imagem1">
+                </div>
+
+                <div class="slide">
+                    <img src=".\fotos\exterior.jpg" alt="imagem2">
+                </div>
+
+                <div class="slide">
+                    <img src=".\fotos\trabalho.jpeg" alt="imagem3">
+                </div>
+
+                <div class="slide">
+                    <img src=".\fotos\parede.jpg" alt="imagem4">
+                </div>
+            </div>
+
+            <!-- Aonde vai ficar as radio bottons-->
+            <div class="navigation-auto">
+
+            </div>
+
+
+            <!-- Criando o label de cada botão -->
+            <div class="manual-nav">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+
+            </div>
     </nav>
     <main>
        <header class="mainContent">
