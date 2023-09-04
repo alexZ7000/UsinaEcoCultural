@@ -220,7 +220,11 @@ body {
     height: 10rem;
 }
 
-#historyText{
+.googleMaps{
+    border-radius: 2rem;
+}
+
+.inceneratorText{
     margin: 0 25rem 10rem 25rem;
     flex-wrap: nowrap;
 }
