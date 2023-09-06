@@ -10,6 +10,7 @@
 }
 
 .usinaIcon{
+    cursor: pointer;
     display: inline;
     height: 8rem;
     width: 8rem;
