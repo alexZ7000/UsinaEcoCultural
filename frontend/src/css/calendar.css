@@ -7,13 +7,90 @@
 .hero{
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #6ac1c5, #bda5ff);
+}
+
+.usinaIcon{
+    display: inline;
+    height: 10rem;
+    width: 10rem;
+}
+
+.closedFist, .store, .place, .forum {
+    display: flex;
+    margin: 0 15px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.place{
+    margin-left: 1.9rem;
+}
+
+.closedFist{
+    margin-left: 2.5rem;
+}
+
+.login{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.signUp{
+    display: flex;
+    height: 1.7rem;
+    width: 1.7rem;
 }
 
 #calendar{
     width: 80%;
     position: absolute;
+    margin-top: 100rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+    .barDiv {
+        display: flex;
+        justify-content: center;
+        padding: 10px 5%;
+        text-align: center;
+        background: #d7d7d7;
+    }
+
+    .barLogin {
+        display: flex;
+        justify-content: center;
+        padding: 10px 5%;
+        text-align: center;
+    }
+
+    .mainImage {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin: 2rem auto;
+    }
+
+    .bottomButtons {
+        margin: 2rem 0;
+    }
+
+    .buttonContainer {
+        padding: 0 1rem;
+        flex: 1;
+    }
+
+    .mainContent {
+        text-align: center;
+        margin: 5rem 15%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin: 0 0 1rem 0;
+    }
 }
