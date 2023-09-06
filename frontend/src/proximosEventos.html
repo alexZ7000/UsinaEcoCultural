@@ -1,70 +1,47 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Incinerador Vergueiro</title>
         <link rel="stylesheet" href="./css/calendar.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+        <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
+        <link rel="stylesheet" href="css/evo-calendar.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="wrapper">
-            <header>
-                <p class="currentDate">September 2023</p>
-                <div class="icons">
-                    <span class="material-symbols-outlined">chevron_left</span>
-                    <span class="material-symbols-outlined">chevron_right</span>
-                </div>
-            </header>
-            <div class="calendar">
-                <ul class="weeks">
-                    <li>Sun</li>
-                    <li>Mon</li>
-                    <li>Tue</li>
-                    <li>Wed</li>
-                    <li>Thu</li>
-                    <li>Fri</li>
-                    <li>Sat</li>
-                </ul>
-                <ul class="days">
-                    <li class="inactive">28</li>
-                    <li class="inactive">29</li>
-                    <li class="inactive">30</li>
-                    <li class="inactive">31</li>
-                    <li class="active">1</li>
-                    <li class="active">2</li>
-                    <li class="active">3</li>
-                    <li class="active">4</li>
-                    <li class="active">5</li>
-                    <li class="active">6</li>
-                    <li class="active">7</li>
-                    <li class="active">8</li>
-                    <li class="active">9</li>
-                    <li class="active">10</li>
-                    <li class="active">11</li>
-                    <li class="active">12</li>
-                    <li class="active">13</li>
-                    <li class="active">14</li>
-                    <li class="active">15</li>
-                    <li class="active">16</li>
-                    <li class="active">17</li>
-                    <li class="active">18</li>
-                    <li class="active">19</li>
-                    <li class="active">20</li>
-                    <li class="active">21</li>
-                    <li class="active">22</li>
-                    <li class="active">23</li>
-                    <li class="active">24</li>
-                    <li class="active">25</li>
-                    <li class="active">26</li>
-                    <li class="active">27</li>
-                    <li class="active">28</li>
-                    <li class="active">29</li>
-                    <li class="active">30</li>
-                    <li class="inactive">1</li>
-                </ul>
-            </div>
+        <div class="hero">
+            <div id="calendar"></div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="JavaScript/evo-calendar.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#calendar').evoCalendar({
+                    theme: "Midnight Blue",
+                    language: "pt",
+                    todayHighlight: true,
+                    calendarEvents: [
+                        {
+                            id: 'event1', // Event's ID (required)
+                            name: "New Year", // Event name (required)
+                            date: "January/1/2020", // Event date (required)
+                            description: "Hoje o dia esta cringe",
+                            type: "holiday", // Event type (required)
+                            everyYear: true // Same event every year (optional)
+                        },
+                        {
+                            name: "Vacation Leave",
+                            badge: "02/13 - 02/15", // Event badge (optional)
+                            date: ["February/13/2020", "February/15/2020"], // Date range
+                            description: "Vacation leave for 3 days.", // Event description (optional)
+                            type: "event",
+                            color: "#63d867" // Event custom color (optional)
+                        }
+                    ]
+                })
+            })
+        </script>
     </body>
 </html>
 <!--
