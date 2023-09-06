@@ -11,83 +11,46 @@
 
 .usinaIcon{
     display: inline;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
 }
 
-.closedFist, .store, .place, .forum {
+.historyDiv{
     display: flex;
-    margin: 0 15px;
-    width: 2rem;
-    height: 2rem;
+    justify-content: center;
+    padding: 10px 5%;
+    background-color: #e8e8e8;
 }
 
-.place{
-    margin-left: 1.9rem;
+.mainPageImage{
+    width: 5rem;
+    height: 5rem;
 }
 
-.closedFist{
-    margin-left: 2.5rem;
+.donateText{
+    margin: 0 10rem 0 10rem;
 }
 
-.login{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
+.donateImage2{
+    width: 5rem;
+    height: 5rem;
 }
 
-.signUp{
-    display: flex;
-    height: 1.7rem;
-    width: 1.7rem;
+.nextEventsImage2{
+    width: 5rem;
+    height: 5rem;
 }
 
 #calendar{
     width: 80%;
     position: absolute;
-    margin-top: 100rem;
+    margin-top: 12rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 768px) {
-    .barDiv {
-        display: flex;
-        justify-content: center;
-        padding: 10px 5%;
-        text-align: center;
-        background: #d7d7d7;
-    }
-
-    .barLogin {
-        display: flex;
-        justify-content: center;
-        padding: 10px 5%;
-        text-align: center;
-    }
-
-    .mainImage {
-        display: flex;
-        align-items: center;
-        width: 70%;
-        margin: 2rem auto;
-    }
-
-    .bottomButtons {
-        margin: 2rem 0;
-    }
-
-    .buttonContainer {
-        padding: 0 1rem;
-        flex: 1;
-    }
-
-    .mainContent {
-        text-align: center;
-        margin: 5rem 15%;
-    }
-
     h1 {
         text-align: center;
         font-size: 4rem;
