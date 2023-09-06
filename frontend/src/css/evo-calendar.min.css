@@ -224,7 +224,7 @@ th[colspan="7"]::after{
 tr.calendar-header .calendar-header-day{
     padding:10px;
     text-align:center;
-    color:#ffffff
+    color:black
 }
 
 tr.calendar-body .calendar-day{
@@ -308,7 +308,7 @@ tr.calendar-body .calendar-day .day[disabled]{
 .calendar-events>.event-header>p{
     font-size:30px;
     font-weight:600;
-    color:#ffffff
+    color:black;
 }
 
 #eventListToggler{

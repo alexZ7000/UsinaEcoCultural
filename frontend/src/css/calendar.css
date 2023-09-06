@@ -7,13 +7,54 @@
 .hero{
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #6ac1c5, #bda5ff);
+}
+
+.usinaIcon{
+    cursor: pointer;
+    display: inline;
+    height: 8rem;
+    width: 8rem;
+}
+
+.historyDiv{
+    display: flex;
+    justify-content: center;
+    padding: 10px 5%;
+    background-color: #e8e8e8;
+}
+
+.mainPageImage{
+    width: 5rem;
+    height: 5rem;
+}
+
+.donateText{
+    margin: 0 10rem 0 10rem;
+}
+
+.donateImage2{
+    width: 5rem;
+    height: 5rem;
+}
+
+.nextEventsImage2{
+    width: 5rem;
+    height: 5rem;
 }
 
 #calendar{
     width: 80%;
     position: absolute;
+    margin-top: 12rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin: 0 0 1rem 0;
+    }
 }
