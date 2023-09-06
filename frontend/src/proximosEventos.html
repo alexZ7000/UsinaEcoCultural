@@ -1,91 +1,76 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Incinerador Vergueiro</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body class="bodyEvents">
-    <h1> INCINERADOR VERGUEIRO</h1>
-    <nav class="nav">
-        <ul><a href="./index.html">Pagina Principal</a></ul>
-        <ul><a href="./historia.html">Um Pouco sobre Nossa História</a></ul>
-        <ul><a href="./doeAqui.html">Doe Aqui</a></ul>
-    </nav>
-        <main>
-   <header class="header">
-        <h2>PROXIMOS EVENTOS</h2>
-   </header>
-        <div class="wrapper">
-            <header>
-                <p class="currentDate">September 2023</p>
-                <div class="icons">
-                    <span class="material-symbols-roundaded">&ensp;&lt;&ensp;</span>
-                    <span class="materialSymbolsRoundaded">&ensp;&gt;&ensp;</span>
-                </div>
-            </header>
-            <div class="calendar">
-                <ul class="weeks">
-                    <li>Sun</li>
-                    <li>Mon</li>
-                    <li>Tue</li>
-                    <li>Wed</li>
-                    <li>Thu</li>
-                    <li>Fri</li>
-                    <li>Sat</li>
-                </ul>
-                <ul class="days">
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>1</li>
-                </ul>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Incinerador Vergueiro</title>
+        <link rel="stylesheet" href="./css/calendar.css">
+        <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
+        <link rel="stylesheet" href="css/evo-calendar.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="hero">
+            <div id="calendar"></div>
         </div>
-   <section>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="JavaScript/evo-calendar.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#calendar').evoCalendar({
+                    theme: "Midnight Blue",
+                    language: "pt",
+                    todayHighlight: true,
+                    format: "dd/mm/yyyy",
+                    eventHeaderFormat: "d MM, yyyy",
+                    calendarEvents: [
+                        {
+                            id: 'event1', // Event's ID (required)
+                            name: "New Year", // Event name (required)
+                            date: "January/1/2020", // Event date (required)
+                            description: "Hoje o dia esta cringe",
+                            type: "holiday", // Event type (required)
+                            everyYear: true // Same event every year (optional)
+                        },
+                        {
+                            name: "Vacation Leave",
+                            badge: "02/13 - 02/15", // Event badge (optional)
+                            date: ["February/13/2020", "February/15/2020"], // Date range
+                            description: "Vacation leave for 3 days.", // Event description (optional)
+                            type: "event",
+                            color: "#63d867" // Event custom color (optional)
+                        }
+                    ]
+                })
+            })
+        </script>
+    </body>
+</html>
+<!--
+<h1> INCINERADOR VERGUEIRO</h1>
+<nav class="nav">
+    <ul><a href="./index.html">Pagina Principal</a></ul>
+    <ul><a href="./historia.html">Um Pouco sobre Nossa História</a></ul>
+    <ul><a href="./doeAqui.html">Doe Aqui</a></ul>
+</nav>
+<main>
+    <header class="header">
+        <h2>PROXIMOS EVENTOS</h2>
+    </header>
+
+    <section>
         <article>
             <header>
-                 <h2>Venha Nos Conhecer!</h2>
-             </header>
-                <p>localização: <i>Rua Breno Ferraz de Amaral</i></p>
-                <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
-             <footer>
-                 <p>Visite online no <a href="https://www.google.com/maps/place/Esta%C3%A7%C3%A3o+Santos-Imigrantes/@-23.5964028,-46.6213618,3a,75y,225.26h,83.94t/data=!3m6!1e1!3m4!1sXbu3da0Hs_b0zF3PSX2VyA!2e0!7i16384!8i8192!4m6!3m5!1s0x94ce5bc5e5f512c5:0x7c37da711402e865!8m2!3d-23.5961189!4d-46.6208133!16s%2Fg%2F11dxlbvlbt?entry=ttu">Google Maps!</a></p>
+                <h2>Venha Nos Conhecer!</h2>
+            </header>
+            <p>localização: <i>Rua Breno Ferraz de Amaral</i></p>
+            <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
+            <footer>
+                <p>Visite online no <a href="https://www.google.com/maps/place/Esta%C3%A7%C3%A3o+Santos-Imigrantes/@-23.5964028,-46.6213618,3a,75y,225.26h,83.94t/data=!3m6!1e1!3m4!1sXbu3da0Hs_b0zF3PSX2VyA!2e0!7i16384!8i8192!4m6!3m5!1s0x94ce5bc5e5f512c5:0x7c37da711402e865!8m2!3d-23.5961189!4d-46.6208133!16s%2Fg%2F11dxlbvlbt?entry=ttu">Google Maps!</a></p>
             </footer>
         </article>
-   </section>
-        </main>
+    </section>
+</main>
 </body>
 <footer class="footer">
     <p>&copy;2023 - todos os direitos reservados</p>
@@ -93,4 +78,4 @@
     <p><a href="https://linktr.ee/usinaecocultural">Siga Nossas Redes Sociais e Veja nossas Causas!</a></p>
     <p><a href="https://www.instagram.com/usinaecocultural/">Siga Nosso Instagram!</a></p>
 </footer>
-</html>
+-->

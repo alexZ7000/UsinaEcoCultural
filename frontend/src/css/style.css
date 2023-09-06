@@ -229,48 +229,6 @@ body {
     flex-wrap: nowrap;
 }
 
-.bodyEvents{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.wrapper{
-    width: 450px;
-    background-color: deepskyblue;
-    border-radius: 10px;
-}
-
-header .currentDate{
-    font-size: 1.45rem;
-    font-weight: 500;
-}
-
-.wrapper header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 30px 10px;
-}
-
-header .icons span{
-    height: 38px;
-    width: 38px;
-    margin: 0 1px;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 90%;
-    cursor: pointer;
-    background: #f2f2f2;
-}
-
-.calendar ul{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
 #street {
     color: blue;
 
@@ -321,5 +279,120 @@ header .icons span{
     .newSection {
         text-align: center;
         padding: 5rem 15%;
+    }
+    .slider {
+        /* Configuração do Slider (overflow vai esconder as outras imagens quando estiver aparecendo uma */
+        width:  1920px;
+        height: 450px;
+        overflow: hidden;
+
+
+
+    }
+    .slides {
+        /* Configuração dos slides em si, o display flex vai alinhar  os radio bottons com a imagem que está aparecendo; */
+        width:  400%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .slides input{
+        /* Configuração do input dos botões(configuração com o evento do mouse */
+        display: none;
+    }
+
+    .slide{
+        /* Configuração das imagens em si */
+        width: 25%;
+        position: relative;
+        transition: 2s;
+    }
+    .slide img {
+        /* Configuração de cada imagem para se encaixar no slider */
+        width: 100%;
+        height: 100%;
+    }
+    .manual-nav{
+        /* o quadrado onde vão ficar as radio bottoms */
+        position: absolute;
+        width: 800px;
+        margin-top: -30px;
+        margin-left: 375px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn {
+        /* Configuração das radio bottoms */
+        border: 2px solid rgb(115, 115, 218);
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .manual-btn:not(:last-child){
+        margin-right: 30px;
+    }
+
+    .radio-button {
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #aaa;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    input {
+        display: none;
+    }
+
+    .manual-btn:hover {
+        background-color: blue;
+        transition: 0.5s;
+    }
+    #radio1:checked ~ .first{
+        margin-left: 0;
+        background-color: blue;
+    }
+    #radio2:checked ~.first{
+        margin-left: -25%;
+        background-color: blue;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -50%;
+        background-color: blue;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -75%;
+        background-color: blue;
+    }
+
+    .navigation-auto div{
+        border: 2px blue;
+        padding:  10px;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+
+    .navigation-auto div.manual-btn:not(:last-child){
+        margin-right: 30px;
+    }
+
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+        background-color: blue;
+    }
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+        background-color: blue;
+    }
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+        background-color: blue;
+    }
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+        background-color: blue;
     }
 }
