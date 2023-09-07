@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body, html {
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 p {
     color: black;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.bar {
+.menuBar {
     background-color: #0800ff;
     color: #ffffff;
     display: flex;
@@ -25,13 +23,13 @@ p {
     padding: 10px 5%;
 }
 
-.bar a {
+.menuBar a {
     text-decoration: none;
     color: #ffffff;
     margin: 0 15px;
 }
 
-.bottomButtons p {
+.history-donate-calendar-configButtons p {
     text-align: center;
     color: black;
     font-size: 20px;
@@ -39,7 +37,7 @@ p {
     padding: 20px;
 }
 
-.barDiv {
+.divBar {
     display: none;
 }
 
@@ -47,28 +45,28 @@ p {
     display: none;
 }
 
-.closedFist, .store, .place, .forum {
+.closedFistImage, .storeImage, .placeImage, .forumImage {
     display: flex;
     margin: 0 15px;
     width: 2rem;
     height: 2rem;
 }
 
-.place{
+.placeImage{
     margin-left: 1.9rem;
 }
 
-.closedFist{
+.closedFistImage{
     margin-left: 2.5rem;
 }
 
-.login{
+.loginBarButton{
     display: flex;
     height: 2rem;
     width: 2rem;
 }
 
-.signUp{
+.signupBarButton{
     display: flex;
     height: 1.7rem;
     width: 1.7rem;
@@ -82,14 +80,14 @@ p {
     box-shadow: 20px 20px 30px 2px rgba(0, 0, 0, 0.2);
 }
 
-.bottomButtons {
+.history-donate-calendar-configButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem 0;
 }
 
-.buttonContainer {
+.history-donate-calendar-divButton {
     text-align: center;
     padding: 0 2rem;
     flex: 1;
@@ -236,7 +234,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .barDiv {
+    .divBar {
         display: flex;
         justify-content: center;
         padding: 10px 5%;
@@ -257,11 +255,11 @@ body {
         margin: 2rem auto;
     }
 
-    .bottomButtons {
+    .history-donate-calendar-configButtons {
         margin: 2rem 0;
     }
 
-    .buttonContainer {
+    .history-donate-calendar-divButton {
         padding: 0 1rem;
         flex: 1;
     }
