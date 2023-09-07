@@ -1,68 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login Usina Eco-Cultural</title>
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-<div class="auth-container">
-    <div class="tabs">
-      <button class="tab-button active" data-tab="signup">Cadastrar</button>
-      <button class="tab-button" data-tab="login">Login</button>
-    </div>
-    <div class="signup-container">
-      <h2>Cadastre-se</h2>
-      <form class="signup-form">
-        <label for="fullname">Nome Completo</label>
-        <input type="text" id="fullname" name="fullname" required>
-
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="confirm-password">Confirme a Senha</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-
-        <label for="birthdate">Data de Nascimento</label>
-        <input type="date" id="birthdate" name="birthdate" required>
-
-        <label>Gênero</label>
-        <label>
-          <input type="radio" name="gender" value="male">
-          Masculino
-        </label>
-        <label>
-          <input type="radio" name="gender" value="female">
-          Feminino
-        </label>
-        <label>
-          <input type="radio" name="gender" value="other">
-          Outro
-        </label>
-
-        <label>
-          <input type="checkbox" name="terms" required>
-          Eu aceito os <a href="#">Termos e Condições</a>
-        </label>
-
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
-      <div class="tab-content" id="login" style="display: none;">
+    <nav class="nav">
+        <div class="historyDiv">
+            <a class="mainPageText" href="./index.html"><button><img class="mainPageImage" src="./Assets/images/home.png" alt="mainPage">Pagina Principal</button></a>
+            <a class="donateText" href="./doeAqui.html"><button><img class="donateImage2" src="./Assets/images/heart.png" alt="donate">Doe Aqui</button></a>
+            <a class="nextEventsText" href="./proximosEventos.html"><button><img class="nextEventsImage2" src="./Assets/images/upcoming.png" alt="nextEvents">Eventos Semanais</button></a>
+        </div>
+    </nav>
+    <div class="tab-content-active" id="login">
         <h2>Login</h2>
         <form class="login-form">
-          <label for="login-email">E-mail</label>
-          <input type="email" id="login-email" name="login-email" required>
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" name="login-email" required>
 
-          <label for="login-password">Senha</label>
-          <input type="password" id="login-password" name="login-password" required>
+            <label for="login-password">Senha</label>
+            <input type="password" id="login-password" name="login-password" required>
 
-          <button type="submit">Entrar</button>
+            <button type="submit">Entrar</button>
         </form>
-      </div>
     </div>
 </body>
 </html>
