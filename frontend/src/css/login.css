@@ -89,36 +89,3 @@
 .signup-form button:hover {
     background-color: #0056b3;
 }
-
-.usinaIcon{
-    cursor: pointer;
-    display: inline;
-    height: 8rem;
-    width: 8rem;
-}
-
-.historyDiv{
-    display: flex;
-    justify-content: center;
-    padding: 10px 5%;
-    background-color: #e8e8e8;
-}
-
-.mainPageImage{
-    width: 5rem;
-    height: 5rem;
-}
-
-.donateText{
-    margin: 0 10rem 0 10rem;
-}
-
-.donateImage2{
-    width: 5rem;
-    height: 5rem;
-}
-
-.nextEventsImage2{
-    width: 5rem;
-    height: 5rem;
-}

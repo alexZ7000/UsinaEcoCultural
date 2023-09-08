@@ -1,16 +1,15 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Eventos Usina Eco-Cultural</title>
-        <link rel="stylesheet" href="./css/calendar.css">
-        <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
-        <link rel="stylesheet" href="css/evo-calendar.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/Calendar/calendar.css">
+        <link rel="stylesheet" href="./css/Calendar/evo-calendar.midnight-blue.min.css">
+        <link rel="stylesheet" href="./css/Calendar/evo-calendar.min.css">
     </head>
     <body>
-    <h1><a href="index.html"><img class="usinaIcon" src="Assets/images/usina_icon.png" alt="usina_icon"></a>Usina Eco-Cultural</h1>
+    <h1><a href="./index.html"><img class="usinaIcon" src="Assets/images/usina_icon.png" alt="usina_icon"></a>Usina Eco-Cultural</h1>
         <nav class="nav">
             <div class="historyDiv">
                 <a class="mainPageText" href="./index.html"><button><img class="mainPageImage" src="./Assets/images/home.png" alt="mainPage">Pagina Principal</button></a>
@@ -22,7 +21,7 @@
             <div id="calendar"></div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-        <script src="JavaScript/evo-calendar.min.js"></script>
+        <script src="./JavaScript/evo-calendar.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#calendar').evoCalendar({
@@ -52,11 +51,25 @@
             })
         </script>
     </body>
-    <footer>
-        <button><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><img class="help" src="Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</a></button>
-        <button><a href="https://linktr.ee/usinaecocultural"><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</a></button>
-        <button><a href="https://www.instagram.com/usinaecocultural/"><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</a></button>
-    </footer>
+
+    <div>
+        <header class="newSection">
+            <h2>VENHA NOS CONHECER!</h2>
+        </header>
+        <div class="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="adressText">
+            <p>localização:<i id="street">Rua Breno Ferraz de Amaral, 415</i></p>
+            <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
+            <p><b> &copy; 2023 -  todos os direitos reservados</b></p>
+        </div>
+        <div class="threeSocialMediaBottomButtons">
+            <button class="helpBottomButton"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><img class="help" src="./Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</a></button>
+            <button class="socialMediaBottomButton"><a href="https://linktr.ee/usinaecocultural"><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</a></button>
+            <button class="instagramBottomButton"><a href="https://www.instagram.com/usinaecocultural/"><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</a></button>
+        </div>
+    </div>
 </html>
 <!--
 <h1> INCINERADOR VERGUEIRO</h1>

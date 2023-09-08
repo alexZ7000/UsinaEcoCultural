@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <title>Usina Eco-Cultural</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/homePage.css">
 </head>
 <body>
-    <h1><a href="index.html"><img class="usinaIcon" src="Assets/images/usina_icon.png" alt="usina_icon"></a>Usina Eco-Cultural</h1>
-    <nav class="upperBar">
-        <nav class="bar">
-            <div class="barDiv">
-                <a href="./quemsomos.html" class="closedFistText"><button><img src="./Assets/images/closed-fist.png" alt="apoie a causa" class="closedFist">Apoie a Causa</button></a>
-                <a href="#" class="storeText"><button><img src="./Assets/images/store.png" alt="" class="store">Loja</button></a>
-                <a href="#" class="placeText"><button><img src="./Assets/images/location.png" alt="place" class="place">Localização</button></a>
-                <a href="./forum.html" class="forumText"><button><img src="./Assets/images/community.png" alt="forum" class="forum">Fórum</button></a>
+    <h1><a href="./index.html"><img class="usinaIcon" src="./Assets/images/usina_icon.png" alt="usina_icon"></a>Usina Eco-Cultural</h1>
+    <nav class="upperNavMenuBar">
+        <nav class="menuBar">
+            <div class="divBar">
+                <a href="./quemsomos.html" class="closedFistText"><button><img src="./Assets/images/closed-fist.png" alt="apoie a causa" class="closedFistImage">Apoie a Causa</button></a>
+                <a href="#" class="storeText"><button><img src="./Assets/images/store.png" alt="" class="storeImage">Loja</button></a>
+                <a href="#" class="placeText"><button><img src="./Assets/images/location.png" alt="place" class="placeImage">Localização</button></a>
+                <a href="./forum.html" class="forumText"><button><img src="./Assets/images/community.png" alt="forum" class="forumImage">Fórum</button></a>
             </div>
             <div class="barLogin">
-                <a href="signup.html" class="loginText"><button><img class="login" src="./Assets/images/user.png" alt="login">Login</button></a>
-                <a href="#"><button><img class="signUp" src="./Assets/images/add-user.png" alt="sign up">Cadastre-se</button></a>
+                <a href="./login.html" class="loginText"><button><img class="loginBarButton" src="./Assets/images/user.png" alt="login">Login</button></a>
+                <a href="./signup.html"><button><img class="signupBarButton" src="./Assets/images/add-user.png" alt="sign up">Cadastre-se</button></a>
             </div>
         </nav>
         <nav class="slider">
@@ -74,23 +75,23 @@
        </header>
     </main>
 <footer>
-    <nav class="bottomButtons">
-        <div class="buttonContainer">
+    <nav class="history-donate-calendar-configButtons">
+        <div class="history-donate-calendar-divButton">
             <a href="./doeAqui.html">
-                <p>FAÇA SUA DOAÇÃO!!</p>
-                <img class="donateImage" src="Assets/images/donate.png" alt="doação">
+                <p class="historyText">FAÇA SUA DOAÇÃO!!</p>
+                <img class="donateImage" src="./Assets/images/donate.png" alt="doação">
             </a>
         </div>
-        <div class="buttonContainer">
+        <div class="history-donate-calendar-divButton">
             <a href="./historia.html">
                 <p class="historyText">CONHEÇA NOSSA HISTÓRIA</p>
-                <img class="historyImage" src="Assets/images/parchment.png" alt="historia">
+                <img class="historyImage" src="./Assets/images/parchment.png" alt="historia">
             </a>
         </div>
-        <div class="buttonContainer">
+        <div class="history-donate-calendar-divButton">
             <a href="./proximosEventos.html">
                 <p class="nextEventsText">VEJA NOSSOS PRÓXIMOS EVENTOS</p>
-                <img class="nextEventsImage" src="Assets/images/schedule.png" alt="eventos">
+                <img class="nextEventsImage" src="./Assets/images/schedule.png" alt="eventos">
             </a>
         </div>
     </nav>
@@ -101,13 +102,19 @@
         <header class="newSection">
             <h2>VENHA NOS CONHECER!</h2>
         </header>
-        <p><iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-        <p>localização: <i id="street">Rua Breno Ferraz de Amaral</i></p>
-        <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
+        <div class="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="adressText">
+            <p>localização:<i id="street">Rua Breno Ferraz de Amaral, 415</i></p>
+            <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
+            <p><b> &copy; 2023 -  todos os direitos reservados</b></p>
+        </div>
+        <div class="threeSocialMediaBottomButtons">
+            <button class="helpBottomButton"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><img class="help" src="./Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</a></button>
+            <button class="socialMediaBottomButton"><a href="https://linktr.ee/usinaecocultural"><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</a></button>
+            <button class="instagramBottomButton"><a href="https://www.instagram.com/usinaecocultural/"><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</a></button>
+        </div>
     </div>
-    <p><b> &copy; 2023 -  todos os direitos reservados</b></p>
-    <button><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><img class="help" src="Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</a></button>
-    <button><a href="https://linktr.ee/usinaecocultural"><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</a></button>
-    <button><a href="https://www.instagram.com/usinaecocultural/"><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</a></button>
 </body>
 </html>

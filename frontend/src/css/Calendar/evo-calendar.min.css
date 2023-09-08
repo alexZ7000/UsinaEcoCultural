@@ -10,6 +10,7 @@
  * Issues: https://github.com/edlynvillegas/evo-calendar/issues
  *
 */
+
 *,::after,::before{
     -webkit-box-sizing:border-box;
     box-sizing:border-box
@@ -18,10 +19,6 @@
 html,body{
     padding:0;
     margin:0
-}
-
-body{
-    font-family:'Source Sans Pro'
 }
 
 input:focus,textarea:focus,button:focus{
