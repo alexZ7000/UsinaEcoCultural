@@ -1,1 +1,9 @@
+Para instalar React:
 
+    cd frontend
+
+    cd vite-project
+
+    npm install
+
+    npm run dev
