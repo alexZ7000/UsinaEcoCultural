@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Doação Usina Eco-Cultural</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <script type="module" src="./JavaScript/index.js"></script>
 </head>
@@ -18,31 +17,27 @@
     <main>
         <header class="header">
              <h2>NOS AJUDE NESSA CAUSA!</h2>
-             <p><strong>QUALQUER VALOR NOS AUXILIA</strong></p>
+             <p><strong>QUALQUER VALOR NOS AJUDA</strong></p>
              <h3><strong>DOAÇÃO DE QUAISQUER ITENS SÃO MUITO BEM VINDOS PARA NOSSA COMUNIDADE!</strong></h3>
         </header>
-        <section>
-             <article>
-                 <header>
-                      <h2>Venha Nos Conhecer!</h2>
-                  </header>
-                 <div id="map"></div>
-                 <p>localização: <i>Rua Breno Ferraz de Amaral</i></p>
-                     <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
-                  <footer>
-                      <p>Visite online no <a href="https://www.google.com/maps/place/Esta%C3%A7%C3%A3o+Santos-Imigrantes/@-23.5964028,-46.6213618,3a,75y,225.26h,83.94t/data=!3m6!1e1!3m4!1sXbu3da0Hs_b0zF3PSX2VyA!2e0!7i16384!8i8192!4m6!3m5!1s0x94ce5bc5e5f512c5:0x7c37da711402e865!8m2!3d-23.5961189!4d-46.6208133!16s%2Fg%2F11dxlbvlbt?entry=ttu">Google Maps!</a></p>
-                 </footer>
-                 <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-                 ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
-             </article>
-        </section>
-     </main>
-<footer class="footer">
-    <p>&copy;2023 - todos os direitos reservados</p>
-    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><button><img class="help" src="./Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</button></a>
-    <a href="https://linktr.ee/usinaecocultural"><button><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</button></a>
-    <a href="https://www.instagram.com/usinaecocultural/"><button><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</button></a>
-    </footer>
-    <button></button>
+    </main>
+    <div>
+        <header class="newSection">
+            <h2>VENHA NOS CONHECER!</h2>
+        </header>
+        <div class="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="adressText">
+            <p>localização:<i id="street">Rua Breno Ferraz de Amaral, 415</i></p>
+            <p>mas comumente conhecido na <i>Ricardo Jaffet</i></p>
+            <p><b> &copy; 2023 -  todos os direitos reservados</b></p>
+        </div>
+        <div class="threeSocialMediaBottomButtons">
+            <button class="helpBottomButton"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV"><img class="help" src="./Assets/images/question.png" alt="question">Tire suas dúvidas conosco!</a></button>
+            <button class="socialMediaBottomButton"><a href="https://linktr.ee/usinaecocultural"><img class="socialMedia" src="./Assets/images/social-media.png" alt="social">Siga Nossas Redes Sociais e Veja nossas Causas!</a></button>
+            <button class="instagramBottomButton"><a href="https://www.instagram.com/usinaecocultural/"><img class="instagramImage" src="./Assets/images/instagram.png" alt="Instagram">Siga Nosso Instagram!</a></button>
+        </div>
+    </div>
 </body>
 </html>
