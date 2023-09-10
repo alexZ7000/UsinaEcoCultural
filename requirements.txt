@@ -1,9 +1,8 @@
+Baixar bootstrap: https://getbootstrap.com/
+Baixar Node/React: https://nodejs.org/en
+
 Para instalar React:
-
     cd frontend
-
-    cd vite-project
-
     npm install
-
+    cd vite-project
     npm run dev

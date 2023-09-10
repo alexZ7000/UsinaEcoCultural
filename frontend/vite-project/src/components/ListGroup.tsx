@@ -10,7 +10,7 @@ function ListGroup(){
 
     return<Fragment>
         <ul className="list-group">
-            {cities.map((cities) => <li key={cities}>{cities}</li>)}
+            {cities.map((cities) => <li className="list-group-item" key={cities} onClick={(event) => console.log(event)}>{cities}</li>)}
         </ul>
     </Fragment>
 }
