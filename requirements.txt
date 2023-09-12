@@ -5,4 +5,8 @@ Para instalar React:
     cd frontend
     npm install
     cd vite-project
+        Caso o bootstrap não esteja instalado (ou não esteja funcionando):
+        npm i bootstrap@5.2.3
     npm run dev
+
+
