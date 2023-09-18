@@ -1,0 +1,9 @@
+/* arquivo css que faz relação com o arquivo "fontepersonalizada.html" */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,300&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
