@@ -7,6 +7,7 @@ Para instalar React:
     cd vite-project
         Caso o bootstrap não esteja instalado (ou não esteja funcionando):
         npm i bootstrap@5.2.3
+        npm install react-bootstrap bootstrap
     npm run dev
 
 
