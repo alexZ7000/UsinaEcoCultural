@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
 import image from './images/usina_icon.png';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import {
     MDBContainer,
     MDBBtn,
@@ -57,9 +59,8 @@ function Login() {
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink href='#'>Doação</MDBNavbarLink>
+                                    <MDBNavbarLink href='./components/Message.tsx'>Doação</MDBNavbarLink>
                                 </MDBNavbarItem>
-
                                 <MDBNavbarItem>
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag='a' className='nav-link'>
