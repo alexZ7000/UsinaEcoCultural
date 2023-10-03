@@ -18,7 +18,9 @@ import {
     MDBDropdown,
     MDBDropdownMenu,
     MDBDropdownToggle,
-    MDBDropdownItem, MDBNavbarBrand,
+    MDBDropdownItem,
+    MDBNavbarBrand,
+    MDBFooter
 }
     from 'mdb-react-ui-kit';
 
@@ -26,8 +28,7 @@ function Login() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
         <MDBContainer className="my-5 gradient-form">
-
-            <MDBRow>
+            <MDBRow className='container-sm'>
                 <MDBNavbar expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
@@ -77,10 +78,11 @@ function Login() {
                     </MDBContainer>
                 </MDBNavbar>
 
+
                 <MDBCol col='6' className="mb-5">
                     <div className="d-flex flex-column ms-5">
                         <div className="text-center mb-7 my-5 ">
-                            <p>Sign in with:</p>
+                            <p>Faça Login com:</p>
 
                             <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
                                 <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
@@ -106,9 +108,9 @@ function Login() {
                         </div>
 
                         <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
-                            <p className="mb-0">Não tem uma conta ainda?</p>
-                            <MDBBtn outline className='mx-2' color='danger'>
-                                Cadastre-se
+                            <p className="mb-0">Não tem uma conta?</p>
+                            <MDBBtn outline className='mx-2' color='primary'>
+                                Cadastrar
                             </MDBBtn>
                         </div>
 
@@ -117,7 +119,14 @@ function Login() {
                 </MDBCol>
 
             </MDBRow>
-
+            <MDBFooter bgColor='light' className='text-center text-lg-left'>
+                <div className='text-center p-3' >
+                    &copy; {new Date().getFullYear()} Copyright:{' '}
+                    <a className='text-dark' href='#'>
+                        Todos os direitos reservados
+                    </a>
+                </div>
+            </MDBFooter>
         </MDBContainer>
     );
 }
