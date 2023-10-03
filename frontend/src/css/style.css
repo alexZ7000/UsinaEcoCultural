@@ -218,9 +218,10 @@ h2{
         margin: 0 0 1rem 0;
     }
 
-    .newSection {
+    .newSection{
         text-align: center;
-        padding: 5rem 15%;
+        padding: 19rem 15%;
+        margin-bottom: -20%; /* margin-botto -> mexe com o Google Maps dentro do site do login */
     }
 
     p {

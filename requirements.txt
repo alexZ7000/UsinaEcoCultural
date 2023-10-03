@@ -3,8 +3,8 @@ Baixar Node/React: https://nodejs.org/en
 
 Para instalar React:
     cd frontend
-    npm install
     cd vite-project
+    npm install
         Caso o bootstrap não esteja instalado (ou não esteja funcionando):
         npm i bootstrap@5.2.3
         npm install react-bootstrap bootstrap

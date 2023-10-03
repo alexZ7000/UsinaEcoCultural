@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,300&display=swap');
 
-*{
-    font-family: 'Nunito Sans', sans-serif;
-}
-
 body{
-    background-color: grey;
     height: 900px;
 }
 
 .cookies-msg{
     width: 80%;
-    background-color: #fff;
+    background-color: rgb(134, 134, 134);
     position: fixed; /* deixa mensagem fixa dentro do site*/
     bottom: 5%;
     left: 50%;

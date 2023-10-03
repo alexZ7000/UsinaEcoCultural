@@ -88,3 +88,26 @@
 .signup-form button:hover {
     background-color: #0056b3;
 }
+
+.login-form{
+    background-color: rgb(134, 134, 134);
+    position: absolute; /*Ocupa espaço so de seus elementos em volta*/
+    top: 45 %;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+#buttonSubmit{
+    padding: 2px; 
+    width: 20%;
+}
+#login-password, #login-email{
+    width: 90%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
