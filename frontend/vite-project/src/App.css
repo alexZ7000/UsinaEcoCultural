@@ -40,3 +40,68 @@
 .read-the-docs {
   color: #888;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: black;
+  border-radius: 5px;
+}
+
+.container-fluid{
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.threeSocialMediaBottomButtons{
+  margin: 3rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.helpBottomButton, .socialMediaBottomButton, .instagramBottomButton{
+  cursor: pointer;
+  margin: 0 1rem 0 1rem;
+  
+}
+
+.socialMedia{
+  height: 2rem;
+  width: 2rem;
+}
+
+.instagramImage{
+  height: 2rem;
+  width: 2rem;
+}
+
+.help{
+  height: 2rem;
+  width: 2rem;
+}
+.threeSocialMediaBottomButtons{
+  margin: 3rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.6%;
+}
+
+.textRedesSociais{
+  margin: 0 1rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.abaixoAssinado{
+  margin: 0 1rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.imageAbaixoAssinado{
+    padding: 20px;
+}

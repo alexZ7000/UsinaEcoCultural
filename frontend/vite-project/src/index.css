@@ -68,28 +68,6 @@ button:focus-visible {
   }
 }
 
-.threeSocialMediaBottomButtons{
-  margin: 3rem 0 2rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.helpBottomButton, .socialMediaBottomButton, .instagramBottomButton{
-  cursor: pointer;
-  margin: 0 1rem 0 1rem;
-}
-
-.socialMedia{
-  height: 2rem;
-  width: 2rem;
-}
-
-.instagramImage{
-  height: 2rem;
-  width: 2rem;
-}
-
-.help{
-  height: 2rem;
-  width: 2rem;
+.carousel-control-prev-icon{
+  background-color: #ff08b5;
 }
