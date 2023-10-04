@@ -67,3 +67,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.carousel-control-prev-icon{
+  background-color: #ff08b5;
+}

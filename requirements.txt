@@ -10,4 +10,5 @@ Para instalar React:
         npm install react-bootstrap bootstrap
     npm run dev
 
-
+Baixar pacote de âncora de link:
+npm install react-router-dom

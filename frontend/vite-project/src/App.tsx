@@ -3,13 +3,16 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login'
+import PaginaInicial from './PaginaInicial';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
+import './App.css';
 
-function App(){
+function App() {
     return (
-        <div>
-            <Home/>
-        </div>
+      <div>
+        <Home/>
+      </div>
     );
-}
+  } 
 
 export default App;
