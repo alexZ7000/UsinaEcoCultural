@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import RevoCalendar from 'revo-calendar';
 import {
     MDBFooter,
     MDBContainer,
@@ -28,6 +29,40 @@ import faixa_do_futuro_usina from "./images/faixa_do_futuro.jpeg";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
+    var events = [
+        {
+            name: "EventoTeste",
+            date: Date.now(),
+            allDay: true,
+        },
+        {
+            name: "Reservation",
+            date: 1594422992000,
+            extra: {
+                icon: "M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09           4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z",
+                text: "7 People",
+            },
+        },
+    ];
+
+    const translations = {
+        esperanto: {
+            days: ["Dimanĉo", ..."Sabato"],
+            daysShort: ["Dim", ..."Sab"],
+            daysMin: ["Di", ..."Sa"],
+            months: ["Januaro", ..."Decembro"],
+            monthsShort: ["Jan", ..."Dec"],
+            noEventForThisDay: "Neniu evento por ĉi tiu tago ... do ripozu!",
+            allDay: "Tuta tago",
+            addEvent: "Aldoni eventon",
+            delete: "Forigi",
+            eventTime: "Tempo de evento",
+            previousYear: "Pasintjare",
+            nextYear: "Venonta jaro",
+            toggleSidebar: "Baskulu flanka kolumno",
+            toggleDetails: "Ŝaltu Detalojn",
+        },
+    };
     return (
         <><MDBContainer className="my-5 gradient-form">
             <MDBRow className='container-sm'>
@@ -80,68 +115,43 @@ export default function Home() {
                     </MDBContainer>
                 </MDBNavbar>
             </MDBRow>
+            <RevoCalendar className="mt-5"
+                events = {
+                    events
+                }
+                style = {
+                {
+                    borderRadius: "15px",
+                    border: "5px solid #4F6995",
+                    height: "534px"
+                }
+            }
+                highlightToday = {true}
+                lang = "pt"
+                primaryColor = "#516b97"
+                secondaryColor = "#D7E6EE"
+                todayColor = "#3B3966"
+                textColor = "#333333"
+                indicatorColor = "orange"
+                animationSpeed = {300}
+                sidebarWidth = {180}
+                detailWidth = {280}
+                showDetailToggler = {true}
+                showSidebarToggler = {true}
+                onePanelAtATime = {false}
+                allowDeleteEvent = {true}
+                allowAddEvent = {true}
+                openDetailsOnDateSelection = {true}
+                timeFormat24 = {true}
+                showAllDayLabel = {false}
+                detailDateFormat = "DD/MM/YYYY"
+            />
         </MDBContainer>
-        <MDBRow className='abaixoAssinado'>
-            <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
-            <MDBIcon className='imageAbaixoAssinado'>
-                <img src="./src/components/pages/images/Abaixo_Assinado.png" alt="ImagemAbaixoAssinado" />
-            </MDBIcon>
-
-        </MDBRow>
-            <MDBCarousel showControls showIndicators>
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={1}
-                    src={abelha_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={2}
-                    src={banquete_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={3}
-                    src={yoga_usina}
-                    alt='...'
-                />
-            </MDBCarousel>
-            <div className='p-5 text-center bg-light'>
-                <h1 className='mb-3'>Heading</h1>
-                <h4 className='mb-3'>Subheading</h4>
-                <a className='btn btn-primary' href='' role='button'>
-                    Call to action
-                </a>
-            </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
-                        <span>Get connected with us on social networks:</span>
-                    </div>
-                    <div>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="facebook-f"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="twitter"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="google"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="instagram"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="linkedin"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="github"/>
-                        </a>
                     </div>
                 </section>
-
                 <section className=''>
                     <MDBContainer className='text-center text-md-start mt-5'>
                         <MDBRow className='mt-3'>
@@ -151,7 +161,7 @@ export default function Home() {
                                     Incinerador Usina-EcoCultural
                                 </h6>
                                 <p>
-                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                    Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                             </MDBCol>
 
@@ -207,13 +217,13 @@ export default function Home() {
                                 <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                <br/>
-                                Perto da estação Santos-Imigrantes (Linha Verde)
+                                    <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                    <br/>
+                                    Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-                                <strong>ExemploEmailUsina@gmail.com</strong>
+                                    <strong>ExemploEmailUsina@gmail.com</strong>
                                 </p>
                                 <p>
                                     <MDBIcon icon="phone" className="me"/> + 01 234 567 89
@@ -256,6 +266,7 @@ export default function Home() {
                         MDBootstrap.com
                     </a>
                 </div>
-            </MDBFooter></>
+            </MDBFooter>
+        </>
     );
 }

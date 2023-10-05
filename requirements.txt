@@ -5,10 +5,17 @@ Para instalar React:
     cd frontend
     cd vite-project
     npm install
+
         Caso o bootstrap não esteja instalado (ou não esteja funcionando):
         npm i bootstrap@5.2.3
-        npm install react-bootstrap bootstrap
-    npm run dev
 
-Baixar pacote de âncora de link:
-npm install react-router-dom
+        Caso o MBD não esteja instalado (ou não esteja funcionando):
+        npm install react-bootstrap bootstrap
+
+        Caso o react-router-dom não esteja instalado (ou não esteja funcionando):
+        npm install react-router-dom
+
+        Caso o RevoCalendar não esteja instalado (ou não esteja funcionando):
+        npm i revo-calendar
+
+    npm run dev
