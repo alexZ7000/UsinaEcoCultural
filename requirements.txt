@@ -16,6 +16,6 @@ Para instalar React:
         npm install react-router-dom
 
         Caso o RevoCalendar não esteja instalado (ou não esteja funcionando):
-        npm i revo-calendar
+        npm i revo-calendar (Este comando deve ser executado na pasta .//UsinaEcoCultural)
 
     npm run dev
