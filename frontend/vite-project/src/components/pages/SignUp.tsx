@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
-import image from './Assets/images/usina_icon.png';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import {
-    MDBContainer,
     MDBBtn,
-    MDBIcon,
+    MDBContainer,
+    MDBCard,
+    MDBCardBody,
     MDBInput,
+    MDBCheckbox,
+    MDBIcon,
     MDBRow,
     MDBCol,
     MDBNavbar,
@@ -25,10 +25,12 @@ import {
     MDBFooter
 }
     from 'mdb-react-ui-kit';
+import image from "./Assets/images/usina_icon.png";
 
-export default function Login() {
+export default function SignUp() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
+        <>
         <MDBContainer className="my-5 gradient-form">
             <MDBRow className='container-sm'>
                 <MDBNavbar expand='lg' light bgColor='light'>
@@ -78,56 +80,33 @@ export default function Login() {
                         </MDBCollapse>
                     </MDBContainer>
                 </MDBNavbar>
-
-
-                <MDBCol col='6' className="mb-5">
-                    <div className="d-flex flex-column ms-5">
-                        <div className="text-center mb-7 my-5 ">
-                            <p>Faça Login com:</p>
-
-                            <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
-                                <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                                    <MDBIcon fab icon='facebook-f' size="lg"/>
-                                </MDBBtn>
-
-                                <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                                    <MDBIcon fab icon='google' size="lg"/>
-                                </MDBBtn>
-                            </div>
-                        </div>
-
-                        <p>Faça login na sua conta</p>
-
-
-                        <MDBInput wrapperClass='mb-4' label='Endereço de E-mail' id='form1' type='email'/>
-                        <MDBInput wrapperClass='mb-4' label='Senha' id='form2' type='password'/>
-
-
-                        <div className="text-center pt-1 mb-5 pb-1">
-                            <MDBBtn className="mb-4 w-100 gradient-custom-2">Faça login</MDBBtn>
-                            <a className="text-muted" href="#!">Esqueceu sua senha?</a>
-                        </div>
-
-                        <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
-                            <p className="mb-0">Não tem uma conta?</p>
-                            <MDBBtn outline className='mx-2' color='primary'>
-                                Cadastrar
-                            </MDBBtn>
-                        </div>
-
-                    </div>
-
-                </MDBCol>
-
             </MDBRow>
-            <MDBFooter bgColor='light' className='text-center text-lg-left'>
-                <div className='text-center p-3' >
-                    &copy; {new Date().getFullYear()} Copyright:{' '}
-                    <a className='text-dark' href='#'>
-                        Todos os direitos reservados
-                    </a>
-                </div>
-            </MDBFooter>
         </MDBContainer>
+        <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: ''}}>
+            <div className='mask gradient-custom-3'></div>
+            <MDBCard className='m-5' style={{maxWidth: '600px'}}>
+                <MDBCardBody className='px-5'>
+                    <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
+                    <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
+                    <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
+                    <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
+                    <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
+                    <div className='d-flex flex-row justify-content-center mb-4'>
+                        <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='Eu concordo com os Termos de Serviço' />
+                    </div>
+                    <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg'>Registrar-se</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+        </MDBContainer>
+
+        <MDBFooter bgColor='light' className='text-center text-lg-left'>
+            <div className='text-center p-3' >
+                &copy; {new Date().getFullYear()} Copyright:{' '}
+                <a className='text-dark' href='#'>
+                    Todos os direitos reservados
+                </a>
+            </div>
+        </MDBFooter>
+        </>
     );
 }

@@ -20,11 +20,11 @@ import {
     MDBCarouselItem,
     MDBBtn,
 } from 'mdb-react-ui-kit';
-import icone_usina from "./images/usina_icon.png";
-import abelha_usina from "./images/abelha.jpeg";
-import banquete_usina from "./images/banquete.png";
-import yoga_usina from "./images/yoga.png";
-import faixa_do_futuro_usina from "./images/faixa_do_futuro.jpeg";
+import icone_usina from "./Assets/images/usina_icon.png";
+import abelha_usina from "./Assets/images/abelha.jpeg";
+import banquete_usina from "./Assets/images/banquete.png";
+import yoga_usina from "./Assets/images/yoga.png";
+import faixa_do_futuro_usina from "./Assets/images/faixa_do_futuro.jpeg";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -233,19 +233,19 @@ export default function Home() {
                 <div className="threeSocialMediaBottomButtons">
                     <button className="helpBottomButton">
                         <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV" target="_blank">
-                            <img className="help" src="./src/components/pages/images/question.png" alt="question" />
+                            <img className="help" src="./src/components/pages/Assets/images/question.png" alt="question" />
                             Tire suas dúvidas!
                         </a>
                     </button>
                     <button className="socialMediaBottomButton">
                         <a href="https://linktr.ee/usinaecocultural" target="_blank">
-                            <img className="socialMedia" src="./src/components/pages/images/social-media.png" alt="social" />
+                            <img className="socialMedia" src="./src/components/pages/Assets/images/social-media.png" alt="social" />
                             Veja nossas Causas!
                         </a>
                     </button>
                     <button className="instagramBottomButton">
                         <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
-                            <img className="instagramImage" src="./src/components/pages/images/instagram.png" alt="Instagram" />
+                            <img className="instagramImage" src="./src/components/pages/Assets/images/instagram.png" alt="Instagram" />
                             Siga Nosso Instagram!
                         </a>
                     </button>
