@@ -86,13 +86,14 @@ export default function SignUp() {
             <div className='mask gradient-custom-3'></div>
             <MDBCard className='m-5' style={{maxWidth: '600px'}}>
                 <MDBCardBody className='px-5'>
-                    <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
+                    <h2 className="text-uppercase text-center mb-5"><u>Crie sua Conta</u></h2>
                     <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
-                    <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
-                    <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
+                    <MDBInput wrapperClass='mb-4' label='E-mail' size='lg' id='form2' type='email'/>
+                    <MDBInput wrapperClass='mb-4' label='Senha' size='lg' id='form3' type='password'/>
                     <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
                     <div className='d-flex flex-row justify-content-center mb-4'>
-                        <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='Eu concordo com os Termos de Serviço' />
+                        <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
+                        Eu concordo com os <i><u>Termos de Serviço</u></i>
                     </div>
                     <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg'>Registrar-se</MDBBtn>
                 </MDBCardBody>

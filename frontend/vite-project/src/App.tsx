@@ -10,7 +10,11 @@ import './App.css';
 function App() {
     return (
       <div>
-        <SignUp/>
+        {/* <Home/> */}
+        {/* <SignUp/> */}
+        {/* <Login/> */}
+        {/* <Shop/> */}
+        {/* <EventsCalendary/> */}
       </div>
     );
   } 

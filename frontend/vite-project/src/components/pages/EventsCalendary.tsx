@@ -115,6 +115,11 @@ export default function Home() {
                     </MDBContainer>
                 </MDBNavbar>
             </MDBRow>
+            <MDBRow>
+                <div className="textEventCalendar">
+                    Calandedário de Eventos
+                </div>
+            </MDBRow>
             <RevoCalendar className="mt-5"
                 events = {
                     events
