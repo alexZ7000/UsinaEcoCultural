@@ -9,7 +9,7 @@ import About from "./components/pages/About";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import './App.css';
 
-function App() {
+export default function App() {
     return (
       <div>
         {/* <Home/> */}
@@ -17,10 +17,8 @@ function App() {
         {/* <Login/> */}
         {/* <Shop/> */}
         {/* <EventsCalendary/> */}
-        { <History/> }
+        {/* <History/> */}
         {/* <About/> */}
       </div>
     );
-  } 
-
-export default App;
+}
