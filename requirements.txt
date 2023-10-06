@@ -1,19 +1,20 @@
 Baixar bootstrap: https://getbootstrap.com/
 Baixar Node/React: https://nodejs.org/en
 
-Para instalar React:
+Comandos para executar o projeto React-Bootstrap:
     cd frontend
+    npm install
     cd vite-project
     npm install
 
         Caso o bootstrap não esteja instalado (ou não esteja funcionando):
-        npm i bootstrap@5.2.3
+        npm i bootstrap@5.2.3 (Este comando deve ser executado na pasta .//frontend)
 
         Caso o MBD não esteja instalado (ou não esteja funcionando):
-        npm install react-bootstrap bootstrap
+        npm install react-bootstrap bootstrap (Este comando deve ser executado na pasta .//vite-project)
 
         Caso o react-router-dom não esteja instalado (ou não esteja funcionando):
-        npm install react-router-dom
+        npm install react-router-dom (Este comando deve ser executado na pasta .//frontend)
 
         Caso o RevoCalendar não esteja instalado (ou não esteja funcionando):
         npm i revo-calendar (Este comando deve ser executado na pasta .//frontend)
