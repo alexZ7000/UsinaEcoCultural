@@ -24,14 +24,15 @@ import icone_usina from "./Assets/images/usina_icon.png";
 import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
 import yoga_usina from "./Assets/images/yoga.png";
+import abaixo_assinado_usina from "./Assets/images/Abaixo_Assinado.png";
 import faixa_do_futuro_usina from "./Assets/images/faixa_do_futuro.jpeg";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
-        <><MDBContainer className="my-5 gradient-form">
+        <><MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'
@@ -84,34 +85,40 @@ export default function Home() {
         <MDBRow className='abaixoAssinado'>
             <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
             <MDBIcon className='imageAbaixoAssinado'>
-                <img src="./src/components/pages/images/Abaixo_Assinado.png" alt="ImagemAbaixoAssinado" />
+                <img src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
             </MDBIcon>
 
         </MDBRow>
-            <MDBCarousel showControls showIndicators>
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={1}
-                    src={abelha_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={2}
-                    src={banquete_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block'
-                    itemId={3}
-                    src={yoga_usina}
-                    alt='...'
-                />
-            </MDBCarousel>
+
             <div className='p-5 text-center bg-light'>
                 <h1 className='mb-3'>Heading</h1>
                 <h4 className='mb-3'>Subheading</h4>
-                <a className='btn btn-primary' href='' role='button'>
+                <a className='btn btn-primary mb-5' href='' role='button'>
+                    Call to action
+                </a>
+                <MDBCarousel className="cudepreto" showControls showIndicators>
+                    <MDBCarouselItem
+                        className='w-100 d-block'
+                        itemId={1}
+                        src={abelha_usina}
+                        alt='...'
+                    />
+                    <MDBCarouselItem
+                        className='w-100 d-block'
+                        itemId={2}
+                        src={banquete_usina}
+                        alt='...'
+                    />
+                    <MDBCarouselItem
+                        className='w-100 d-block'
+                        itemId={3}
+                        src={yoga_usina}
+                        alt='...'
+                    />
+                </MDBCarousel>
+                <h1 className='mt-5 mb-3'>Heading</h1>
+                <h4 className='mb-3'>Subheading</h4>
+                <a className='btn btn-primary mb-5' href='' role='button'>
                     Call to action
                 </a>
             </div>
@@ -148,7 +155,7 @@ export default function Home() {
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
                                     <MDBIcon icon="gem" className="me"/>
-                                    Incinerador Usina-EcoCultural
+                                    Usina-EcoCultural
                                 </h6>
                                 <p>
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
@@ -156,55 +163,55 @@ export default function Home() {
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'>Produtos da Loja</h6>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Angular
+                                        Roupas
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        React
+                                        Canecas
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Vue
+                                        Livros
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Laravel
+                                        Outros
                                     </a>
                                 </p>
                             </MDBCol>
 
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'>Links Úteis</h6>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Pricing
+                                        Apoie a Causa
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Settings
+                                        Configurações
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Orders
+                                        Loja
                                     </a>
                                 </p>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        Help
+                                        Eventos
                                     </a>
                                 </p>
                             </MDBCol>
 
                             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'>Contato</h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
                                 <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
@@ -213,13 +220,10 @@ export default function Home() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-                                <strong>ExemploEmailUsina@gmail.com</strong>
+                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
-                                    <MDBIcon icon="phone" className="me"/> + 01 234 567 89
-                                </p>
-                                <p>
-                                    <MDBIcon icon="print" className="me"/> + 01 234 567 89
+                                    <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
                                 </p>
                             </MDBCol>
                         </MDBRow>

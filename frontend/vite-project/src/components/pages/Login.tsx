@@ -31,7 +31,7 @@ export default function Login() {
     return (
         <MDBContainer className="my-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'

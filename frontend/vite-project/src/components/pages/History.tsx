@@ -34,7 +34,7 @@ export default function History() {
         <>
         <MDBContainer className="my-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'
@@ -121,7 +121,6 @@ export default function History() {
                 </div>
              </MDBRow>
         </MDBContainer>
-
 
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>

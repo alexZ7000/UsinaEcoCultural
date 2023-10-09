@@ -19,7 +19,7 @@ import {
     MDBDropdownItem,
     MDBCarousel,
     MDBCarouselItem,
-    MDBBtn,
+    MDBBtn
 } from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 import abelha_usina from "./Assets/images/abelha.jpeg";
@@ -66,7 +66,7 @@ export default function Home() {
     return (
         <><MDBContainer className="my-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'
