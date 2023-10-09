@@ -149,13 +149,13 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className=''>
+                <section className='containerInfoSite'>
                     <MDBContainer className='text-center text-md-start mt-5'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
                                     <MDBIcon icon="gem" className="me"/>
-                                    Usina-EcoCultural
+                                    <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
@@ -163,7 +163,7 @@ export default function Home() {
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Produtos da Loja</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'><u>Produtos da Loja</u></h6>
                                 <p>
                                     <a href='#!' className='text-reset'>
                                         Roupas
@@ -187,7 +187,7 @@ export default function Home() {
                             </MDBCol>
 
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Links Úteis</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
                                     <a href='#!' className='text-reset'>
                                         Apoie a Causa
@@ -211,7 +211,7 @@ export default function Home() {
                             </MDBCol>
 
                             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Contato</h6>
+                                <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
                                 <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
