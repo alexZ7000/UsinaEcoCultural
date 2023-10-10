@@ -12,7 +12,7 @@ import './App.css';
 export default function App() {
     return (
       <div>
-        {/* <Home/> */}
+        { <Home/> }
         {/* <SignUp/> */}
         {/* <Login/> */}
         {/* <Shop/> */}
