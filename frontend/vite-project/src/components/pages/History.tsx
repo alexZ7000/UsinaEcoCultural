@@ -229,31 +229,6 @@ export default function History() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-
-                <div className='textRedesSociais'>
-                    <p><strong>Redes Sociais:</strong></p>
-                </div>
-
-                <div className="threeSocialMediaBottomButtons">
-                    <button className="helpBottomButton">
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV" target="_blank">
-                            <img className="help" src="./src/components/pages/Assets/images/question.png" alt="question" />
-                            Tire suas dúvidas!
-                        </a>
-                    </button>
-                    <button className="socialMediaBottomButton">
-                        <a href="https://linktr.ee/usinaecocultural" target="_blank">
-                            <img className="socialMedia" src="./src/components/pages/Assets/images/social-media.png" alt="social" />
-                            Veja nossas Causas!
-                        </a>
-                    </button>
-                    <button className="instagramBottomButton">
-                        <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
-                            <img className="instagramImage" src="./src/components/pages/Assets/images/instagram.png" alt="Instagram" />
-                            Siga Nosso Instagram!
-                        </a>
-                    </button>
-                </div>
                 <div className='text-center p-4' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados:
                     <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
