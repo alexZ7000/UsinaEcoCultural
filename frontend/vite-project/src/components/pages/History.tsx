@@ -27,62 +27,68 @@ import {
     MDBFooter
 }
     from 'mdb-react-ui-kit';
+import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function History() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
         <>
-        <MDBContainer className="my-5 gradient-form">
-            <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarCenteredExample'
-                            aria-controls='navbarCenteredExample'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon='bars' fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#'>
-                            <img
-                                src={usina_icon}
-                                width={100}
-                                alt=''
-                            />
-                        </MDBNavbarBrand>
+            <MDBContainer className="mb-5 gradient-form">
+                <MDBRow className='container-sm'>
+                    <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type='button'
+                                data-target='#navbarCenteredExample'
+                                aria-controls='navbarCenteredExample'
+                                aria-expanded='false'
+                                aria-label='Toggle navigation'
+                                onClick={() => setShowNavCentred(!showNavCentred)}
+                            >
+                                <MDBIcon icon='bars' fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href='#'>
+                                <img
+                                    src={icone_usina}
+                                    width={100}
+                                    alt=''
+                                />
+                            </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                            <MDBNavbarNav fullWidth={false}  className='mb-2 mb-lg-0'>
-
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink active aria-current='page' href='#'>
-                                        Página Inicial
-                                    </MDBNavbarLink>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink href='#'>Doação</MDBNavbarLink>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBDropdown>
-                                        <MDBDropdownToggle tag='a' className='nav-link'>
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <MDBDropdownItem link>Quem nós somos</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
-                                </MDBNavbarItem>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-            </MDBRow>
-        </MDBContainer>
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
+                                <MDBNavbarNav fullWidth={false}>
+                                    <MDBNavbarItem className="mx-auto ">
+                                        <MDBNavbarLink active aria-current='page' href='#'>
+                                            Página Inicial
+                                        </MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <MDBNavbarLink href="#">Doação</MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <MDBDropdownItem link>Quem nós somos</MDBDropdownItem>
+                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="ms-5 justify-content-center">
+                                        <a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="ms-3">
+                                        <a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
+                                    </MDBNavbarItem>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
+            </MDBContainer>
         <MDBContainer className="my-5 gradient-form">
              <MDBRow className='container-sm'>
                 <div className='p-5 text-center bg-light mb-5'>

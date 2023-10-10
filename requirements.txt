@@ -19,4 +19,7 @@ Comandos para executar o projeto React-Bootstrap:
         Caso o RevoCalendar não esteja instalado (ou não esteja funcionando):
         npm i revo-calendar (Este comando deve ser executado na pasta .//frontend)
 
+        Caso os icones não estejam aparecendo corretamente:
+        npm install mdbreact (Este comando deve ser executado na pasta .//vite-project)
+
     npm run dev

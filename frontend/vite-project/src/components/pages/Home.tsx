@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import {
     MDBFooter,
     MDBContainer,
     MDBRow,
     MDBCol,
-    MDBIcon,
     MDBNavbar,
     MDBNavbarNav,
     MDBNavbarItem,
     MDBNavbarLink,
     MDBNavbarToggler,
     MDBCollapse,
+    MDBIcon,
     MDBNavbarBrand,
     MDBDropdown,
     MDBDropdownToggle,
@@ -53,18 +55,16 @@ export default function Home() {
                         </MDBNavbarBrand>
 
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                            <MDBNavbarNav fullWidth={false}  className='mb-2 mb-lg-0'>
-
-                                <MDBNavbarItem>
+                            <MDBNavbarNav fullWidth={false}>
+                                <MDBNavbarItem className="mx-auto ">
                                     <MDBNavbarLink active aria-current='page' href='#'>
                                         Página Inicial
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBNavbarLink href="#">Doação</MDBNavbarLink>
                                 </MDBNavbarItem>
-
-                                <MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag='a' className='nav-link'>
                                             Sobre nós
@@ -76,6 +76,12 @@ export default function Home() {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
+                                <MDBNavbarItem className="ms-5 justify-content-center">
+                                    <a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="ms-3">
+                                    <a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
+                                </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
                     </MDBContainer>
@@ -84,10 +90,7 @@ export default function Home() {
         </MDBContainer>
         <MDBRow className='abaixoAssinado'>
             <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
-            <MDBIcon className='imageAbaixoAssinado'>
-                <img src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
-            </MDBIcon>
-
+            <img className='imageAbaixoAssinado' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
         </MDBRow>
 
             <div className='p-5 text-center bg-light'>
@@ -96,7 +99,7 @@ export default function Home() {
                 <a className='btn btn-primary mb-5' href='' role='button'>
                     Call to action
                 </a>
-                <MDBCarousel className="cudepreto" showControls showIndicators>
+                <MDBCarousel className="carousel" showControls showIndicators>
                     <MDBCarouselItem
                         className='w-100 d-block'
                         itemId={1}
@@ -223,35 +226,9 @@ export default function Home() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-
-                <div className='textRedesSociais'>
-                    <p><strong>Redes Sociais:</strong></p>
-                </div>
-
-                <div className="threeSocialMediaBottomButtons">
-                    <button className="helpBottomButton">
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvmZKMBmKBZjzmsZCbgkcnLqhfwRlkGVxCFtRnXrQjZlXvgWznxWmLPWlbxzxGPLsJFzLV" target="_blank">
-                            <img className="help" src="./src/components/pages/Assets/images/question.png" alt="question" />
-                            Tire suas dúvidas!
-                        </a>
-                    </button>
-                    <button className="socialMediaBottomButton">
-                        <a href="https://linktr.ee/usinaecocultural" target="_blank">
-                            <img className="socialMedia" src="./src/components/pages/Assets/images/social-media.png" alt="social" />
-                            Veja nossas Causas!
-                        </a>
-                    </button>
-                    <button className="instagramBottomButton">
-                        <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
-                            <img className="instagramImage" src="./src/components/pages/Assets/images/instagram.png" alt="Instagram" />
-                            Siga Nosso Instagram!
-                        </a>
-                    </button>
-                </div>
-                <div className='text-center p-4' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados:
-                    <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-                        MDBootstrap.com
+                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
+                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    <a className='text-reset fw-bold' href='#'>
                     </a>
                 </div>
             </MDBFooter></>

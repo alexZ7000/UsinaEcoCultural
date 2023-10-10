@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import RevoCalendar from 'revo-calendar';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
     MDBFooter,
     MDBContainer,
@@ -64,7 +65,7 @@ export default function Home() {
         },
     };
     return (
-        <><MDBContainer className="my-5 gradient-form">
+        <><MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
                 <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
@@ -87,18 +88,16 @@ export default function Home() {
                         </MDBNavbarBrand>
 
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                            <MDBNavbarNav fullWidth={false}  className='mb-2 mb-lg-0'>
-
-                                <MDBNavbarItem>
+                            <MDBNavbarNav fullWidth={false}>
+                                <MDBNavbarItem className="mx-auto ">
                                     <MDBNavbarLink active aria-current='page' href='#'>
                                         Página Inicial
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBNavbarLink href="#">Doação</MDBNavbarLink>
                                 </MDBNavbarItem>
-
-                                <MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag='a' className='nav-link'>
                                             Sobre nós
@@ -109,6 +108,12 @@ export default function Home() {
                                             <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="ms-5 justify-content-center">
+                                    <a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="ms-3">
+                                    <a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
