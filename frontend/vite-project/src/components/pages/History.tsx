@@ -1,10 +1,16 @@
 import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
+import { Link } from 'react-router-dom'; 
 import usina_icon from './Assets/images/usina_icon.png';
 import usina_faixa_do_futuro from './Assets/images/faixa_do_futuro.jpeg'
 import usina_caminhao_de_lixo from './Assets/images/caminhao-de-lixo-vai-incinerar-residuos-em-uma-usina-de-incineracao_124715-1127-removebg-preview(1).png'
+import Home from './Home';
+import Login from './Login'
+import Shop from "./Shop";
+import EventsCalendary from "./EventsCalendary";
+import SignUp from "./SignUp";
+import About from "./About"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import {
     MDBContainer,
@@ -28,12 +34,12 @@ import {
 }
     from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
+import App from '../../App';
 
 export default function History() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
-        <>
-            <MDBContainer className="mb-5 gradient-form">
+            <><MDBContainer className="mb-5 gradient-form">
                 <MDBRow className='container-sm'>
                     <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                         <MDBContainer fluid>
@@ -54,13 +60,11 @@ export default function History() {
                                     alt=''
                                 />
                             </MDBNavbarBrand>
-
+                            
                             <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
                                 <MDBNavbarNav fullWidth={false}>
                                     <MDBNavbarItem className="mx-auto ">
-                                        <MDBNavbarLink active aria-current='page' href='#'>
-                                            Página Inicial
-                                        </MDBNavbarLink>
+                                        <Link to="../Home">Página Inicial</Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBNavbarLink href="#">Doação</MDBNavbarLink>
