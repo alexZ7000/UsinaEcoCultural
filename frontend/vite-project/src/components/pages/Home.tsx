@@ -58,20 +58,17 @@ export default function Home() {
 
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
                             <MDBNavbarNav fullWidth={false}>
-                                <MDBNavbarItem>
-                                    <Link to="/Shop">Loja</Link>
-                                </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag='a' className='nav-link'>
                                             Sobre
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
-                                            <Link to="/History">Nossa História</Link>
+                                            <Link id="textNavBar" to="/History">Nossa História</Link>
                                             <br />
-                                            <Link to="/Shop">Loja</Link>
+                                            <Link id="textNavBar" to="/Shop">Loja</Link>
                                             <br />
-                                            <Link to="/EventsCalendary">Calendário de Eventos</Link>
+                                            <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
