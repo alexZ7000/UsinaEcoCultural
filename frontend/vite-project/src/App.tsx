@@ -11,14 +11,15 @@ import './App.css';
 
 export default function App() {
     return (
-      <div>
-        { <Home/> }
-        {/* <SignUp/> */}
-        {/* <Login/> */}
-        {/* <Shop/> */}
-        {/* <EventsCalendary/> */}
-        {/* <History/> */}
-        {/* <About/> */}
-      </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Shop" element={<Shop />} />
+                <Route path="/EventsCalendary" element={<EventsCalendary />} />
+                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/history" element={<History />} />
+            </Routes>
+        </BrowserRouter>
     );
 }

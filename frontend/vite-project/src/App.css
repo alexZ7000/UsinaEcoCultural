@@ -79,3 +79,24 @@
 .containerInfoSite {
   border-radius: 10px;
 }
+
+.textEventCalendar{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+#textNavBar{
+  color: #000000a1;
+}
+
+#textNavBarPaginaInicial{
+  color: #000000a1;
+  padding-right: 10px;
+}
+
+.custom-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

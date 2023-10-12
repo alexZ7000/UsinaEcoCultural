@@ -53,26 +53,25 @@ export default function Login() {
 
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
                             <MDBNavbarNav fullWidth={false}  className='mb-2 mb-lg-0'>
-
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink active aria-current='page' href='#'>
-                                        Página Inicial
-                                    </MDBNavbarLink>
+                                <MDBNavbarItem className="custom-center">
+                                    <Link id="textNavBarPaginaInicial" to="/">Página Inicial</Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
                                     <MDBNavbarLink href='#'>Doação</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
                                     <MDBDropdown>
-                                        <MDBDropdownToggle tag='a' className='nav-link'>
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <MDBDropdownItem link>Quem nós somos</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link id="textNavBar" to="/History">Nossa História</Link>
+                                                <br />
+                                                <Link id="textNavBar" to="/Shop">Loja</Link>
+                                                <br />
+                                                <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>

@@ -1,10 +1,16 @@
 import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
+import { Link } from 'react-router-dom'; 
 import usina_icon from './Assets/images/usina_icon.png';
 import usina_faixa_do_futuro from './Assets/images/faixa_do_futuro.jpeg'
 import usina_caminhao_de_lixo from './Assets/images/caminhao-de-lixo-vai-incinerar-residuos-em-uma-usina-de-incineracao_124715-1127-removebg-preview(1).png'
+import Home from './Home';
+import Login from './Login'
+import Shop from "./Shop";
+import EventsCalendary from "./EventsCalendary";
+import SignUp from "./SignUp";
+import About from "./About"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import {
     MDBContainer,
@@ -28,12 +34,12 @@ import {
 }
     from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
+import App from '../../App';
 
 export default function History() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
-        <>
-            <MDBContainer className="mb-5 gradient-form">
+            <><MDBContainer className="mb-5 gradient-form">
                 <MDBRow className='container-sm'>
                     <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                         <MDBContainer fluid>
@@ -54,34 +60,34 @@ export default function History() {
                                     alt=''
                                 />
                             </MDBNavbarBrand>
-
+                            
                             <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
                                 <MDBNavbarNav fullWidth={false}>
-                                    <MDBNavbarItem className="mx-auto ">
-                                        <MDBNavbarLink active aria-current='page' href='#'>
-                                            Página Inicial
-                                        </MDBNavbarLink>
+                                    <MDBNavbarItem className="custom-center">
+                                        <Link id="textNavBarPaginaInicial" to="/">Página Inicial</Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBNavbarLink href="#">Doação</MDBNavbarLink>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBDropdown>
-                                            <MDBDropdownToggle tag='a' className='nav-link'>
-                                                Sobre nós
-                                            </MDBDropdownToggle>
-                                            <MDBDropdownMenu>
-                                                <MDBDropdownItem link>Quem nós somos</MDBDropdownItem>
-                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                                <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
-                                            </MDBDropdownMenu>
-                                        </MDBDropdown>
+                                                <MDBDropdownToggle tag='a' className='nav-link'>
+                                                    Sobre
+                                                </MDBDropdownToggle>
+                                                <MDBDropdownMenu>
+                                                    <Link id="textNavBar" to="/History">Nossa História</Link>
+                                                    <br />
+                                                    <Link id="textNavBar" to="/Shop">Loja</Link>
+                                                    <br />
+                                                    <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
+                                                </MDBDropdownMenu>
+                                            </MDBDropdown>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="ms-5 justify-content-center">
-                                        <a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                        <Link to="/Login"><a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="ms-3">
-                                        <a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
+                                    <Link to="/SignUp"><a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
                                     </MDBNavbarItem>
                                 </MDBNavbarNav>
                             </MDBCollapse>

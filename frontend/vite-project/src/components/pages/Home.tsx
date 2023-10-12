@@ -31,6 +31,8 @@ import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
 import faixa_do_futuro_usina from "./Assets/images/faixa_do_futuro.jpeg";
+import {Link} from "react-router-dom";
+import App from '../../App';
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -73,17 +75,21 @@ export default function Home() {
                                             Sobre nós
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
-                                            <MDBDropdownItem link>Quem nós somos</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                            <MDBDropdownItem link>Nossos Eventos</MDBDropdownItem>
+                                            <Link id="textNavBar" to="/History">Nossa História</Link>
+                                            <br />
+                                            <Link id="textNavBar" to="/Shop">Loja</Link>
+                                            <br />
+                                            <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="ms-5 justify-content-center">
                                     <a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                    <Link to="/Login"><a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="ms-3">
                                     <a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
+                                    <Link to="/SignUp"><a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
