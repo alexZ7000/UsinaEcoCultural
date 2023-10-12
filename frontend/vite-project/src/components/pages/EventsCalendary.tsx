@@ -121,11 +121,9 @@ export default function Home() {
                 </MDBNavbar>
             </MDBRow>
             <MDBRow>
-                <div className="textEventCalendar">
-                    Calandedário de Eventos
-                </div>
+                <h1 className="mt-5">Calendário de Eventos</h1>
             </MDBRow>
-            <RevoCalendar className="mt-5"
+            <RevoCalendar className="mt-2"
                 events = {
                     events
                 }
@@ -153,7 +151,7 @@ export default function Home() {
                 allowAddEvent = {true}
                 openDetailsOnDateSelection = {true}
                 timeFormat24 = {true}
-                showAllDayLabel = {false}
+                showAllDayLabel = {true}
                 detailDateFormat = "DD/MM/YYYY"
             />
         </MDBContainer>

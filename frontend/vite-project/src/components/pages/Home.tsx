@@ -27,6 +27,9 @@ import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
 import yoga_usina from "./Assets/images/yoga.png";
 import abaixo_assinado_usina from "./Assets/images/Abaixo_Assinado.png";
+import usina_schedule from "./Assets/images/schedule.png";
+import usina_parchment from "./Assets/images/parchment.png";
+import usina_donate from "./Assets/images/donate.png";
 import faixa_do_futuro_usina from "./Assets/images/faixa_do_futuro.jpeg";
 
 export default function Home() {
@@ -77,10 +80,10 @@ export default function Home() {
                                     </MDBDropdown>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="ms-5 justify-content-center">
-                                    <a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
+                                    <a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="ms-3">
-                                    <a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
+                                    <a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
@@ -92,43 +95,89 @@ export default function Home() {
             <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
             <img className='imageAbaixoAssinado' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
         </MDBRow>
-
-            <div className='p-5 text-center bg-light'>
-                <h1 className='mb-3'>Heading</h1>
-                <h4 className='mb-3'>Subheading</h4>
-                <a className='btn btn-primary mb-5' href='' role='button'>
-                    Call to action
+        <div className='px-3 text-center bg-light my-5 rounded-2'>
+                <h1 className='mb-3 pt-4'>Site Cultural</h1>
+                <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
+                <a className='btn btn-outline-success mb-5 btn-lg' href='' role='button'>
+                    APOIE A CAUSA!!
                 </a>
-                <MDBCarousel className="carousel" showControls showIndicators>
-                    <MDBCarouselItem
-                        className='w-100 d-block'
-                        itemId={1}
-                        src={abelha_usina}
-                        alt='...'
-                    />
-                    <MDBCarouselItem
-                        className='w-100 d-block'
-                        itemId={2}
-                        src={banquete_usina}
-                        alt='...'
-                    />
-                    <MDBCarouselItem
-                        className='w-100 d-block'
-                        itemId={3}
-                        src={yoga_usina}
-                        alt='...'
-                    />
-                </MDBCarousel>
-                <h1 className='mt-5 mb-3'>Heading</h1>
-                <h4 className='mb-3'>Subheading</h4>
-                <a className='btn btn-primary mb-5' href='' role='button'>
-                    Call to action
-                </a>
+            <MDBCarousel showControls>
+                <MDBCarouselItem
+                    className='w-100 d-block rounded-3'
+                    itemId={1}
+                    src={abelha_usina}
+                    alt='...'
+                />
+                <MDBCarouselItem
+                    className='w-100 d-block rounded-3'
+                    itemId={2}
+                    src={banquete_usina}
+                    alt='...'
+                />
+                <MDBCarouselItem
+                    className='w-100 d-block rounded-3'
+                    itemId={3}
+                    src={yoga_usina}
+                    alt='...'
+                />
+            </MDBCarousel>
+            <div className="container-sm">
+                <div className="row">
+                    <div className="col-md-4 mb-2">
+                        <h4 className='mt-5 border-bottom border-primary'>Faça sua doação</h4>
+                        <button className="btn btn-outline-light">
+                            <a href="#">
+                                <img className=""
+                                     width={225}
+                                     height={210}
+                                     src={usina_donate}
+                                     alt="usina_donate"/>
+                            </a>
+                        </button>
+                    </div>
+                    <div className="col-md-4 mb-2">
+                        <h4 className='mt-5 border-bottom border-primary'>Conheça nossa história</h4>
+                        <button className="btn btn-outline-light">
+                            <a href="#">
+                                <img className=""
+                                     width={200}
+                                     height={190}
+                                     src={usina_parchment}
+                                     alt="usina_calendario"/>
+                            </a>
+                        </button>
+                    </div>
+                    <div className="col-md-4 mb-3">
+                        <h4 className='mt-5 border-bottom border-primary'>Veja nossos próximos eventos</h4>
+                        <button className="btn btn-outline-light">
+                            <a href="#">
+                                <img className=""
+                                     width={200}
+                                     height={200}
+                                     src={usina_schedule}
+                                     alt="usina_calendario"/>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div className="row">
+                <div className="container">
+                    <div className="my-5">
+                        <h1 className="text-center border-bottom mb-3">Onde nos encontrar?</h1>
+                        <iframe className="container rounded-3 border border-2 border-light my-1"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr"
+                        width="1000" height="600" allowFullScreen={true} loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <p className="text-primary text-center">Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</p>
+                    </div>
+                </div>
             </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
-                        <span>Fique conectado conosco em nossas redes sociais</span>
+                        <span>Fique conectado em nossas redes sociais:</span>
                     </div>
                     <div>
                         <a href='' className='me-4 text-reset'>
@@ -140,11 +189,12 @@ export default function Home() {
                         <a href='' className='me-4 text-reset'>
                             <MDBIcon fab icon="google"/>
                         </a>
-                        <a href='' className='me-4 text-reset'>
+                        <a href='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="instagram"/>
                         </a>
                     </div>
                 </section>
+
 
                 <section className='containerInfoSite'>
                     <MDBContainer className='text-center text-md-start mt-5'>
