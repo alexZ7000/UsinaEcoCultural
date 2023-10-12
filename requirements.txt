@@ -6,6 +6,7 @@ Comandos para executar o projeto React-Bootstrap:
     npm install
     cd vite-project
     npm install
+    npm run dev
 
         Caso o bootstrap não esteja instalado (ou não esteja funcionando):
         npm i bootstrap@5.2.3 (Este comando deve ser executado na pasta .//frontend)
@@ -21,5 +22,3 @@ Comandos para executar o projeto React-Bootstrap:
 
         Caso os icones não estejam aparecendo corretamente:
         npm install mdbreact (Este comando deve ser executado na pasta .//vite-project)
-
-    npm run dev

@@ -74,7 +74,9 @@ export default function Home() {
                                     </Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-auto">
-                                    <MDBNavbarLink href="#">Doação</MDBNavbarLink>
+                                    <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                        <MDBNavbarLink>Doação</MDBNavbarLink>
+                                    </Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>

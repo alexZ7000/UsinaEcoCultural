@@ -56,15 +56,8 @@ export default function SignUp() {
                                     />
                                 </Link>
                             </MDBNavbarBrand>
-
                             <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4">
-                                <MDBNavbarNav fullWidth={true}>
-                                    <div className="ms-5"></div>
-                                    <div className="ms-5"></div>
-                                    <div className="ms-5"></div>
-                                    <div className="ms-5"></div>
-                                    <div className="ms-5"></div>
-                                    <div className="ms-5"></div>
+                                <MDBNavbarNav fullWidth={false}>
                                     <MDBNavbarItem className="mx-2">
                                         <Link to="/" style={{ textDecoration: 'none' }}>
                                             <MDBNavbarLink active aria-current='page' href='#'>
@@ -72,8 +65,10 @@ export default function SignUp() {
                                             </MDBNavbarLink>
                                         </Link>
                                     </MDBNavbarItem>
-                                    <MDBNavbarItem className="mx-2">
-                                        <MDBNavbarLink href="#">Doação</MDBNavbarLink>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-2">
                                         <MDBDropdown>
@@ -96,9 +91,6 @@ export default function SignUp() {
                                     <div className="me-5"></div>
                                     <div className="me-5"></div>
                                     <div className="me-5"></div>
-                                    <div className="me-5"></div>
-
-
                                 </MDBNavbarNav>
                             </MDBCollapse>
                         </MDBContainer>

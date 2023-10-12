@@ -66,76 +66,79 @@ export default function Home() {
         },
     };
     return (
-        <><MDBContainer className="mb-5 gradient-form">
-            <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarCenteredExample'
-                            aria-controls='navbarCenteredExample'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon='bars' fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#' className="ms-1">
-                            <Link to="/" style={{ textDecoration: 'none' }}>
-                                <img
-                                    src={icone_usina}
-                                    width={100}
-                                    alt=''
-                                />
-                            </Link>
-                        </MDBNavbarBrand>
+        <>
+            <MDBContainer className="mb-5 gradient-form">
+                <MDBRow className='container-sm'>
+                    <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type='button'
+                                data-target='#navbarCenteredExample'
+                                aria-controls='navbarCenteredExample'
+                                aria-expanded='false'
+                                aria-label='Toggle navigation'
+                                onClick={() => setShowNavCentred(!showNavCentred)}
+                            >
+                                <MDBIcon icon='bars' fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href='#' className="ms-1">
+                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                    <img
+                                        src={icone_usina}
+                                        width={100}
+                                        alt=''
+                                    />
+                                </Link>
+                            </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
-                            <MDBNavbarNav fullWidth={true}>
-                                <div className="ms-5"></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/" style={{ textDecoration: 'none' }}>
-                                        <MDBNavbarLink active aria-current='page' href='#'>
-                                            Página Inicial
-                                        </MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <MDBNavbarLink href="#">Doação</MDBNavbarLink>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <MDBDropdown>
-                                        <MDBDropdownToggle tag='a' className='nav-link'>
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <Link to="/History" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/Shop" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Loja</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
-                                            </Link>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="ms-5">
-                                    <Link to="/Login"><a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-4">
-                                    <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
-                                </MDBNavbarItem>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-            </MDBRow>
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
+                                <MDBNavbarNav fullWidth={true}>
+                                    <div className="ms-5"></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                                </Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="ms-5">
+                                        <Link to="/Login"><a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-4">
+                                        <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
+                                    </MDBNavbarItem>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
             <MDBRow>
                 <div className="mt-5 mb-3 ">
                     <h1>Calendário de Eventos</h1>
