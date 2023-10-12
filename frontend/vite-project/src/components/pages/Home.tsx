@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 import {
     MDBFooter,
     MDBContainer,
@@ -30,7 +29,6 @@ import abaixo_assinado_usina from "./Assets/images/Abaixo_Assinado.png";
 import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
-import faixa_do_futuro_usina from "./Assets/images/faixa_do_futuro.jpeg";
 import {Link} from "react-router-dom";
 import App from '../../App';
 
@@ -51,20 +49,29 @@ export default function Home() {
                         >
                             <MDBIcon icon='bars' fas />
                         </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#'>
+                        <MDBNavbarBrand href='#' className="ms-1">
+                            <Link to="/" style={{ textDecoration: 'none' }}>
                             <img
                                 src={icone_usina}
                                 width={100}
                                 alt=''
                             />
+                            </Link>
                         </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                            <MDBNavbarNav fullWidth={false}>
-                                <MDBNavbarItem className="mx-auto ">
-                                    <MDBNavbarLink active aria-current='page' href='#'>
-                                        Página Inicial
-                                    </MDBNavbarLink>
+                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
+                            <MDBNavbarNav fullWidth={true}>
+                                <div className="ms-5"></div>
+                                <div className='ms-5'></div>
+                                <div className='ms-5'></div>
+                                <div className='ms-5'></div>
+                                <div className='ms-5'></div>
+                                <MDBNavbarItem className="mx-auto">
+                                    <Link to="/" style={{ textDecoration: 'none' }}>
+                                        <MDBNavbarLink active aria-current='page' href='#'>
+                                            Página Inicial
+                                        </MDBNavbarLink>
+                                    </Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-auto">
                                     <MDBNavbarLink href="#">Doação</MDBNavbarLink>
@@ -75,21 +82,23 @@ export default function Home() {
                                             Sobre nós
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
-                                            <Link id="textNavBar" to="/History">Nossa História</Link>
-                                            <br />
-                                            <Link id="textNavBar" to="/Shop">Loja</Link>
-                                            <br />
-                                            <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
+                                            <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                            </Link>
+                                            <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                            </Link>
+                                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                            </Link>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem className="ms-5 justify-content-center">
-                                    <a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a>
-                                    <Link to="/Login"><a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
+                                <MDBNavbarItem className="ms-5">
+                                    <Link to="/Login"><a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem className="ms-3">
-                                    <a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a>
-                                    <Link to="/SignUp"><a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
+                                <MDBNavbarItem className="mx-4">
+                                    <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
@@ -132,37 +141,37 @@ export default function Home() {
                     <div className="col-md-4 mb-2">
                         <h4 className='mt-5 border-bottom border-primary'>Faça sua doação</h4>
                         <button className="btn btn-outline-light">
-                            <a href="#">
+                            <Link to="/Donate" style={{ textDecoration: 'none' }}>
                                 <img className=""
                                      width={225}
                                      height={210}
                                      src={usina_donate}
                                      alt="usina_donate"/>
-                            </a>
+                            </Link>
                         </button>
                     </div>
                     <div className="col-md-4 mb-2">
                         <h4 className='mt-5 border-bottom border-primary'>Conheça nossa história</h4>
                         <button className="btn btn-outline-light">
-                            <a href="#">
+                            <Link to="/History" style={{ textDecoration: 'none' }}>
                                 <img className=""
                                      width={200}
                                      height={190}
                                      src={usina_parchment}
-                                     alt="usina_calendario"/>
-                            </a>
+                                     alt="usina_parchment"/>
+                            </Link>
                         </button>
                     </div>
                     <div className="col-md-4 mb-3">
                         <h4 className='mt-5 border-bottom border-primary'>Veja nossos próximos eventos</h4>
                         <button className="btn btn-outline-light">
-                            <a href="#">
+                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
                                 <img className=""
                                      width={200}
                                      height={200}
                                      src={usina_schedule}
                                      alt="usina_calendario"/>
-                            </a>
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -252,14 +261,14 @@ export default function Home() {
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to="/Shop" className="text-dark">
                                         Loja
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to="/History" className="text-dark">
                                         Eventos
-                                    </a>
+                                    </Link>
                                 </p>
                             </MDBCol>
 

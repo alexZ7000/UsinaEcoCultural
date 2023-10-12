@@ -53,41 +53,56 @@ export default function History() {
                             >
                                 <MDBIcon icon='bars' fas />
                             </MDBNavbarToggler>
-                            <MDBNavbarBrand href='#'>
-                                <img
-                                    src={icone_usina}
-                                    width={100}
-                                    alt=''
-                                />
+                            <MDBNavbarBrand href='#' className="ms-1">
+                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                    <img
+                                        src={icone_usina}
+                                        width={100}
+                                        alt=''
+                                    />
+                                </Link>
                             </MDBNavbarBrand>
-                            
-                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                                <MDBNavbarNav fullWidth={false}>
-                                    <MDBNavbarItem className="custom-center">
-                                        <Link id="textNavBarPaginaInicial" to="/">Página Inicial</Link>
+
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
+                                <MDBNavbarNav fullWidth={true}>
+                                    <div className="ms-5"></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBNavbarLink href="#">Doação</MDBNavbarLink>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBDropdown>
-                                                <MDBDropdownToggle tag='a' className='nav-link'>
-                                                    Sobre
-                                                </MDBDropdownToggle>
-                                                <MDBDropdownMenu>
-                                                    <Link id="textNavBar" to="/History">Nossa História</Link>
-                                                    <br />
-                                                    <Link id="textNavBar" to="/Shop">Loja</Link>
-                                                    <br />
-                                                    <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
-                                                </MDBDropdownMenu>
-                                            </MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                                </Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
                                     </MDBNavbarItem>
-                                    <MDBNavbarItem className="ms-5 justify-content-center">
-                                        <Link to="/Login"><a className='btn btn-outline-primary ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
+                                    <MDBNavbarItem className="ms-5">
+                                        <Link to="/Login"><a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
                                     </MDBNavbarItem>
-                                    <MDBNavbarItem className="ms-3">
-                                    <Link to="/SignUp"><a className='btn btn-primary' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
+                                    <MDBNavbarItem className="mx-4">
+                                        <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
                                     </MDBNavbarItem>
                                 </MDBNavbarNav>
                             </MDBCollapse>
@@ -100,7 +115,7 @@ export default function History() {
                 <div className='p-5 text-center bg-light mb-5'>
                     <h1 className='mb-3'>NOSSA HISTÓRIA</h1>
                     <h4 className='mb-3'>O Incenerador Vergueiro</h4>
-                    <img src={usina_caminhao_de_lixo} alt="truckTrash"/>
+                    <img src={usina_caminhao_de_lixo} className="img-fluid" alt="truckTrash"/>
 
                     <h1>Um Passado Preocupante</h1>
                     <p>
@@ -134,114 +149,114 @@ export default function History() {
              </MDBRow>
         </MDBContainer>
 
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-                <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-                    <div className='me-5 d-none d-lg-block'>
-                        <span>Fique conectado conosco em nossas redes sociais</span>
+                <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+                    <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+                        <div className='me-5 d-none d-lg-block'>
+                            <span>Fique conectado em nossas redes sociais:</span>
+                        </div>
+                        <div>
+                            <a href='' className='me-4 text-reset'>
+                                <MDBIcon fab icon="facebook-f"/>
+                            </a>
+                            <a href='' className='me-4 text-reset'>
+                                <MDBIcon fab icon="twitter"/>
+                            </a>
+                            <a href='' className='me-4 text-reset'>
+                                <MDBIcon fab icon="google"/>
+                            </a>
+                            <a href='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
+                                <MDBIcon fab icon="instagram"/>
+                            </a>
+                        </div>
+                    </section>
+
+
+                    <section className='containerInfoSite'>
+                        <MDBContainer className='text-center text-md-start mt-5'>
+                            <MDBRow className='mt-3'>
+                                <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
+                                    <h6 className='text-uppercase fw-bold mb-4'>
+                                        <MDBIcon icon="gem" className="me"/>
+                                        <u>Usina-EcoCultural</u>
+                                    </h6>
+                                    <p>
+                                        Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                    </p>
+                                </MDBCol>
+
+                                <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
+                                    <h6 className='text-uppercase fw-bold mb-4'><u>Produtos da Loja</u></h6>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Roupas
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Canecas
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Livros
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Outros
+                                        </a>
+                                    </p>
+                                </MDBCol>
+
+                                <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+                                    <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Apoie a Causa
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href='#!' className='text-reset'>
+                                            Configurações
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <Link to="/Shop" className="text-dark">
+                                            Loja
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link to="/History" className="text-dark">
+                                            Eventos
+                                        </Link>
+                                    </p>
+                                </MDBCol>
+
+                                <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+                                    <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
+                                    <p>
+                                        <MDBIcon icon="home" className="me"/>
+                                        <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                        <br/>
+                                        Perto da estação Santos-Imigrantes (Linha Verde)
+                                    </p>
+                                    <p>
+                                        <MDBIcon icon="envelope" className="me"/>
+                                        <strong>usinaecoculturalnaooficial@gmail.com</strong>
+                                    </p>
+                                    <p>
+                                        <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
+                                    </p>
+                                </MDBCol>
+                            </MDBRow>
+                        </MDBContainer>
+                    </section>
+                    <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
+                        © {new Date().getFullYear()} Todos os Direitos Reservados
+                        <a className='text-reset fw-bold' href='#'>
+                        </a>
                     </div>
-                    <div>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="facebook-f"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="twitter"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="google"/>
-                        </a>
-                        <a href='' className='me-4 text-reset'>
-                            <MDBIcon fab icon="instagram"/>
-                        </a>
-                    </div>
-                </section>
-
-                <section className=''>
-                    <MDBContainer className='text-center text-md-start mt-5'>
-                        <MDBRow className='mt-3'>
-                            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>
-                                    <MDBIcon icon="gem" className="me"/>
-                                    Usina-EcoCultural
-                                </h6>
-                                <p>
-                                    Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
-                                </p>
-                            </MDBCol>
-
-                            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Produtos da Loja</h6>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Roupas
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Canecas
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Livros
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Outros
-                                    </a>
-                                </p>
-                            </MDBCol>
-
-                            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Links Úteis</h6>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Apoie a Causa
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Configurações
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Loja
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href='#!' className='text-reset'>
-                                        Eventos
-                                    </a>
-                                </p>
-                            </MDBCol>
-
-                            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                                <h6 className='text-uppercase fw-bold mb-4'>Contato</h6>
-                                <p>
-                                    <MDBIcon icon="home" className="me"/>
-                                    <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                    <br/>
-                                    Perto da estação Santos-Imigrantes (Linha Verde)
-                                </p>
-                                <p>
-                                    <MDBIcon icon="envelope" className="me"/>
-                                    <strong>usinaecoculturalnaooficial@gmail.com</strong>
-                                </p>
-                                <p>
-                                    <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
-                                </p>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBContainer>
-                </section>
-                <div className='text-center p-4' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados:
-                    <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-                        MDBootstrap.com
-                    </a>
-                </div>
-            </MDBFooter>
+                </MDBFooter>
         </>
     );
 }

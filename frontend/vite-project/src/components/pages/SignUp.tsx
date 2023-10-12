@@ -27,88 +27,110 @@ import {
 }
     from 'mdb-react-ui-kit';
 import image from "./Assets/images/usina_icon.png";
+import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function SignUp() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
         <>
-        <MDBContainer className="my-5 gradient-form">
-            <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarCenteredExample'
-                            aria-controls='navbarCenteredExample'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon='bars' fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#'>
-                            <img
-                                src={image}
-                                width={100}
-                                alt=''
-                            />
-                        </MDBNavbarBrand>
+            <MDBContainer className="mb-5 gradient-form">
+                <MDBRow className='container-sm'>
+                    <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type='button'
+                                data-target='#navbarCenteredExample'
+                                aria-controls='navbarCenteredExample'
+                                aria-expanded='false'
+                                aria-label='Toggle navigation'
+                                onClick={() => setShowNavCentred(!showNavCentred)}
+                            >
+                                <MDBIcon icon='bars' fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href='#' className="ms-1">
+                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                    <img
+                                        src={icone_usina}
+                                        width={100}
+                                        alt=''
+                                    />
+                                </Link>
+                            </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4 mb-4" id='navbarCenteredExample'>
-                            <MDBNavbarNav fullWidth={false}  className='mb-2 mb-lg-0'>
-
-                                <MDBNavbarItem className="custom-center">
-                                    <Link id="textNavBarPaginaInicial" to="/">Página Inicial</Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink href='#'>Doação</MDBNavbarLink>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBDropdown>
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center my-4">
+                                <MDBNavbarNav fullWidth={true}>
+                                    <div className="ms-5"></div>
+                                    <div className="ms-5"></div>
+                                    <div className="ms-5"></div>
+                                    <div className="ms-5"></div>
+                                    <div className="ms-5"></div>
+                                    <div className="ms-5"></div>
+                                    <MDBNavbarItem className="mx-2">
+                                        <Link to="/" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-2">
+                                        <MDBNavbarLink href="#">Doação</MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-2">
+                                        <MDBDropdown>
                                             <MDBDropdownToggle tag='a' className='nav-link'>
-                                                Sobre
+                                                Sobre nós
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu>
-                                                <Link id="textNavBar" to="/History">Nossa História</Link>
-                                                <br />
-                                                <Link id="textNavBar" to="/Shop">Loja</Link>
-                                                <br />
-                                                <Link id="textNavBar" to="/EventsCalendary">Calendário de Eventos</Link>
+                                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                                </Link>
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
-                                </MDBNavbarItem>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-            </MDBRow>
-        </MDBContainer>
+                                    </MDBNavbarItem>
+                                    <div className="me-5"></div>
+                                    <div className="me-5"></div>
+                                    <div className="me-5"></div>
+                                    <div className="me-5"></div>
+
+
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
+            </MDBContainer>
         <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: ''}}>
-            <div className='mask gradient-custom-3'></div>
-            <MDBCard className='m-5' style={{maxWidth: '600px'}}>
-                <MDBCardBody className='px-5'>
+            <MDBCard style={{maxWidth: '600px'}}>
+                <MDBCardBody>
                     <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
                     <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
-                    <MDBInput wrapperClass='mb-4' label='E-mail' size='lg' id='form2' type='email'/>
-                    <MDBInput wrapperClass='mb-4' label='Senha' size='lg' id='form3' type='password'/>
+                    <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
+                    <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
                     <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
                     <div className='d-flex flex-row justify-content-center mb-4'>
                         <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                         <p>Eu concordo com os <a href="#"><i><u>Termos de Serviço</u></i></a></p>
                     </div>
-                    <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg'>Registrar-se</MDBBtn>
+                    <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success' size='lg'>Registrar-se</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
         </MDBContainer>
-
-        <MDBFooter bgColor='light' className='text-center text-lg-left'>
-            <div className='text-center p-3' >
-                &copy; {new Date().getFullYear()} Copyright:{' '}
-                <a className='text-dark' href='#'>
-                    Todos os direitos reservados
-                </a>
+            <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
+                <p className="mb-0 me-2">Já tem uma conta?</p>
+                <Link to="/Login"><a className='btn btn-outline-success' href='' role='button'><MDBIcon far icon="user" />Login</a></Link>
             </div>
-        </MDBFooter>
+            <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
+                <div className='text-center p-3' >
+                    <p>&copy; {new Date().getFullYear()} Copyright:{' '}
+                        Todos os direitos reservados</p>
+                </div>
+            </MDBFooter>
         </>
     );
 }
