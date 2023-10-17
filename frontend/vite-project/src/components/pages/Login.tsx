@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
+import { Link } from 'react-router-dom'; 
 import image from './Assets/images/usina_icon.png';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import {
     MDBContainer,
     MDBBtn,

@@ -96,8 +96,14 @@ export default function Home() {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem className="ms-5">
-                                    <Link to="/Login"><a className='btn btn-outline-success ms-5' href='' role='button'><MDBIcon fas icon="user" /> Login</a></Link>
+                                <MDBNavbarItem className="mx-4">
+                                    <div className='mx-auto'>
+                                        <Link to="/Login">
+                                            <a className='btn mb-2' href='' role='button'>
+                                                <MDBIcon fas icon="user" />Login
+                                            </a>
+                                        </Link>
+                                    </div>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-4">
                                     <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
@@ -113,7 +119,7 @@ export default function Home() {
             <img className='imageAbaixoAssinado' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
         </MDBRow>
         <div className='px-3 text-center bg-light my-5 rounded-2'>
-                <h1 className='mb-3 pt-4'>Site Cultural</h1>
+                <h1 className='mb-3 pt-4'><strong><u>Site Cultural</u></strong></h1>
                 <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
                 <a className='btn btn-outline-success mb-5 btn-lg' href='' role='button'>
                     APOIE A CAUSA!!
@@ -197,17 +203,20 @@ export default function Home() {
                         <span>Fique conectado em nossas redes sociais:</span>
                     </div>
                     <div>
-                        <a href='' className='me-4 text-reset'>
+                        <a href='https://www.facebook.com/usinaecocultural/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="facebook-f"/>
                         </a>
-                        <a href='' className='me-4 text-reset'>
+                        <a href='' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="twitter"/>
                         </a>
-                        <a href='' className='me-4 text-reset'>
+                        <a href='' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="google"/>
                         </a>
                         <a href='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="instagram"/>
+                        </a>
+                        <a href='https://www.youtube.com/@usinaecocultural' target="_blank" className='me-4 text-reset'>
+                            <MDBIcon fab icon="youtube" />
                         </a>
                     </div>
                 </section>
@@ -223,6 +232,10 @@ export default function Home() {
                                 </h6>
                                 <p>
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                </p>
+                                <p>
+                                    Para saber mais, acesse nosso:
+                                    <a href="https://linktr.ee/usinaecocultural">Linktr.ee</a>
                                 </p>
                             </MDBCol>
 
