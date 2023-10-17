@@ -1,13 +1,7 @@
-const express = require('express');
-const routes = express.Router();
+const { Router } = require('express');
+const router = Router();
+const controller = require('./users/controller');
 
-routes.get('/', (req, res) => {
-    res.send('using api route');
-});
+router.get('/', controller.getUsers)
 
-routes.post('/login', (req, res) => {
-    const { email, password } = req.body;
-    res.send(email + ' ' + password);
-});
-
-module.exports = routes;
+module.exports = router;
