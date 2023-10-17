@@ -1,7 +1,8 @@
 const pool = require('./database.js');
+const queries = require('./queries.js');
 
 const getUsers = (req, res) => {
-    pool.query("SELECT * FROM login_info", (errors, result) => {
+    pool.query(queries.getUsers, (errors, result) => {
         if (errors) throw errors;
         res.status(200).json(result.rows);
     });
