@@ -8,3 +8,4 @@ Diagrama de Casos de Uso:
 https://mauabr-my.sharepoint.com/:u:/g/personal/23_00051-0_maua_br/EUouk5ApPC5EuRaq0bQFEX4BvyuU0ULClPk0u2e5_kTEyQ?e=nCCZna
 Diagrama de Entidade e Relacionamento:
 https://mauabr-my.sharepoint.com/:u:/g/personal/23_00051-0_maua_br/ERAxRYPqGIdOuojtytjaQewBuJsN3zD9P4UoD74OZ4Z6sA?e=mJrvwR
+Modelagem finalizada e sujeito a alterações.
