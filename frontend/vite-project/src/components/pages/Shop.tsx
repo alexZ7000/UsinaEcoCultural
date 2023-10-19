@@ -165,20 +165,23 @@ function renderProduct(product: Product): React.FC {
         if (productsContainer) {
             productsContainer.innerHTML = products.map(renderProduct).join('');
         }
-    return  
-        <div class="card col-3" style="width: 18rem;">
-            <img src=${product.imageLink} class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title text-center">${product.name}</h5>
-                <p class="card-text">${product.description}</p>
-                <p></p>
-                <p></p>
-                <select class="chinen">
-                     <option>chinen</option>
-                </select>
-                <p></p>
-                <h3 class="text-center">R$ ${product.price}</h3>
-                <a href="#" class="btn btn-primary"onClick=() => adicionarAoCarrinho(${product.name}, ${product.price})>Adicionar ao Carrinho</a>
+    return 
+        <div class="container container-fluid mt-4  p-3">
+            <div class="row"></div>
+                <div class="card col-3" style="width: 18rem;">
+                    <img src=${product.imageLink} class="card-img-top"></img>
+                <div class="card-body">
+                    <h5 class="card-title text-center">${product.name}</h5>
+                    <p class="card-text">${product.description}</p>
+                    <p></p>
+                    <p></p>
+                    <select class="chinen">
+                        <option>chinen</option>
+                    </select>
+                    <p></p>
+                    <h3 class="text-center">R$ ${product.price}</h3>
+                    <a href="#" class="btn btn-primary"onClick=() => adicionarAoCarrinho(${product.name}, ${product.price})>Adicionar ao Carrinho</a>
+                </div>
             </div>
         </div>
     
