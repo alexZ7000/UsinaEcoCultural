@@ -71,8 +71,8 @@ interface Product {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
   
-      const adicionarAoCarrinho = (name = String ,preco = Number)  => {
-      const novoProduto = { nome: name , preco: preco};
+      const adicionarAoCarrinho = (product:Product)  => {
+      const novoProduto = { nome: product.name , preco: product.price};
       setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
       setL(l => l + 1);
       };
@@ -90,7 +90,7 @@ interface Product {
               </select>
               <p></p>
               <h3 className="text-center">R$ {product.price}</h3>
-              <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product.name, product.price)}>
+              <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product)}>
                 Adicionar ao Carrinho
               </a>
             </div>
