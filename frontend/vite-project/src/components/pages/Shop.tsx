@@ -33,7 +33,7 @@ import {
     MDBDropdownItem,
     MDBNavbarBrand,
     MDBFooter
-};
+}from 'mdb-react-ui-kit';
 interface Product {
     idProduto: number;
     name: string;
@@ -67,30 +67,30 @@ interface Product {
     
   ];
 
-  function cardProduto(product: Product) {
+  function renderProduct(product: Product) {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
   
-    const adicionarAoCarrinho = (nomeProduto: string, precoProduto: number) => {
-      const novoProduto = { nome: nomeProduto, preco: precoProduto };
+      const adicionarAoCarrinho = (name = String ,preco = Number)  => {
+      const novoProduto = { nome: name , preco: preco};
       setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
       setL(l => l + 1);
-    };
+      };
   
     return (
-      <div class="container container-fluid mt-4 p-3">
-        <div class="row">
-          <div class="card col-3" style={{ width: '18rem' }}>
-            <img src={product.imageLink} class="card-img-top" alt="Imagem do Produto" />
-            <div class="card-body">
-              <h5 class="card-title text-center">{product.name}</h5>
-              <p class="card-text">{product.description}</p>
-              <select class="chinen">
+      <div className="container container-fluid mt-4 p-3">
+        <div className="row">
+          <div className="card col-3" style={{ width: '18rem' }}>
+            <img src={product.imageLink} className="card-img-top" alt="Imagem do Produto" />
+            <div className="card-body">
+              <h5 className="card-title text-center">{product.name}</h5>
+              <p className="card-text">{product.description}</p>
+              <select className="chinen">
                 <option>chinen</option>
               </select>
               <p></p>
-              <h3 class="text-center">R$ {product.price}</h3>
-              <a href="#" class="btn btn-primary" onClick={() => adicionarAoCarrinho(product.name, product.price)}>
+              <h3 className="text-center">R$ {product.price}</h3>
+              <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product.name, product.price)}>
                 Adicionar ao Carrinho
               </a>
             </div>
@@ -102,19 +102,19 @@ interface Product {
   
   function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcularTotal: () => number }) {
     return (
-      <div class="container container-fluid mt-4 p-3">
-        <div class="row">
-          <div class="col-12">
+      <div className="container container-fluid mt-4 p-3">
+        <div className="row">
+          <div className="col-12">
             <h2>Seus Itens:</h2>
             <ul>
-              {carrinho.map((item, index) => (
+              {carrinho.map((product, index) => (
                 <li key={index}>
-                  Produto: {item.nome}, Preço: R$ {item.preco}
+                  Produto: {product.name}, Preço: R$ {product.preco}
                 </li>
               ))}
             </ul>
             <h3>O valor total foi de: R$ {calcularTotal()}</h3>
-            <button class="btn btn-success">Continuar com o pagamento</button>
+            <a href="xxxxxx.br"className="btn btn-success" >Continuar com o pagamento</a>
           </div>
         </div>
       </div>
