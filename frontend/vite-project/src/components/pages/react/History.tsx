@@ -34,7 +34,7 @@ import {
 }
     from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
-import App from '../../App';
+import App from '../../../App';
 
 export default function History() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -103,7 +103,7 @@ export default function History() {
                                     <MDBNavbarItem className="mx-4">
                                         <div className='mx-auto'>
                                             <Link to="/Login">
-                                                <a className='btn mb-2' href='' role='button'>
+                                                <a className='btn mb-2 btn btn-outline-success' href='' role='button'>
                                                     <MDBIcon fas icon="user" />Login
                                                 </a>
                                             </Link>

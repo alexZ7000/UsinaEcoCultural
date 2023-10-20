@@ -131,7 +131,7 @@ export default function Home() {
                                     <MDBNavbarItem className="mx-4">
                                         <div className='mx-auto'>
                                             <Link to="/Login">
-                                                <a className='btn mb-2' href='' role='button'>
+                                                <a className='btn mb-2 btn btn-outline-success' href='' role='button'>
                                                     <MDBIcon fas icon="user" />Login
                                                 </a>
                                             </Link>

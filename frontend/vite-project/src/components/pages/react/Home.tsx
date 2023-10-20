@@ -30,7 +30,7 @@ import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
 import {Link} from "react-router-dom";
-import App from '../../App';
+import App from '../../../App';
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -99,7 +99,7 @@ export default function Home() {
                                 <MDBNavbarItem className="mx-4">
                                     <div className='mx-auto'>
                                         <Link to="/Login">
-                                            <a className='btn mb-2' href='' role='button'>
+                                            <a className='btn mb-2 btn btn-outline-success' href='' role='button'>
                                                 <MDBIcon fas icon="user" />Login
                                             </a>
                                         </Link>

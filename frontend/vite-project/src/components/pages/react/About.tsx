@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
+import image from './Assets/images/usina_icon.png';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
+
 import {
-    MDBFooter,
     MDBContainer,
+    MDBBtn,
+    MDBIcon,
+    MDBInput,
     MDBRow,
     MDBCol,
     MDBNavbar,
@@ -11,22 +18,17 @@ import {
     MDBNavbarLink,
     MDBNavbarToggler,
     MDBCollapse,
-    MDBIcon,
-    MDBNavbarBrand,
     MDBDropdown,
-    MDBDropdownToggle,
     MDBDropdownMenu,
+    MDBDropdownToggle,
     MDBDropdownItem,
-    MDBCarousel,
-    MDBCarouselItem,
-    MDBBtn, MDBBtnGroup, MDBCardHeader, MDBCardText,
-} from 'mdb-react-ui-kit';
+    MDBNavbarBrand,
+    MDBFooter
+}
+    from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
-import {Link} from "react-router-dom";
-import App from '../../App';
-import {Button} from "react-bootstrap";
 
-export default function Home() {
+export default function About() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
         <>
@@ -69,7 +71,9 @@ export default function Home() {
                                         </Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
-                                        <MDBNavbarLink href="#">Doação</MDBNavbarLink>
+                                        <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-auto">
                                         <MDBDropdown>
@@ -92,7 +96,7 @@ export default function Home() {
                                     <MDBNavbarItem className="mx-4">
                                         <div className='mx-auto'>
                                             <Link to="/Login">
-                                                <a className='btn mb-2' href='' role='button'>
+                                                <a className='btn mb-2 btn btn-outline-success' href='' role='button'>
                                                     <MDBIcon fas icon="user" />Login
                                                 </a>
                                             </Link>
@@ -107,36 +111,7 @@ export default function Home() {
                     </MDBNavbar>
                 </MDBRow>
             </MDBContainer>
-            <div className="container-sm">
-                <div className="row">
-                    <div className="col-md-6 mb-4">
-                        <div className="card">
 
-                            <h1 className="card-title">Roupas e Objetos</h1>
-                            <p className="card-text">Doe diversos itens ao movimento</p>
-                            <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
-                                <MDBBtn className="me-2 rounded-2" color="success">Roupas</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">Objetos</MDBBtn>
-                                <MDBBtn className="rounded-2" color="success">Outros</MDBBtn>
-                            </MDBBtnGroup>
-                            <MDBBtn className="mt-5" outline color="success">CONFIRMAR</MDBBtn>
-                        </div>
-                    </div>
-                    <div className="col-md-6 mb-4">
-                        <div className="card">
-                            <h1 className="card-title">Dinheiro</h1>
-                            <p className="card-text">Escolha o valor que deseja doar ao movimento</p>
-                            <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
-                                <MDBBtn className="me-2 rounded-2" color="success">10 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">25 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">50 R$</MDBBtn>
-                                <MDBBtn className="rounded-2" color="success">Outro</MDBBtn>
-                            </MDBBtnGroup>
-                            <MDBBtn className="mt-5" outline color="success">CONFIRMAR</MDBBtn>
-                        </div>
-                    </div>
-                        </div>
-                    </div>
 
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
