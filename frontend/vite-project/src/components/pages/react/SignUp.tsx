@@ -109,7 +109,7 @@ export default function SignUp() {
                         <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                         <p>Eu concordo com os <a href="#"><i><u>Termos de Serviço</u></i></a></p>
                     </div>
-                    <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success' size='lg'>Registrar-se</MDBBtn>
+                    <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success mx-auto' size='lg'>Registrar-se</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
         </MDBContainer>
@@ -118,9 +118,10 @@ export default function SignUp() {
                 <Link to="/Login"><a className='btn btn-outline-success' href='' role='button'><MDBIcon far icon="user" />Login</a></Link>
             </div>
             <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
-                <div className='text-center p-3' >
-                    <p>&copy; {new Date().getFullYear()} Copyright:{' '}
-                        Todos os direitos reservados</p>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
+                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    <a className='text-reset fw-bold' href='#'>
+                    </a>
                 </div>
             </MDBFooter>
         </>

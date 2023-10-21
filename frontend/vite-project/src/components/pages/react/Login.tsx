@@ -98,11 +98,11 @@ export default function Login() {
                         <MDBCardBody>
                             <h2 className="text-uppercase text-center mb-5">Faça seu Login</h2>
                             <div className='my-5 mx-auto'>
-                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'green' }}>
+                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'darkblue' }}>
                                     <MDBIcon fab icon='facebook-f' size="lg"/>
                                 </MDBBtn>
 
-                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'green' }}>
+                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'grey' }}>
                                     <MDBIcon fab icon='google' size="lg"/>
                                 </MDBBtn>
                             </div>
@@ -112,7 +112,7 @@ export default function Login() {
                                 <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                                 <p>Lembrar meus dados para próximo login</p>
                             </div>
-                            <MDBBtn className='mb-4 w-100 btn-success gradient-custom-4' size='lg'>Login</MDBBtn>
+                            <MDBBtn className='mb-4 w-100 btn-success gradient-custom-4 mx-auto' size='lg'>Login</MDBBtn>
                             <div className="text-center pt-1 pb-1">
                                 <a className="text-primary" href="#!">Esqueceu sua senha?</a>
                             </div>
@@ -124,9 +124,10 @@ export default function Login() {
                     <Link to="/SignUp"><a className='btn btn-outline-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
                 </div>
                 <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
-                    <div className='text-center p-3' >
-                        <p>&copy; {new Date().getFullYear()} Copyright:{' '}
-                            Todos os direitos reservados</p>
+                    <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
+                        © {new Date().getFullYear()} Todos os Direitos Reservados
+                        <a className='text-reset fw-bold' href='#'>
+                        </a>
                     </div>
                 </MDBFooter>
             </MDBRow>

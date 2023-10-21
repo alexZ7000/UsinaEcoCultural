@@ -191,7 +191,10 @@ export default function Home() {
                         <h1 className="text-center border-bottom mb-3">Onde nos encontrar?</h1>
                         <iframe className="container rounded-3 border border-2 border-light my-1"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr"
-                        width="1000" height="600" allowFullScreen={true} loading="lazy"
+                            width="1000" 
+                            height="600" 
+                            allowFullScreen={true} 
+                            loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <p className="text-primary text-center">Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</p>
                     </div>
@@ -306,7 +309,7 @@ export default function Home() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                     <a className='text-reset fw-bold' href='#'>
                     </a>
