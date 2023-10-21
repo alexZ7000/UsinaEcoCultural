@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('You are connected with the database!');
 });
 
 app.use("/api/v1/users", userRoutes);
