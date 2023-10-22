@@ -307,7 +307,7 @@ interface Product {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                     <a className='text-reset fw-bold' href='#'>
                     </a>
