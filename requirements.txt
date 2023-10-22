@@ -25,16 +25,11 @@ FRONTEND:
             npm install mdbreact (Este comando deve ser executado na pasta .//vite-project)
 BACKEND:
     cd backend
-    npm install
-    
-        Caso o express não esteja funcionando:
-        npm i express
-
-        Caso o cors não esteja funcionando:
-        npm i cors
-
-        Caso o nodemon não esteja funcionando:
-        npm i nodemon
+    npm i express
+    npm i nodemon
+    npm i cors
+    npm i dotenv
+    npm i pg
 
         Para acessar o Banco de Dados, acesse o site do aiven:
         https://console.aiven.io/account/a46869f1b30f/project/usinaecoculturalnaooficial-869a/services/usina-eco-cultural-database/overview (link direto para o dashboard do banco de dados)
