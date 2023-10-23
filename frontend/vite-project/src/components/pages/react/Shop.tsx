@@ -51,7 +51,11 @@ interface Product {
     },
     
   ];
-
+function tituloLoja() {
+    return (
+        <h1 className="text-center mt-3">Loja</h1>
+    );
+};
   function renderProduct(product: Product) {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
@@ -61,11 +65,10 @@ interface Product {
           setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
           setL(l => l + 1);
       };
-  
     return (
       <div className="container container-fluid mt-4 p-3">
         <div className="row">
-          <div className="card col-md-4" style={{ width: '18rem' }}>
+          <div className="card col-3 item-align-center" style={{ width: '18rem' }}>
             <img src={product.imageLink} className="card-img-top" alt="Imagem do Produto" />
             <div className="card-body">
               <h5 className="card-title text-center">{product.name}</h5>
