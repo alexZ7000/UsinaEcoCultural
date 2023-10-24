@@ -66,25 +66,21 @@ function tituloLoja() {
           setL(l => l + 1);
       };
     return (
-      <div className="container container-fluid mt-4 p-3">
-        <div className="row">
-          <div className="card col-3 item-align-center" style={{ width: '18rem' }}>
-            <img src={product.imageLink} className="card-img-top" alt="Imagem do Produto" />
-            <div className="card-body">
-              <h5 className="card-title text-center">{product.name}</h5>
-              <p className="card-text">{product.description}</p>
-              <select className="chinen">
-                <option>chinen</option>
-              </select>
-              <p></p>
-              <h3 className="text-center">R$ {product.price}</h3>
-              <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product)}>
-                Adicionar ao Carrinho
-              </a>
-            </div>
-          </div>
+        <div className="card col-3 item-align-center me-5" style={{ width: '18rem' }}>
+        <img src={product.imageLink} className="card-img-top" alt="Imagem do Produto" />
+        <div className="card-body">
+            <h5 className="card-title text-center">{product.name}</h5>
+            <p className="card-text">{product.description}</p>
+            <select className="chinen">
+            <option>chinen</option>
+            </select>
+            <p></p>
+            <h3 className="text-center">R$ {product.price}</h3>
+            <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product)}>
+            Adicionar ao Carrinho
+            </a>
         </div>
-      </div>
+        </div>
     );
   }
   
@@ -197,9 +193,11 @@ function tituloLoja() {
                 </MDBNavbar>
             </MDBRow>
         </MDBContainer>
-      <div className="mx-auto">
+        <div className="container container-fluid mt-4 p-3">
+            <div className="row">
         {products.map((product) => renderProduct(product))}
         <CarrinhoDaLoja carrinho={carrinho} calcularTotal={calcularTotal} />
+            </div>
       </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
