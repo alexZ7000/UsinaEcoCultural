@@ -107,7 +107,7 @@ export default function SignUp() {
                     <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
                     <div className='d-flex flex-row justify-content-center mb-4'>
                         <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
-                        <p>Eu concordo com os <a href="#"><i><u>Termos de Serviço</u></i></a></p>
+                        <p>Eu concordo com os <Link to="#"><i><u>Termos de Serviço</u></i></Link></p>
                     </div>
                     <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success mx-auto' size='lg'>Registrar-se</MDBBtn>
                 </MDBCardBody>
@@ -115,13 +115,11 @@ export default function SignUp() {
         </MDBContainer>
             <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
                 <p className="mb-0 me-2">Já tem uma conta?</p>
-                <Link to="/Login"><a className='btn btn-outline-success' href='' role='button'><MDBIcon far icon="user" />Login</a></Link>
+                <Link to="/Login" className='btn btn-outline-success' role='button'><MDBIcon far icon="user" />Login</Link>
             </div>
             <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
-                    <a className='text-reset fw-bold' href='#'>
-                    </a>
                 </div>
             </MDBFooter>
         </>

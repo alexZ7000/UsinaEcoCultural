@@ -29,6 +29,9 @@ import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function Login() {
     const [showNavCentred, setShowNavCentred] = useState(false);
+    const [valor, setValor] = useState("");
+    const handleChange = (event: any) => {setValor(event.target.value)};
+
     return (
         <MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
@@ -106,28 +109,29 @@ export default function Login() {
                                     <MDBIcon fab icon='google' size="lg"/>
                                 </MDBBtn>
                             </div>
-                            <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
-                            <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
+                            <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email' onChange={handleChange}/>
+                            <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password' onChange={handleChange}/>
+
+                            <p>{valor}</p> {/* Apenas para testar o valor do input */}
+                            
                             <div className='d-flex flex-row justify-content-center mb-4'>
                                 <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                                 <p>Lembrar meus dados para próximo login</p>
                             </div>
                             <MDBBtn className='mb-4 w-100 btn-success gradient-custom-4 mx-auto' size='lg'>Login</MDBBtn>
                             <div className="text-center pt-1 pb-1">
-                                <a className="text-primary" href="#!">Esqueceu sua senha?</a>
+                                <Link className="text-primary" to="#!">Esqueceu sua senha?</Link>
                             </div>
                         </MDBCardBody>
                     </MDBCard>
                 </MDBContainer>
                 <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
                     <p className="mb-0 me-2">Não tem uma conta?</p>
-                    <Link to="/SignUp"><a className='btn btn-outline-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
+                    <Link to="/SignUp" className='btn btn-success' role='button'><MDBIcon far icon="user"/>Cadastre-se</Link>
                 </div>
                 <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
                     <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
                         © {new Date().getFullYear()} Todos os Direitos Reservados
-                        <a className='text-reset fw-bold' href='#'>
-                        </a>
                     </div>
                 </MDBFooter>
             </MDBRow>

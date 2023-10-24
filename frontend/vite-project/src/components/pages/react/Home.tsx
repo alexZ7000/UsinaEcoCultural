@@ -98,15 +98,13 @@ export default function Home() {
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-4">
                                     <div className='mx-auto'>
-                                        <Link to="/Login">
-                                            <a className='btn mb-2 btn btn-outline-success' href='' role='button'>
+                                        <Link to="/Login" className='btn mb-2 btn btn-outline-success' role='button'>
                                                 <MDBIcon fas icon="user" />Login
-                                            </a>
                                         </Link>
                                     </div>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-4">
-                                    <Link to="/SignUp"><a className='btn btn-success' href='' role='button'><MDBIcon far icon="user" /> Cadastre-se</a></Link>
+                                    <Link to="/SignUp" className='btn btn-success' role='button'><MDBIcon far icon="user" /> Cadastre-se</Link>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
@@ -121,9 +119,9 @@ export default function Home() {
         <div className='px-3 text-center bg-light my-5 rounded-2'>
                 <h1 className='mb-3 pt-4'><strong><u>Site Cultural</u></strong></h1>
                 <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
-                <a className='btn btn-outline-success mb-5 btn-lg' href='' role='button'>
+                <Link className='btn btn-outline-success mb-5 btn-lg' to='' role='button'>
                     APOIE A CAUSA!!
-                </a>
+                </Link>
             <MDBCarousel showControls>
                 <MDBCarouselItem
                     className='w-100 d-block rounded-3'
@@ -206,21 +204,21 @@ export default function Home() {
                         <span>Fique conectado em nossas redes sociais:</span>
                     </div>
                     <div>
-                        <a href='https://www.facebook.com/usinaecocultural/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target={"_blank"} className='me-4 text-reset'>
+                        <Link to='https://www.facebook.com/usinaecocultural/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="facebook-f"/>
-                        </a>
-                        <a href='' target={"_blank"} className='me-4 text-reset'>
+                        </Link>
+                        <Link to='' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="twitter"/>
-                        </a>
-                        <a href='' target={"_blank"} className='me-4 text-reset'>
+                        </Link>
+                        <Link to='' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="google"/>
-                        </a>
-                        <a href='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
+                        </Link>
+                        <Link to='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
                             <MDBIcon fab icon="instagram"/>
-                        </a>
-                        <a href='https://www.youtube.com/@usinaecocultural' target="_blank" className='me-4 text-reset'>
+                        </Link>
+                        <Link to='https://www.youtube.com/@usinaecocultural' target="_blank" className='me-4 text-reset'>
                             <MDBIcon fab icon="youtube" />
-                        </a>
+                        </Link>
                     </div>
                 </section>
 
@@ -238,45 +236,45 @@ export default function Home() {
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso:
-                                    <a href="https://linktr.ee/usinaecocultural">Linktr.ee</a>
+                                    <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Produtos da Loja</u></h6>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Roupas
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Canecas
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Livros
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Outros
-                                    </a>
+                                    </Link>
                                 </p>
                             </MDBCol>
 
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Apoie a Causa
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <Link to='#!' className='text-reset'>
                                         Configurações
-                                    </a>
+                                    </Link>
                                 </p>
                                 <p>
                                     <Link to="/Shop" className="text-dark">
@@ -311,8 +309,6 @@ export default function Home() {
                 </section>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
-                    <a className='text-reset fw-bold' href='#'>
-                    </a>
                 </div>
             </MDBFooter></>
     );
