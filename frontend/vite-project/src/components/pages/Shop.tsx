@@ -17,6 +17,10 @@ import {
     MDBNavbarToggler,
     MDBRow
 } from "mdb-react-ui-kit";
+import BoneUsina from "./Assets/images/BoneUsina.png";
+import CalcaUsina from "./Assets/images/CalçaUsina.png";
+import CanecaUsina from "./Assets/images/CanecaUsina.png";
+import CamisetaUsina from "./Assets/images/CamisetaUsina.png";
 import {Link} from "react-router-dom";
 import icone_usina from "./Assets/images/usina_icon.png";
 
@@ -25,38 +29,60 @@ interface Product {
     name: string;
     description: string;
     price: number;
-    imageLink: string;
-  }
+    opcoes1: string;
+    opcoes2: string;
+    opcoes3: string;
+    opcoes4: string;
+    imageLink: any;
+  };
   
   const products: Product[] = [
     {
             idProduto: 1,
-            name: 'Camiseta do Chinen',
-            description: 'E do Mateus Yudi Chinen Oliveira',
-            price: 700,
-            imageLink: 'chinen.png'
+            name: 'Camiseta da Usina',
+            description: 'Camiseta 100% Lã com a logo da Usina EcoCultural',
+            price: 40,
+            opcoes1:"S",
+            opcoes2:"M",
+            opcoes3:"L",
+            opcoes4:"XL",
+            imageLink: "{CamisetaUsina}"
     },
     {
             idProduto: 2,
-            name: 'Shortes do Chinen',
-            description: 'Shortes do Mateus Yudi Chinen Oliveira',
-            price: 700,
-            imageLink: 'chinen4.png'
+            name: 'Calça da Usina',
+            description: 'Calça preta com a logo da Usina EcoCultural',
+            price: 70,
+            opcoes1:"S",
+            opcoes2:"M",
+            opcoes3:"L",
+            opcoes4:"XL",
+            imageLink: "{CalcaUsina}"
     },
     {
             idProduto: 3,
-            name: 'Bone do Chinen',
-            description: 'Bone do Mateus Yudi Chinen Oliveira',
-            price: 300,
-            imageLink:'chinen7.png'
+            name: 'Bone da Usina',
+            description: 'Bone preto da usina com a logo da Usina EcoCultural',
+            price: 30,
+            opcoes1:"Forma Pequena",
+            opcoes2:"Forma Grande",
+            opcoes3:"Aba reta Pequena",
+            opcoes4:"Aba Reta Grande",
+            imageLink:"{BoneUsina}"
+    },
+    {
+            idProduto: 4,
+            name: 'Caneca da Usina',
+            description: 'Canecas com a logo da Usina EcoCultural',
+            price: 15,
+            opcoes1:"Cor vermelha",
+            opcoes2:"Cor Azul",
+            opcoes3:"Cor Amarela",
+            opcoes4:"Cor Preta",
+            imageLink:"{CanecaUsina}"
     },
     
   ];
-function tituloLoja() {
-    return (
-        <h1 className="text-center mt-3">Loja</h1>
-    );
-}
   function renderProduct(product: Product) {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
@@ -67,17 +93,20 @@ function tituloLoja() {
           setL(l => l + 1);
       };
     return (
-        <div className="card col-3 item-align-center me-5" style={{ width: '18rem' }}>
-        <img src={product.imageLink} className="card-img-top" alt="Imagem do Produto" />
+        <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
+        <img src= {CamisetaUsina} className="card-img-top" alt="Imagem do Produto" />
         <div className="card-body">
             <h5 className="card-title text-center">{product.name}</h5>
             <p className="card-text">{product.description}</p>
             <select className="chinen">
-            <option>chinen</option>
+            <option>{product.opcoes1}</option>
+            <option>{product.opcoes2}</option>
+            <option>{product.opcoes3}</option>
+            <option>{product.opcoes4}</option>
             </select>
             <p></p>
             <h3 className="text-center">R$ {product.price}</h3>
-            <a href="#" className="btn btn-primary" onClick={() => adicionarAoCarrinho(product)}>
+            <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(product)}>
             Adicionar ao Carrinho
             </a>
         </div>
@@ -109,9 +138,9 @@ function tituloLoja() {
   export default function Loja() {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [showNavCentred, setShowNavCentred] = useState(false);
-    const calcularTotal = () => {
-      return carrinho.reduce((total, produto) => total + produto.preco, 0);
-    };
+    const calcularTotal = (product:Product) => {
+        return carrinho.reduce((total, product) => total + product.price, 0);
+      }
   
     return (
         <>
