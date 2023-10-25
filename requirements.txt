@@ -34,3 +34,5 @@ BACKEND:
         Para acessar o Banco de Dados, acesse o site do aiven:
         https://console.aiven.io/account/a46869f1b30f/project/usinaecoculturalnaooficial-869a/services/usina-eco-cultural-database/overview (link direto para o dashboard do banco de dados)
         O email e senha estão nas fotos enviadas no grupo do whatsapp da Usina Eco-Cultural
+
+        npm i vlibras-react
