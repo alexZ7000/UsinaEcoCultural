@@ -1,12 +1,12 @@
 import React from 'react';
-import Home from './components/pages/react/Home';
-import Login from './components/pages/react/Login'
-import Shop from "./components/pages/react/Shop";
-import EventsCalendary from "./components/pages/react/EventsCalendary";
-import SignUp from "./components/pages/react/SignUp";
-import History from "./components/pages/react/History";
-import About from "./components/pages/react/About";
-import Donate from "./components/pages/react/Donate";
+import Home from './components/pages/Home';
+import Login from './components/pages/Login'
+import Shop from "./components/pages/Shop";
+import EventsCalendary from "./components/pages/EventsCalendary";
+import SignUp from "./components/pages/SignUp";
+import History from "./components/pages/History";
+import About from "./components/pages/About";
+import Donate from "./components/pages/Donate";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import './App.css';
 
