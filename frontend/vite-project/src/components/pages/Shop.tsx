@@ -90,7 +90,34 @@ interface Product {
       const adicionarAoCarrinho = (product:Product)  => {
           const novoProduto = { nome: product.name , preco: product.price};
           setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
-          setL(l => l + 1);
+          const adicionarAoCarrinho = (product:Product)  => {
+                let l=0
+                const calcularTotal = (products:Product) => {
+                    var total = 0
+                    let todo 
+                    todo = total
+                    
+                     switch(product.idProduto) {
+              
+                    case 1:
+                         todo = total + 40;
+                         break;
+                    case 2:
+                         todo = total + 70
+                        break;
+                    case 3:
+                        todo = total + 15
+                        break;
+                    return todo
+                    };
+                var valorFinal = calcularTotal(product)
+                if (l = l +1){
+                    valorFinal
+                };
+                    
+              
+            }
+        };
       };
     return (
         <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
@@ -138,9 +165,7 @@ interface Product {
   export default function Loja() {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [showNavCentred, setShowNavCentred] = useState(false);
-    const calcularTotal = (product:Product) => {
-        return carrinho.reduce((total, product) => total + product.price, 0);
-      }
+    
   
     return (
         <>
@@ -227,12 +252,6 @@ interface Product {
                 </MDBNavbar>
             </MDBRow>
         </MDBContainer>
-        <div className="container container-fluid mt-4 p-3">
-            <div className="row">
-        {products.map((product) => renderProduct(product))}
-        <CarrinhoDaLoja carrinho={carrinho} calcularTotal={calcularTotal} />
-            </div>
-      </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
