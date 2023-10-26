@@ -46,7 +46,7 @@ interface Product {
             opcoes2:"M",
             opcoes3:"L",
             opcoes4:"XL",
-            imageLink: "{CamisetaUsina}"
+            imageLink: CamisetaUsina
     },
     {
             idProduto: 2,
@@ -57,7 +57,7 @@ interface Product {
             opcoes2:"M",
             opcoes3:"L",
             opcoes4:"XL",
-            imageLink: "{CalcaUsina}"
+            imageLink: CalcaUsina
     },
     {
             idProduto: 3,
@@ -68,7 +68,7 @@ interface Product {
             opcoes2:"Forma Grande",
             opcoes3:"Aba reta Pequena",
             opcoes4:"Aba Reta Grande",
-            imageLink:"{BoneUsina}"
+            imageLink: BoneUsina
     },
     {
             idProduto: 4,
@@ -79,7 +79,7 @@ interface Product {
             opcoes2:"Cor Azul",
             opcoes3:"Cor Amarela",
             opcoes4:"Cor Preta",
-            imageLink:"{CanecaUsina}"
+            imageLink: CanecaUsina
     },
     
   ];
@@ -90,23 +90,26 @@ interface Product {
       const adicionarAoCarrinho = (product:Product)  => {
           const novoProduto = { nome: product.name , preco: product.price};
           setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
+          setL(l=> l + 1)
           const adicionarAoCarrinho = (product:Product)  => {
                 let l=0
                 const calcularTotal = (products:Product) => {
                     var total = 0
-                    let todo 
+                    var todo 
                     todo = total
                     
                      switch(product.idProduto) {
               
                     case 1:
-                         todo = total + 40;
+                         total = 40
+                         todo = todo + total;
                          break;
                     case 2:
-                         todo = total + 70
+                         total = 70
+                         todo = todo + total;
                         break;
                     case 3:
-                        todo = total + 15
+                        todo = todo + total;
                         break;
                     return todo
                     };
@@ -121,7 +124,7 @@ interface Product {
       };
     return (
         <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
-        <img src= {CamisetaUsina} className="card-img-top" alt="Imagem do Produto" />
+        <img src= {product.imageLink} className="card-img-top" alt="Imagem do Produto" />
         <div className="card-body">
             <h5 className="card-title text-center">{product.name}</h5>
             <p className="card-text">{product.description}</p>
@@ -141,7 +144,8 @@ interface Product {
     );
   }
   
-  function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcularTotal: () => number }) {
+  function CarrinhoDaLoja({ carrinho, calcularTotal,renderProduct }: { carrinho: any[]; calcularTotal: () => number; renderProduct: () => any}) {
+    const chamarCalculo = renderProduct().AdicionarAoCarrinho().calcularTotal()
     return (
       <div className="container container-fluid mt-4 p-3">
         <div className="row">
@@ -154,7 +158,7 @@ interface Product {
                 </li>
               ))}
             </ul>
-            <h3>O valor total foi de: R$ {calcularTotal()}</h3>
+            <h3>O valor total foi de: R$ {chamarCalculo}</h3>
             <a href="xxxxxx.br" className="btn btn-success" >Continuar com o pagamento</a>
           </div>
         </div>
