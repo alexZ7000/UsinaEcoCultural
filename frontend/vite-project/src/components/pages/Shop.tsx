@@ -42,10 +42,10 @@ interface Product {
             name: 'Camiseta da Usina',
             description: 'Camiseta 100% Lã com a logo da Usina EcoCultural',
             price: 40,
-            opcoes1:"S",
-            opcoes2:"M",
-            opcoes3:"L",
-            opcoes4:"XL",
+            opcoes1:"Tamanho S",
+            opcoes2:"Tamanho M",
+            opcoes3:"Tamanho L",
+            opcoes4:"Tamanho XL",
             imageLink: CamisetaUsina
     },
     {
@@ -53,10 +53,10 @@ interface Product {
             name: 'Calça da Usina',
             description: 'Calça preta com a logo da Usina EcoCultural',
             price: 70,
-            opcoes1:"S",
-            opcoes2:"M",
-            opcoes3:"L",
-            opcoes4:"XL",
+            opcoes1:"Tamanho S",
+            opcoes2:"Tamanho M",
+            opcoes3:"Tamanho L",
+            opcoes4:"Tamanho XL",
             imageLink: CalcaUsina
     },
     {
@@ -79,7 +79,7 @@ interface Product {
             opcoes2:"Cor Azul",
             opcoes3:"Cor Amarela",
             opcoes4:"Cor Preta",
-            imageLink: CanecaUsina
+            imageLink:CanecaUsina
     },
     
   ];
@@ -90,37 +90,7 @@ interface Product {
       const adicionarAoCarrinho = (product:Product)  => {
           const novoProduto = { nome: product.name , preco: product.price};
           setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
-          setL(l=> l + 1)
-          const adicionarAoCarrinho = (product:Product)  => {
-                let l=0
-                const calcularTotal = (products:Product) => {
-                    var total = 0
-                    var todo 
-                    todo = total
-                    
-                     switch(product.idProduto) {
-              
-                    case 1:
-                         total = 40
-                         todo = todo + total;
-                         break;
-                    case 2:
-                         total = 70
-                         todo = todo + total;
-                        break;
-                    case 3:
-                        todo = todo + total;
-                        break;
-                    return todo
-                    };
-                var valorFinal = calcularTotal(product)
-                if (l = l +1){
-                    valorFinal
-                };
-                    
-              
-            }
-        };
+          setL(l => l + 1);
       };
     return (
         <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
@@ -128,11 +98,11 @@ interface Product {
         <div className="card-body">
             <h5 className="card-title text-center">{product.name}</h5>
             <p className="card-text">{product.description}</p>
-            <select className="chinen">
-            <option>{product.opcoes1}</option>
-            <option>{product.opcoes2}</option>
-            <option>{product.opcoes3}</option>
-            <option>{product.opcoes4}</option>
+            <select className="form-control btn-success active border border-success  form-control-sm">
+                <option>{product.opcoes1}</option>
+                <option>{product.opcoes2}</option>
+                <option>{product.opcoes3}</option>
+                <option>{product.opcoes4}</option>
             </select>
             <p></p>
             <h3 className="text-center">R$ {product.price}</h3>
@@ -144,8 +114,7 @@ interface Product {
     );
   }
   
-  function CarrinhoDaLoja({ carrinho, calcularTotal,renderProduct }: { carrinho: any[]; calcularTotal: () => number; renderProduct: () => any}) {
-    const chamarCalculo = renderProduct().AdicionarAoCarrinho().calcularTotal()
+  function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcularTotal: () => number }) {
     return (
       <div className="container container-fluid mt-4 p-3">
         <div className="row">
@@ -158,7 +127,7 @@ interface Product {
                 </li>
               ))}
             </ul>
-            <h3>O valor total foi de: R$ {chamarCalculo}</h3>
+            <h3>O valor total foi de: R$ {calcularTotal()}</h3>
             <a href="xxxxxx.br" className="btn btn-success" >Continuar com o pagamento</a>
           </div>
         </div>
@@ -169,7 +138,9 @@ interface Product {
   export default function Loja() {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [showNavCentred, setShowNavCentred] = useState(false);
-    
+    const calcularTotal = (product:Product) => {
+        return carrinho.reduce((total, product) => total + product.price, 0);
+      }
   
     return (
         <>
@@ -256,6 +227,12 @@ interface Product {
                 </MDBNavbar>
             </MDBRow>
         </MDBContainer>
+        <div className="container container-fluid mt-4 p-3">
+            <div className="row">
+        {products.map((product) => renderProduct(product))}
+        <CarrinhoDaLoja carrinho={carrinho} calcularTotal={calcularTotal} />
+            </div>
+      </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
