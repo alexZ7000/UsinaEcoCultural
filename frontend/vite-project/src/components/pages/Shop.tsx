@@ -21,6 +21,10 @@ import BoneUsina from "./Assets/images/BoneUsina.png";
 import CalcaUsina from "./Assets/images/CalçaUsina.png";
 import CanecaUsina from "./Assets/images/CanecaUsina.png";
 import CamisetaUsina from "./Assets/images/CamisetaUsina.png";
+import QuadroUsina from "./Assets/images/QuadroUsina.png";
+import CanetaUsina from "./Assets/images/CanetaUsina.png";
+import CalendarioUsina from "./Assets/images/CalendarioUsina.png";
+import LivroUsina from "./Assets/images/LivroUsina.png";
 import {Link} from "react-router-dom";
 import icone_usina from "./Assets/images/usina_icon.png";
 
@@ -38,52 +42,96 @@ interface Product {
   
   const products: Product[] = [
     {
-            idProduto: 1,
-            name: 'Camiseta da Usina',
-            description: 'Camiseta 100% Lã com a logo da Usina EcoCultural',
-            price: 40,
-            opcoes1:"Tamanho S",
-            opcoes2:"Tamanho M",
-            opcoes3:"Tamanho L",
-            opcoes4:"Tamanho XL",
-            imageLink: CamisetaUsina
+        idProduto: 1,
+        name: 'Camiseta da Usina',
+        description: 'Camiseta 100% Lã com a logo da Usina EcoCultural',
+        price: 40,
+        opcoes1:"Tamanho S",
+        opcoes2:"Tamanho M",
+        opcoes3:"Tamanho L",
+        opcoes4:"Tamanho XL",
+        imageLink: CamisetaUsina
     },
     {
-            idProduto: 2,
-            name: 'Calça da Usina',
-            description: 'Calça preta com a logo da Usina EcoCultural',
-            price: 70,
-            opcoes1:"Tamanho S",
-            opcoes2:"Tamanho M",
-            opcoes3:"Tamanho L",
-            opcoes4:"Tamanho XL",
-            imageLink: CalcaUsina
+        idProduto: 2,
+        name: 'Calça da Usina',
+        description: 'Calça preta com a logo da Usina EcoCultural',
+        price: 70,
+        opcoes1:"Tamanho S",
+        opcoes2:"Tamanho M",
+        opcoes3:"Tamanho L",
+        opcoes4:"Tamanho XL",
+        imageLink: CalcaUsina
     },
     {
-            idProduto: 3,
-            name: 'Bone da Usina',
-            description: 'Bone preto da usina com a logo da Usina EcoCultural',
-            price: 30,
-            opcoes1:"Forma Pequena",
-            opcoes2:"Forma Grande",
-            opcoes3:"Aba reta Pequena",
-            opcoes4:"Aba Reta Grande",
-            imageLink: BoneUsina
+        idProduto: 3,
+        name: 'Bone da Usina',
+        description: 'Bone preto da usina com a logo da Usina EcoCultural',
+        price: 30,
+        opcoes1:"Forma Pequena",
+        opcoes2:"Forma Grande",
+        opcoes3:"Aba reta Pequena",
+        opcoes4:"Aba Reta Grande",
+        imageLink: BoneUsina
     },
     {
-            idProduto: 4,
-            name: 'Caneca da Usina',
-            description: 'Canecas com a logo da Usina EcoCultural',
-            price: 15,
-            opcoes1:"Cor vermelha",
-            opcoes2:"Cor Azul",
-            opcoes3:"Cor Amarela",
-            opcoes4:"Cor Preta",
-            imageLink:CanecaUsina
+        idProduto: 4,
+        name: 'Caneca da Usina',
+        description: 'Canecas com a logo da Usina EcoCultural',
+        price: 15,
+        opcoes1:"Cor vermelha",
+        opcoes2:"Cor Azul",
+        opcoes3:"Cor Amarela",
+        opcoes4:"Cor Preta",
+        imageLink:CanecaUsina
     },
+    {
+        idProduto: 5,
+        name: 'Caneta da Usina',
+        description: 'Canetas com a logo da Usina EcoCultural',
+        price: 15,
+        opcoes1:"Tinta vermelha",
+        opcoes2:"Tinta Azul",
+        opcoes3:"Tinta Verde",
+        opcoes4:"Tinta Preta",
+        imageLink:CanetaUsina
+},
+{
+        idProduto: 6,
+        name: 'Quadro da Usina',
+        description: 'Quadro com a paisagem da Usina EcoCultural',
+        price: 50,
+        opcoes1:"Paisagem paronâmica",
+        opcoes2:"Paisagem frontal",
+        opcoes3:"Desenho da Usina",
+        opcoes4:"Logo da Usina EcoCultural",
+        imageLink:QuadroUsina
+},
+{
+        idProduto: 7,
+        name: 'Livro da Usina',
+        description: 'Livros com a história da Usina EcoCultural',
+        price: 30,
+        opcoes1:"Capa Dura",
+        opcoes2:"Capa Mole",
+        opcoes3:"E-book",
+        opcoes4:"Edição especial",
+        imageLink:LivroUsina
+},
+{
+        idProduto: 8,
+        name: 'Calendário da Usina',
+        description: 'Calendário com a logo da Usina EcoCultural',
+        price: 10,
+        opcoes1:"Cor vermelha",
+        opcoes2:"Cor Azul",
+        opcoes3:"Cor Amarela",
+        opcoes4:"Cor Preta",
+        imageLink:CalendarioUsina
+},
     
   ];
-  function renderProduct(product: Product) {
+  function renderProduct(products: Product) {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
   
@@ -94,20 +142,20 @@ interface Product {
       };
     return (
         <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
-        <img src= {product.imageLink} className="card-img-top" alt="Imagem do Produto" />
+        <img src= {products.imageLink} className="card-img-top item-align-center" alt="Imagem do Produto" />
         <div className="card-body">
-            <h5 className="card-title text-center">{product.name}</h5>
-            <p className="card-text">{product.description}</p>
+            <h5 className="card-title text-center">{products.name}</h5>
+            <p className="card-text">{products.description}</p>
             <select className="form-control btn-success active border border-success  form-control-sm">
-                <option>{product.opcoes1}</option>
-                <option>{product.opcoes2}</option>
-                <option>{product.opcoes3}</option>
-                <option>{product.opcoes4}</option>
+                <option>{products.opcoes1}</option>
+                <option>{products.opcoes2}</option>
+                <option>{products.opcoes3}</option>
+                <option>{products.opcoes4}</option>
             </select>
             <p></p>
-            <h3 className="text-center">R$ {product.price}</h3>
-            <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(product)}>
-            Adicionar ao Carrinho
+            <h3 className="text-center">R$ {products.price}</h3>
+            <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(products)}>
+                Adicionar ao Carrinho
             </a>
         </div>
         </div>
