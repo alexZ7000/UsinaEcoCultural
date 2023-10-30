@@ -18,7 +18,7 @@ import {
     MDBRow
 } from "mdb-react-ui-kit";
 import BoneUsina from "./Assets/images/BoneUsina.png";
-import CalcaUsina from "./Assets/images/CalçaUsina.png";
+import CadernoUsina from "./Assets/images/CadernoUsina.png";
 import CanecaUsina from "./Assets/images/CanecaUsina.png";
 import CamisetaUsina from "./Assets/images/CamisetaUsina.png";
 import QuadroUsina from "./Assets/images/QuadroUsina.png";
@@ -54,14 +54,14 @@ interface Product {
     },
     {
         idProduto: 2,
-        name: 'Calça da Usina',
-        description: 'Calça preta com a logo da Usina EcoCultural',
+        name: 'Caderno da Usina',
+        description: 'Cadernos escolares com a logo da Usina EcoCultural',
         price: 70,
-        opcoes1:"Tamanho S",
-        opcoes2:"Tamanho M",
-        opcoes3:"Tamanho L",
-        opcoes4:"Tamanho XL",
-        imageLink: CalcaUsina
+        opcoes1:"Cor Preta",
+        opcoes2:"Cor Verde",
+        opcoes3:"Cor Branca",
+        opcoes4:"Cor Amarela",
+        imageLink: CadernoUsina
     },
     {
         idProduto: 3,
@@ -79,7 +79,7 @@ interface Product {
         name: 'Caneca da Usina',
         description: 'Canecas com a logo da Usina EcoCultural',
         price: 15,
-        opcoes1:"Cor vermelha",
+        opcoes1:"Cor Vermelha",
         opcoes2:"Cor Azul",
         opcoes3:"Cor Amarela",
         opcoes4:"Cor Preta",
@@ -90,7 +90,7 @@ interface Product {
         name: 'Caneta da Usina',
         description: 'Canetas com a logo da Usina EcoCultural',
         price: 15,
-        opcoes1:"Tinta vermelha",
+        opcoes1:"Tinta Vermelha",
         opcoes2:"Tinta Azul",
         opcoes3:"Tinta Verde",
         opcoes4:"Tinta Preta",
@@ -123,9 +123,9 @@ interface Product {
         name: 'Calendário da Usina',
         description: 'Calendário com a logo da Usina EcoCultural',
         price: 10,
-        opcoes1:"Cor vermelha",
+        opcoes1:"Cor Vermelha",
         opcoes2:"Cor Azul",
-        opcoes3:"Cor Amarela",
+        opcoes3:"Cor Verde",
         opcoes4:"Cor Preta",
         imageLink:CalendarioUsina
 },
@@ -141,7 +141,7 @@ interface Product {
           setL(l => l + 1);
       };
     return (
-        <div className="card col-3 item-align-center ms-3 me-4" style={{ width: '16rem' }}>
+        <div className="card col-3 item-align-center ms-3 me-4 mb-5" style={{ width: '16rem' }}>
         <img src= {products.imageLink} className="card-img-top item-align-center" alt="Imagem do Produto" />
         <div className="card-body">
             <h5 className="card-title text-center">{products.name}</h5>
