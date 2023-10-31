@@ -23,8 +23,7 @@ import {
     MDBDropdownItem,
     MDBNavbarBrand,
     MDBFooter
-}
-    from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function SignUp() {
@@ -95,22 +94,22 @@ export default function SignUp() {
                     </MDBNavbar>
                 </MDBRow>
             </MDBContainer>
-        <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: ''}}>
-            <MDBCard style={{maxWidth: '600px'}}>
-                <MDBCardBody>
-                    <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
-                    <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
-                    <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
-                    <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
-                    <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
-                    <div className='d-flex flex-row justify-content-center mb-4'>
-                        <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
-                        <p>Eu concordo com os <Link to="#"><i><u>Termos de Serviço</u></i></Link></p>
-                    </div>
-                    <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success mx-auto' size='lg'>Registrar-se</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-        </MDBContainer>
+            <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: ''}}>
+                <MDBCard style={{maxWidth: '600px'}}>
+                    <MDBCardBody>
+                        <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
+                        <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
+                        <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
+                        <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
+                        <MDBInput wrapperClass='mb-4' label='Repita sua Senha' size='lg' id='form4' type='password'/>
+                        <div className='d-flex flex-row justify-content-center mb-4'>
+                            <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
+                            <p>Eu concordo com os <Link to="#"><i><u>Termos de Serviço</u></i></Link></p>
+                        </div>
+                        <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success mx-auto' size='lg'>Registrar-se</MDBBtn>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBContainer>
             <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
                 <p className="mb-0 me-2">Já tem uma conta?</p>
                 <Link to="/Login" style={{ textDecoration: 'none' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Login</MDBBtn></Link>

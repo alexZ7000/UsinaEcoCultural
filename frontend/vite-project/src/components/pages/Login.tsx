@@ -8,7 +8,6 @@ import {
     MDBIcon,
     MDBInput,
     MDBRow,
-    MDBCol,
     MDBNavbar,
     MDBNavbarNav,
     MDBNavbarItem,
@@ -21,8 +20,7 @@ import {
     MDBDropdownItem,
     MDBNavbarBrand,
     MDBFooter, MDBCard, MDBCardBody, MDBCheckbox
-}
-    from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function Login() {

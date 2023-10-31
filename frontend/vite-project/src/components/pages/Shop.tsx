@@ -10,10 +10,14 @@ import {
     MDBDropdown,
     MDBDropdownItem,
     MDBDropdownMenu,
-    MDBDropdownToggle, MDBFooter,
+    MDBDropdownToggle,
+    MDBFooter,
     MDBIcon,
     MDBNavbar,
-    MDBNavbarBrand, MDBNavbarItem, MDBNavbarLink, MDBNavbarNav,
+    MDBNavbarBrand,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBNavbarNav,
     MDBNavbarToggler,
     MDBRow
 } from "mdb-react-ui-kit";
@@ -27,6 +31,7 @@ import CalendarioUsina from "./Assets/images/CalendarioUsina.png";
 import LivroUsina from "./Assets/images/LivroUsina.png";
 import {Link} from "react-router-dom";
 import icone_usina from "./Assets/images/usina_icon.png";
+import {Button, Modal} from "react-bootstrap";
 
 interface Product {
     idProduto: number;
@@ -38,9 +43,9 @@ interface Product {
     opcoes3: string;
     opcoes4: string;
     imageLink: any;
-  };
+}
   
-  const products: Product[] = [
+const products: Product[] = [
     {
         idProduto: 1,
         name: 'Camiseta da Usina',
@@ -95,8 +100,8 @@ interface Product {
         opcoes3:"Tinta Verde",
         opcoes4:"Tinta Preta",
         imageLink:CanetaUsina
-},
-{
+    },
+    {
         idProduto: 6,
         name: 'Quadro da Usina',
         description: 'Quadro com a paisagem da Usina EcoCultural',
@@ -106,8 +111,8 @@ interface Product {
         opcoes3:"Desenho da Usina",
         opcoes4:"Logo da Usina EcoCultural",
         imageLink:QuadroUsina
-},
-{
+    },
+    {
         idProduto: 7,
         name: 'Livro da Usina',
         description: 'Livros com a história da Usina EcoCultural',
@@ -117,8 +122,8 @@ interface Product {
         opcoes3:"E-book",
         opcoes4:"Edição especial",
         imageLink:LivroUsina
-},
-{
+    },
+    {
         idProduto: 8,
         name: 'Calendário da Usina',
         description: 'Calendário com a logo da Usina EcoCultural',
@@ -128,159 +133,193 @@ interface Product {
         opcoes3:"Cor Verde",
         opcoes4:"Cor Preta",
         imageLink:CalendarioUsina
-},
-    
-  ];
-  function renderProduct(products: Product) {
+    }
+];
+
+function renderProduct(products: Product) {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [l, setL] = useState(0);
-  
-      const adicionarAoCarrinho = (product:Product)  => {
-          const novoProduto = { nome: product.name , preco: product.price};
-          setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
-          setL(l => l + 1);
-      };
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    const adicionarAoCarrinho = (product:Product)  => {
+        const novoProduto = { nome: product.name , preco: product.price};
+        setCarrinho(prevCarrinho => [...prevCarrinho, novoProduto]);
+        setL(l => l + 1);
+    };
+
     return (
         <div className="card col-3 item-align-center ms-3 me-4 mb-5" style={{ width: '16rem' }}>
-        <img src= {products.imageLink} className="card-img-top item-align-center" alt="Imagem do Produto" />
-        <div className="card-body">
-            <h5 className="card-title text-center">{products.name}</h5>
-            <p className="card-text">{products.description}</p>
-            <select className="form-control btn-success active border border-success  form-control-sm">
-                <option>{products.opcoes1}</option>
-                <option>{products.opcoes2}</option>
-                <option>{products.opcoes3}</option>
-                <option>{products.opcoes4}</option>
-            </select>
-            <p></p>
-            <h3 className="text-center">R$ {products.price}</h3>
-            <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(products)}>
-                Adicionar ao Carrinho
-            </a>
-        </div>
+            <img src= {products.imageLink} className="card-img-top item-align-center" alt="Imagem do Produto" onClick={openModal} role='button'/>
+                {showModal && <ImageModal image={products.imageLink}  onClose={closeModal}/>}
+            <div className="card-body">
+                <h5 className="card-title text-center">{products.name}</h5>
+                <p className="card-text">{products.description}</p>
+                <select className="form-control btn-success active border border-success  form-control-sm" role='button'>
+                    <option>{products.opcoes1}</option>
+                    <option>{products.opcoes2}</option>
+                    <option>{products.opcoes3}</option>
+                    <option>{products.opcoes4}</option>
+                </select>
+                <h3 className="text-center my-3">R$ {products.price}</h3>
+                <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(products)}>
+                    Adicionar ao Carrinho
+                </a>
+            </div>
         </div>
     );
-  }
-  
-  function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcularTotal: () => number }) {
+}
+
+function ImageModal({ image, onClose }: { image: string; onClose: () => void }) {
     return (
-      <div className="container container-fluid mt-4 p-3">
-        <div className="row">
-          <div className="col-12">
-            <h2>Seus Itens:</h2>
-            <ul>
-              {carrinho.map((product, index) => (
-                <li key={index}>
-                  Produto: {product.name}, Preço: R$ {product.preco}
-                </li>
-              ))}
-            </ul>
-            <h3>O valor total foi de: R$ {calcularTotal()}</h3>
-            <a href="xxxxxx.br" className="btn btn-success" >Continuar com o pagamento</a>
-          </div>
-        </div>
-      </div>
+        <Modal show={true} onHide={onClose}>
+            <Modal.Body>
+                <img src={image} alt="Imagem" />
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="outline-success" onClick={onClose}>
+                    Fechar
+                </Button>
+            </Modal.Footer>
+        </Modal>
     );
-  }
+}
+
+
   
-  export default function Loja() {
+function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcularTotal: () => number}) {
+    return (
+        <div className="container container-fluid mt-4 p-3">
+            <div className="row">
+                <div className="col-12">
+                    <h2>Seus Itens:</h2>
+                    <ul>
+                        {carrinho.map((product, index) => (
+                            <li key={index}>
+                            Produto: {product.name}, Preço: R$ {product.preco}
+                            </li>
+                            )
+                        )};
+                    </ul>
+                    <h3>O valor total foi de: R$ {calcularTotal()}</h3>
+                    <a href="#" className="btn btn-success" >Continuar com o pagamento</a>
+                </div>
+            </div>
+        </div>
+);
+}
+  
+export default function Loja() {
     const [carrinho, setCarrinho] = useState<any[]>([]);
     const [showNavCentred, setShowNavCentred] = useState(false);
     const calcularTotal = (product:Product) => {
         return carrinho.reduce((total, product) => total + product.price, 0);
-      }
+    };
   
     return (
         <>
-        <MDBContainer className="mb-5 gradient-form">
-            <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarCenteredExample'
-                            aria-controls='navbarCenteredExample'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon='bars' fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#' className="ms-1">
-                            <Link to="/" style={{ textDecoration: 'none' }}>
-                                <img
-                                    src={icone_usina}
-                                    width={100}
-                                    alt=''
-                                />
-                            </Link>
-                        </MDBNavbarBrand>
+            <MDBContainer className="mb-5 gradient-form">
+                <MDBRow className='container-sm'>
+                    <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type='button'
+                                data-target='#navbarCenteredExample'
+                                aria-controls='navbarCenteredExample'
+                                aria-expanded='false'
+                                aria-label='Toggle navigation'
+                                onClick={() => setShowNavCentred(!showNavCentred)}
+                            >
+                                <MDBIcon icon='bars' fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href='#' className="ms-1">
+                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                    <img
+                                        src={icone_usina}
+                                        width={100}
+                                        alt=''
+                                    />
+                                </Link>
+                            </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
-                            <MDBNavbarNav fullWidth={true}>
-                                <div className="ms-5"></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/" style={{ textDecoration: 'none' }}>
-                                        <MDBNavbarLink active aria-current='page' href='#'>
-                                            Página Inicial
-                                        </MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/Donate" style={{ textDecoration: 'none' }}>
-                                        <MDBNavbarLink>Doação</MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <MDBDropdown>
-                                        <MDBDropdownToggle tag='a' className='nav-link'>
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <Link to="/History" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
+                                <MDBNavbarNav fullWidth={true}>
+                                    <div className="ms-5"></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <div className='ms-5'></div>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                                </Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-4">
+                                        <div className='mx-auto'>
+                                            <Link to="/Login" style={{ textDecoration: 'none' }} role='button'>
+                                                <MDBBtn outline={true} className='mb-2 btn-outline-success'>
+                                                    <MDBIcon fas icon="user"/>Login
+                                                </MDBBtn>
                                             </Link>
-                                            <Link to="/Shop" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Loja</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
-                                            </Link>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-4">
-                                    <div className='mx-auto'>
-                                        <Link to="/Login" style={{ textDecoration: 'none' }} role='button'>
-                                            <MDBBtn outline={true} className='mb-2 btn-outline-success'>
-                                                <MDBIcon fas icon="user"/>Login
+                                        </div>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-4">
+                                        <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'>
+                                            <MDBBtn className='btn-success'>
+                                                <MDBIcon far icon="user"/>Cadastre-se
                                             </MDBBtn>
                                         </Link>
-                                    </div>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-4">
-                                    <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'>
-                                        <MDBBtn className='btn-success'>
-                                            <MDBIcon far icon="user"/>Cadastre-se
-                                        </MDBBtn>
-                                    </Link>
-                                </MDBNavbarItem>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-            </MDBRow>
-        </MDBContainer>
-        <div className="container container-fluid mt-4 p-3">
-            <div className="row">
-        {products.map((product) => renderProduct(product))}
-        <CarrinhoDaLoja carrinho={carrinho} calcularTotal={calcularTotal} />
+                                    </MDBNavbarItem>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
+            </MDBContainer>
+            <div className="container container-fluid mt-4 p-3">
+                <div className="row">
+                    {products.map((product) => renderProduct(product))}
+                    <CarrinhoDaLoja carrinho={carrinho} calcularTotal={calcularTotal as () => number} />
+                </div>
             </div>
-      </div>
+            <div>
+                <MDBBtn color='success' className="btn btn-danger btn-lg " onClick={() => setCarrinho([])}>
+                    Limpar Carrinho
+                </MDBBtn>
+            </div>
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
@@ -304,8 +343,6 @@ interface Product {
                         </Link>
                     </div>
                 </section>
-
-
                 <section className='containerInfoSite'>
                     <MDBContainer className='text-center text-md-start mt-5'>
                         <MDBRow className='mt-3'>

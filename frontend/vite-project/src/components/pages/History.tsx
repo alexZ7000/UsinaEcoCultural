@@ -23,8 +23,7 @@ import {
     MDBDropdownItem,
     MDBNavbarBrand,
     MDBFooter
-}
-    from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 
 export default function History() {

@@ -3,7 +3,6 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import icone_usina from "./Assets/images/usina_icon.png";
 import { Link } from 'react-router-dom'; //import para linkar as páginas - não usado
-
 import {
     MDBContainer,
     MDBBtn,
@@ -22,8 +21,7 @@ import {
     MDBDropdownItem,
     MDBNavbarBrand,
     MDBFooter
-}
-    from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
 
 export default function About() {
     const [showNavCentred, setShowNavCentred] = useState(false);
