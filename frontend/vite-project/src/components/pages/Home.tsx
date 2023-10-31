@@ -190,12 +190,12 @@ export default function Home() {
         </div>
             <div className="row">
                 <div className="container">
-                    <div className="my-5">
+                    <div className="my-5" style={{borderRadius: '16px', backgroundColor: 'light'}}>
                         <h1 className="text-center border-bottom mb-3">Onde nos encontrar?</h1>
                         <iframe className="container rounded-3 border border-2 border-light my-1"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr"
-                            width="1000" 
-                            height="600" 
+                            width="600" 
+                            height="400" 
                             allowFullScreen={true} 
                             loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -203,7 +203,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -228,8 +228,8 @@ export default function Home() {
                 </section>
 
 
-                <section className='containerInfoSite'>
-                    <MDBContainer className='text-center text-md-start mt-5'>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                    <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
@@ -282,12 +282,12 @@ export default function Home() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-dark">
+                                    <Link to="/Shop" className="text-reset">
                                         Loja
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-dark">
+                                    <Link to="/History" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -303,6 +303,7 @@ export default function Home() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
+                                    
                                 <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
@@ -312,7 +313,7 @@ export default function Home() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                 </div>
             </MDBFooter></>
