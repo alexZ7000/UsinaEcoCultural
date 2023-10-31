@@ -112,7 +112,7 @@ export default function About() {
             </MDBContainer>
 
 
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -137,8 +137,8 @@ export default function About() {
                 </section>
 
 
-                <section className='containerInfoSite'>
-                    <MDBContainer className='text-center text-md-start mt-5'>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                    <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
@@ -149,8 +149,7 @@ export default function About() {
                                     Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso:
-                                    <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
@@ -191,12 +190,12 @@ export default function About() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-dark">
+                                    <Link to="/Shop" className="text-reset">
                                         Loja
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-dark">
+                                    <Link to="/History" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -212,6 +211,7 @@ export default function About() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
+
                                     <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
@@ -221,7 +221,9 @@ export default function About() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                
+                <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
+                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                </div>
             </MDBFooter>
         </>
     );

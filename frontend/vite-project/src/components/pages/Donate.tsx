@@ -22,9 +22,13 @@ import {
 } from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 import {Link} from "react-router-dom";
+import {MDBPageNav} from "mdbreact";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
+    const [showShow, setShowShow] = useState(false);
+
+    const toggleShow = () => setShowShow(!showShow);
     return (
         <>
             <MDBContainer className="mb-5 gradient-form">
@@ -110,22 +114,9 @@ export default function Home() {
             </MDBContainer>
             <div className="container-sm">
                 <div className="row">
-                    <div className="col-md-6 mb-4">
+                    <div className="col-md-6 mb-4 mx-auto">
                         <div className="card">
-
-                            <h1 className="card-title">Roupas e Objetos</h1>
-                            <p className="card-text">Doe diversos itens ao movimento</p>
-                            <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
-                                <MDBBtn className="me-2 rounded-2" color="success">Roupas</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">Objetos</MDBBtn>
-                                <MDBBtn className="rounded-2" color="success">Outros</MDBBtn>
-                            </MDBBtnGroup>
-                            <MDBBtn className="mt-5" outline color="success">CONFIRMAR</MDBBtn>
-                        </div>
-                    </div>
-                    <div className="col-md-6 mb-4">
-                        <div className="card">
-                            <h1 className="card-title">Dinheiro</h1>
+                            <h1 className="card-title">Doação via PIX</h1>
                             <p className="card-text">Escolha o valor que deseja doar ao movimento</p>
                             <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
                                 <MDBBtn className="me-2 rounded-2" color="success">10 R$</MDBBtn>
@@ -136,10 +127,31 @@ export default function Home() {
                             <MDBBtn className="mt-5" outline color="success">CONFIRMAR</MDBBtn>
                         </div>
                     </div>
+                </div>
+            </div>
+            <MDBBtn tag='a' color='info' onClick={toggleShow}>
+                O que faremos com sua doação?
+            </MDBBtn>
+            <MDBCollapse show={showShow}>
+                <div className='row'>
+                    <div className='col-md-6 mx-auto mt-3'>
+                        <div className='card'>
+                            <div className='card-body'>
+                                <div className='card-title'>
+                                    <h4>
+                                        Sua doação é muito importante para nós!
+                                    </h4>
+                                </div>
+                                <p className='card-text mt-1'>
+                                    Com sua doação o movimento Usina Eco-Cultural poderá continuar com suas atividades de educação ambiental, arte e cultura.
+                                </p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </MDBCollapse>
 
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -164,8 +176,8 @@ export default function Home() {
                 </section>
 
 
-                <section className='containerInfoSite'>
-                    <MDBContainer className='text-center text-md-start mt-5'>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                    <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
@@ -176,8 +188,7 @@ export default function Home() {
                                     Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso:
-                                    <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
@@ -218,12 +229,12 @@ export default function Home() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-dark">
+                                    <Link to="/Shop" className="text-reset">
                                         Loja
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-dark">
+                                    <Link to="/History" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -239,6 +250,7 @@ export default function Home() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
+
                                     <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
@@ -248,7 +260,7 @@ export default function Home() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                 </div>
             </MDBFooter>

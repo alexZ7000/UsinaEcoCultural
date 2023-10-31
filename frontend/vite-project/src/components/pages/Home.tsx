@@ -34,7 +34,8 @@ import {Link} from "react-router-dom";
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
-        <><MDBContainer className="mb-5 gradient-form">
+        <>
+            <MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
                 <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
                     <MDBContainer fluid>
@@ -116,78 +117,78 @@ export default function Home() {
                     </MDBContainer>
                 </MDBNavbar>
             </MDBRow>
-        </MDBContainer>
-        <MDBRow className='abaixoAssinado'>
-            <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
-            <img className='imageAbaixoAssinado' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
-        </MDBRow>
-        <div className='px-3 text-center bg-light my-5 rounded-2'>
-                <h1 className='mb-3 pt-4'><strong><u>Site Cultural</u></strong></h1>
+            </MDBContainer>
+            <MDBRow className='abaixoAssinado'>
+                <u><strong>Abaixo assinado Usina Eco-Cultural</strong></u>
+                <img className='imageAbaixoAssinado' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
+            </MDBRow>
+            <div className='px-3 text-center bg-light my-5 rounded-2'>
+                <h1 className='mb-3 pt-4'><strong><u>Futuro Museu do Meio Ambiente!</u></strong></h1>
                 <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
                 <Link className='btn btn-outline-success mb-5 btn-lg' to='' role='button'>
                     APOIE A CAUSA!!
                 </Link>
-            <MDBCarousel showControls>
-                <MDBCarouselItem
-                    className='w-100 d-block rounded-3'
-                    itemId={1}
-                    src={abelha_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block rounded-3'
-                    itemId={2}
-                    src={banquete_usina}
-                    alt='...'
-                />
-                <MDBCarouselItem
-                    className='w-100 d-block rounded-3'
-                    itemId={3}
-                    src={yoga_usina}
-                    alt='...'
-                />
-            </MDBCarousel>
-            <div className="container-sm">
-                <div className="row">
-                    <div className="col-md-4 mb-2">
-                        <h4 className='mt-5 border-bottom border-primary'>Faça sua doação</h4>
-                        <button className="btn btn-outline-light">
-                            <Link to="/Donate" style={{ textDecoration: 'none' }}>
-                                <img className=""
-                                     width={225}
-                                     height={210}
-                                     src={usina_donate}
-                                     alt="usina_donate"/>
-                            </Link>
-                        </button>
-                    </div>
-                    <div className="col-md-4 mb-2">
-                        <h4 className='mt-5 border-bottom border-primary'>Conheça nossa história</h4>
-                        <button className="btn btn-outline-light">
-                            <Link to="/History" style={{ textDecoration: 'none' }}>
-                                <img className=""
-                                     width={200}
-                                     height={190}
-                                     src={usina_parchment}
-                                     alt="usina_parchment"/>
-                            </Link>
-                        </button>
-                    </div>
-                    <div className="col-md-4 mb-3">
-                        <h4 className='mt-5 border-bottom border-primary'>Veja nossos próximos eventos</h4>
-                        <button className="btn btn-outline-light">
-                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
-                                <img className=""
-                                     width={200}
-                                     height={200}
-                                     src={usina_schedule}
-                                     alt="usina_calendario"/>
-                            </Link>
-                        </button>
+                <MDBCarousel showControls>
+                    <MDBCarouselItem
+                        className='w-100 d-block rounded-3'
+                        itemId={1}
+                        src={abelha_usina}
+                        alt='...'
+                    />
+                    <MDBCarouselItem
+                        className='w-100 d-block rounded-3'
+                        itemId={2}
+                        src={banquete_usina}
+                        alt='...'
+                    />
+                    <MDBCarouselItem
+                        className='w-100 d-block rounded-3'
+                        itemId={3}
+                        src={yoga_usina}
+                        alt='...'
+                    />
+                </MDBCarousel>
+                <div className="container-sm">
+                    <div className="row">
+                        <div className="col-md-4 mb-2">
+                            <h4 className='mt-5 border-bottom border-primary'>Faça sua doação</h4>
+                            <button className="btn btn-outline-light">
+                                <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                    <img className=""
+                                         width={225}
+                                         height={210}
+                                         src={usina_donate}
+                                         alt="usina_donate"/>
+                                </Link>
+                            </button>
+                        </div>
+                        <div className="col-md-4 mb-2">
+                            <h4 className='mt-5 border-bottom border-primary'>Conheça nossa história</h4>
+                            <button className="btn btn-outline-light">
+                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                    <img className=""
+                                         width={200}
+                                         height={190}
+                                         src={usina_parchment}
+                                         alt="usina_parchment"/>
+                                </Link>
+                            </button>
+                        </div>
+                        <div className="col-md-4 mb-3">
+                            <h4 className='mt-5 border-bottom border-primary'>Veja nossos próximos eventos</h4>
+                            <button className="btn btn-outline-light">
+                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                    <img className=""
+                                         width={200}
+                                         height={200}
+                                         src={usina_schedule}
+                                         alt="usina_calendario"/>
+                                </Link>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
             <div className="row">
                 <div className="container">
                     <div className="my-5" style={{borderRadius: '16px', backgroundColor: 'light'}}>
@@ -240,8 +241,7 @@ export default function Home() {
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso:
-                                    <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
@@ -316,6 +316,7 @@ export default function Home() {
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                 </div>
-            </MDBFooter></>
+            </MDBFooter>
+        </>
     );
 }

@@ -163,7 +163,7 @@ function renderProduct(products: Product) {
             <div className="card-body">
                 <h5 className="card-title text-center">{products.name}</h5>
                 <p className="card-text">{products.description}</p>
-                <select className="form-control btn-success active border border-success  form-control-sm" role='button'>
+                <select className="form-control btn-light active border-primary-subtle form-control-sm" role='button'>
                     <option>{products.opcoes1}</option>
                     <option>{products.opcoes2}</option>
                     <option>{products.opcoes3}</option>
@@ -181,14 +181,14 @@ function renderProduct(products: Product) {
 function ImageModal({ image, onClose }: { image: string; onClose: () => void }) {
     return (
         <Modal show={true} onHide={onClose}>
+            <Modal.Header>
+                <MDBBtn className='close ms-auto'  outline color="danger" onClick={onClose}>
+                    &times;
+                </MDBBtn>
+            </Modal.Header>
             <Modal.Body>
-                <img src={image} alt="Imagem" className="card-img-top item-align-center rounded-3"/>
+                <img src={image} alt="Imagem" className="card-img-top item-align-center rounded-3 mx-auto"/>
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="outline-success" onClick={onClose}>
-                    Fechar
-                </Button>
-            </Modal.Footer>
         </Modal>
     );
 }
@@ -207,10 +207,10 @@ function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcular
                             Produto: {product.name}, Preço: R$ {product.preco}
                             </li>
                             )
-                        )};
+                        )}
                     </ul>
                     <h3>O valor total foi de: R$ {calcularTotal()}</h3>
-                    <a href="#" className="btn btn-success" >Continuar com o pagamento</a>
+                    <a href="#" className="btn btn-success mt-3" >Continuar com o pagamento</a>
                 </div>
             </div>
         </div>
@@ -320,7 +320,7 @@ export default function Loja() {
                     Limpar Carrinho
                 </MDBBtn>
             </div>
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5'>
+            <MDBFooter bgColor='light' className='mt-5 text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -343,8 +343,10 @@ export default function Loja() {
                         </Link>
                     </div>
                 </section>
-                <section className='containerInfoSite'>
-                    <MDBContainer className='text-center text-md-start mt-5'>
+
+
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                    <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
@@ -355,8 +357,7 @@ export default function Loja() {
                                     Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso:
-                                    <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
@@ -397,12 +398,12 @@ export default function Loja() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-dark">
+                                    <Link to="/Shop" className="text-reset">
                                         Loja
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-dark">
+                                    <Link to="/History" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -418,6 +419,7 @@ export default function Loja() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
+
                                     <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
@@ -427,7 +429,7 @@ export default function Loja() {
                         </MDBRow>
                     </MDBContainer>
                 </section>
-                <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                 </div>
             </MDBFooter>

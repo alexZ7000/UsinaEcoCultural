@@ -125,11 +125,9 @@ export default function Login() {
                     <p className="mb-0 me-2">Não tem uma conta?</p>
                     <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Cadastre-se</MDBBtn></Link>
                 </div>
-                <MDBFooter bgColor='light' className='mt-5 text-center text-lg-left'>
-                    <div className='text-center p-4 mt-5' style={{backgroundColor: 'rgba(0, 0, 0, 0.20)', borderRadius: '8px', color: '#000000'}}>
-                        © {new Date().getFullYear()} Todos os Direitos Reservados
-                    </div>
-                </MDBFooter>
+                <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
+                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                </div>
             </MDBRow>
         </MDBContainer>
     );
