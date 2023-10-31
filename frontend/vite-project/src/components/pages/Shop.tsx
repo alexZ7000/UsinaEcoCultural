@@ -158,8 +158,8 @@ function renderProduct(products: Product) {
 
     return (
         <div className="card col-3 item-align-center ms-3 me-4 mb-5" style={{ width: '16rem' }}>
-            <img src= {products.imageLink} className="card-img-top item-align-center" alt="Imagem do Produto" onClick={openModal} role='button'/>
-                {showModal && <ImageModal image={products.imageLink}  onClose={closeModal}/>}
+            <img src= {products.imageLink} className="card-img-top item-align-center rounded-2" alt="Imagem do Produto" onClick={openModal} role='button'/>
+                {showModal && <ImageModal image={products.imageLink} onClose={closeModal}/>}
             <div className="card-body">
                 <h5 className="card-title text-center">{products.name}</h5>
                 <p className="card-text">{products.description}</p>
@@ -182,7 +182,7 @@ function ImageModal({ image, onClose }: { image: string; onClose: () => void }) 
     return (
         <Modal show={true} onHide={onClose}>
             <Modal.Body>
-                <img src={image} alt="Imagem" />
+                <img src={image} alt="Imagem" className="card-img-top item-align-center rounded-3"/>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="outline-success" onClick={onClose}>
