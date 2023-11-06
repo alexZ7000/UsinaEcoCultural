@@ -10,6 +10,5 @@ const pool = new Pool({
         rejectUnauthorized: false,
     }
 });
-const ws = new WebSocket("wss://" + location.host + "/") //adicionar ainda o host
 
 module.exports = pool;
