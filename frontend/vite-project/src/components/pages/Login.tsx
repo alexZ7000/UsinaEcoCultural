@@ -114,7 +114,7 @@ export default function Login() {
                                 <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                                 <p>Lembrar meus dados para próximo login</p>
                             </div>
-                            <MDBBtn className='mb-4 w-100 btn-success gradient-custom-4 mx-auto' size='lg'>Login</MDBBtn>
+                            <MDBBtn className='mb-4 w-100 btn-success gradient-custom-4 mx-auto' size='lg' style={{backgroundColor: '#69A625'}}>Login</MDBBtn>
                             <div className="text-center pt-1 pb-1">
                                 <Link className="text-primary" to="#!">Esqueceu sua senha?</Link>
                             </div>
@@ -123,7 +123,7 @@ export default function Login() {
                 </MDBContainer>
                 <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
                     <p className="mb-0 me-2">Não tem uma conta?</p>
-                    <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Cadastre-se</MDBBtn></Link>
+                    <Link to="/SignUp" style={{ textDecoration: 'none', color: '#69A625' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Cadastre-se</MDBBtn></Link>
                 </div>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados

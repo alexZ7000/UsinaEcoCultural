@@ -37,7 +37,7 @@ export default function Home() {
         <>
             <MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' style={{color: '#000', backgroundColor: '#ffffff'}}>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'
@@ -61,13 +61,13 @@ export default function Home() {
 
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
                             <MDBNavbarNav fullWidth={true}>
-                                <div className="ms-5"></div>
+                                {/* <div className="ms-5"></div>
                                 <div className='ms-5'></div>
                                 <div className='ms-5'></div>
                                 <div className='ms-5'></div>
-                                <div className='ms-5'></div>
+                                <div className='ms-5'></div> */}
                                 <MDBNavbarItem className="mx-auto">
-                                    <Link to="/" style={{ textDecoration: 'none' }}>
+                                    <Link to="/" style={{ textDecoration: 'none'}}>
                                         <MDBNavbarLink active aria-current='page' href='#'>
                                             Página Inicial
                                         </MDBNavbarLink>
@@ -98,8 +98,8 @@ export default function Home() {
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-4">
                                     <div className='mx-auto'>
-                                        <Link to="/Login" style={{ textDecoration: 'none' }} role='button'>
-                                            <MDBBtn outline={true} className='mb-2 btn-outline-success'>
+                                        <Link to="/Login" style={{ textDecoration: 'none', color: '#69A625'}} role='button'>
+                                            <MDBBtn style={{color: '#69A625'}} outline={true} className='mb-2 btn-outline-success'>
                                                 <MDBIcon fas icon="user"/>Login
                                             </MDBBtn>
                                         </Link>
@@ -107,7 +107,7 @@ export default function Home() {
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-4">
                                     <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'>
-                                        <MDBBtn className='btn-success'>
+                                        <MDBBtn className='btn-success' style={{color: 'ECECEC', backgroundColor: '#69A625'}}>
                                             <MDBIcon far icon="user"/>Cadastre-se
                                         </MDBBtn>
                                     </Link>
