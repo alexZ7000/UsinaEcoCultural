@@ -125,8 +125,8 @@ export default function Home() {
             <div className='px-3 text-center bg-light my-5 rounded-2'>
                 <h1 className='mb-3 pt-4'><strong><u>Futuro Museu do Meio Ambiente!</u></strong></h1>
                 <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
-                <Link className='btn btn-outline-success mb-5 btn-lg' to='' role='button'>
-                    APOIE A CAUSA!!
+                <Link className='btn btn-outline-success mb-5 btn-lg' to='/Donate' role='button' style={{color: '#69A625'}}>
+                    APOIE A CAUSA!
                 </Link>
                 <MDBCarousel showControls>
                     <MDBCarouselItem
@@ -229,12 +229,12 @@ export default function Home() {
                 </section>
 
 
-                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
-                                    <MDBIcon icon="gem" className="me"/>
+                                    <MDBIcon className="me"/>
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
@@ -314,7 +314,7 @@ export default function Home() {
                     </MDBContainer>
                 </section>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    © {new Date().getFullYear()} - Todos os Direitos Reservados
                 </div>
             </MDBFooter>
         </>

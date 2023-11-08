@@ -121,17 +121,17 @@ export default function Home() {
                             <h1 className="card-title">Doação via PIX</h1>
                             <p className="card-text">Escolha o valor que deseja doar ao movimento</p>
                             <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
-                                <MDBBtn className="me-2 rounded-2" color="success">10 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">25 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" color="success">50 R$</MDBBtn>
-                                <MDBBtn className="rounded-2" color="success">Outro</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>10 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>25 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>50 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>Outro</MDBBtn>
                             </MDBBtnGroup>
-                            <MDBBtn className="mt-5" outline color="success">CONFIRMAR</MDBBtn>
+                            <MDBBtn className="mt-5" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>CONFIRMAR</MDBBtn>
                         </div>
                     </div>
                 </div>
             </div>
-            <MDBBtn tag='a' color='info' onClick={toggleShow}>
+            <MDBBtn tag='a' onClick={toggleShow} style={{color:'#ececec', backgroundColor:'#3A90C3'}}>
                 O que faremos com sua doação?
             </MDBBtn>
             <MDBCollapse show={showShow}>
