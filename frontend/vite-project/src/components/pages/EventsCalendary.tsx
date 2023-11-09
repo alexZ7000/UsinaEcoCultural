@@ -145,7 +145,7 @@ export default function Home() {
                 </MDBRow>
             <MDBRow>
                 <div className="mt-5 mb-3 ">
-                    <h1>Calendário de Eventos</h1>
+                    <h1><strong>Calendário de Eventos</strong></h1>
                 </div>
             </MDBRow>
             <RevoCalendar className="mt"
@@ -155,15 +155,15 @@ export default function Home() {
                 style = {
                 {
                     borderRadius: "15px",
-                    border: "5px solid #4F6995",
+                    border: "3px solid #4F6995",
                     height: "534px"
                 }
             }
                 highlightToday = {true}
                 lang = "pt"
-                primaryColor = "#516b97"
-                secondaryColor = "#D7E6EE"
-                todayColor = "#3B3966"
+                primaryColor = "#3A90C3"
+                secondaryColor = "#efffff"
+                todayColor = "#FFFaa"
                 textColor = "#333333"
                 indicatorColor = "orange"
                 animationSpeed = {300}
@@ -180,7 +180,7 @@ export default function Home() {
                 detailDateFormat = "DD/MM/YYYY"
             />
         </MDBContainer>
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+        <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -205,16 +205,16 @@ export default function Home() {
                 </section>
 
 
-                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
-                                    <MDBIcon icon="gem" className="me"/>
+                                    <MDBIcon className="me"/>
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                    Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
@@ -248,7 +248,7 @@ export default function Home() {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <Link to='/Donate' className='text-reset'>
                                         Apoie a Causa
                                     </Link>
                                 </p>
@@ -263,7 +263,7 @@ export default function Home() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-reset">
+                                    <Link to="/EventsCalendary" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -273,14 +273,14 @@ export default function Home() {
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                    <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                    <br/>
-                                    Perto da estação Santos-Imigrantes (Linha Verde)
+                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                <br/>
+                                Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-
-                                    <strong>usinaecoculturalnaooficial@gmail.com</strong>
+                                    
+                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
                                     <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
@@ -290,7 +290,7 @@ export default function Home() {
                     </MDBContainer>
                 </section>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    © {new Date().getFullYear()} - Todos os Direitos Reservados
                 </div>
             </MDBFooter>
         </>

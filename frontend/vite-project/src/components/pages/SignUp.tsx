@@ -32,7 +32,7 @@ export default function SignUp() {
         <>
             <MDBContainer className="mb-5 gradient-form">
                 <MDBRow className='container-sm'>
-                    <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                    <MDBNavbar className="navbar" expand='lg' style={{backgroundColor: 'FFF'}}>
                         <MDBContainer fluid>
                             <MDBNavbarToggler
                                 type='button'
@@ -97,7 +97,7 @@ export default function SignUp() {
             <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: ''}}>
                 <MDBCard style={{maxWidth: '600px'}}>
                     <MDBCardBody>
-                        <h2 className="text-uppercase text-center mb-5">Crie sua Conta</h2>
+                        <h2 className="text-uppercase text-center mb-5"><strong>Crie sua Conta</strong></h2>
                         <MDBInput wrapperClass='mb-4' label='Digite seu Nome' size='lg' id='form1' type='text'/>
                         <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email'/>
                         <MDBInput wrapperClass='mb-4' label='Digite sua Senha' size='lg' id='form3' type='password'/>
@@ -106,13 +106,13 @@ export default function SignUp() {
                             <MDBCheckbox name='flexCheck' id='flexCheckDefault'/>
                             <p>Eu concordo com os <Link to="#"><i><u>Termos de Serviço</u></i></Link></p>
                         </div>
-                        <MDBBtn className='mb-4 w-100 gradient-custom-4 btn-success mx-auto' size='lg'>Registrar-se</MDBBtn>
+                        <MDBBtn className='w-100 btn-success gradient-custom-4' size='lg' style={{backgroundColor: '#69A625'}}>Registrar-se</MDBBtn>
                     </MDBCardBody>
                 </MDBCard>
             </MDBContainer>
-            <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
+            <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3">
                 <p className="mb-0 me-2">Já tem uma conta?</p>
-                <Link to="/Login" style={{ textDecoration: 'none' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Login</MDBBtn></Link>
+                <Link to="/Login" style={{color: '#69A625'}} role='button'><MDBBtn outline={false} className='btn-outline-success' style={{color: '#69A625', backgroundColor: '#FFF'}}><MDBIcon far icon="user" style={{color: '#69A625'}}/>Login</MDBBtn></Link>
             </div>
             <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                 © {new Date().getFullYear()} Todos os Direitos Reservados

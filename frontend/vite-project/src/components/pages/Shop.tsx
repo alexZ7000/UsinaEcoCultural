@@ -157,20 +157,20 @@ function renderProduct(products: Product) {
     };
 
     return (
-        <div className="card col-3 item-align-center ms-3 me-4 mb-5" style={{ width: '16rem' }}>
+        <div className="card col-3 item-align-center ms-3 me-4 mb-5" style={{width: '16rem'}}>
             <img src= {products.imageLink} className="card-img-top item-align-center rounded-2" alt="Imagem do Produto" onClick={openModal} role='button'/>
                 {showModal && <ImageModal image={products.imageLink} onClose={closeModal}/>}
             <div className="card-body">
                 <h5 className="card-title text-center">{products.name}</h5>
                 <p className="card-text">{products.description}</p>
-                <select className="form-control btn-light active border-primary-subtle form-control-sm" role='button'>
+                <select className="form-control btn-light active border-primary-subtle form-control-sm" role='button' style={{backgroundColor: '#FFF'   }}>
                     <option>{products.opcoes1}</option>
                     <option>{products.opcoes2}</option>
                     <option>{products.opcoes3}</option>
                     <option>{products.opcoes4}</option>
                 </select>
                 <h3 className="text-center my-3">R$ {products.price}</h3>
-                <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(products)}>
+                <a href="#" className="btn btn-success" onClick={() => adicionarAoCarrinho(products)} style={{color: '#FFF', backgroundColor: '#69A625'}}>
                     Adicionar ao Carrinho
                 </a>
             </div>
@@ -210,7 +210,7 @@ function CarrinhoDaLoja({ carrinho, calcularTotal }: { carrinho: any[]; calcular
                         )}
                     </ul>
                     <h3>O valor total foi de: R$ {calcularTotal()}</h3>
-                    <a href="#" className="btn btn-success mt-3" >Continuar com o pagamento</a>
+                    <a href="#" className="btn btn-success mt-3" style={{color: '#FFF', backgroundColor: '#69A625'}}>Continuar com o pagamento</a>
                 </div>
             </div>
         </div>
@@ -320,7 +320,7 @@ export default function Loja() {
                     Limpar Carrinho
                 </MDBBtn>
             </div>
-            <MDBFooter bgColor='light' className='mt-5 text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC', marginTop: 30}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -345,16 +345,16 @@ export default function Loja() {
                 </section>
 
 
-                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
-                                    <MDBIcon icon="gem" className="me"/>
+                                    <MDBIcon className="me"/>
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                    Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
@@ -388,7 +388,7 @@ export default function Loja() {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <Link to='/Donate' className='text-reset'>
                                         Apoie a Causa
                                     </Link>
                                 </p>
@@ -403,7 +403,7 @@ export default function Loja() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-reset">
+                                    <Link to="/EventsCalendary" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -413,14 +413,14 @@ export default function Loja() {
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                    <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                    <br/>
-                                    Perto da estação Santos-Imigrantes (Linha Verde)
+                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                <br/>
+                                Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-
-                                    <strong>usinaecoculturalnaooficial@gmail.com</strong>
+                                    
+                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
                                     <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
@@ -430,7 +430,7 @@ export default function Loja() {
                     </MDBContainer>
                 </section>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    © {new Date().getFullYear()} - Todos os Direitos Reservados
                 </div>
             </MDBFooter>
         </>

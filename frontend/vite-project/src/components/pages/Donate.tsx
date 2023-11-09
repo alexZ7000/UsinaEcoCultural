@@ -118,20 +118,20 @@ export default function Home() {
                 <div className="row">
                     <div className="col-md-6 mb-4 mx-auto">
                         <div className="card">
-                            <h1 className="card-title">Doação via PIX</h1>
+                            <h1 className="card-title"><strong>Doação via PIX</strong></h1>
                             <p className="card-text">Escolha o valor que deseja doar ao movimento</p>
-                            <MDBBtnGroup className="mr-2 mt-2 bg-light btn-outline-white">
-                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>10 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>25 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>50 R$</MDBBtn>
-                                <MDBBtn className="me-2 rounded-2" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>Outro</MDBBtn>
-                            </MDBBtnGroup>
-                            <MDBBtn className="mt-5" style={{color:'#ECECEC', backgroundColor:'#69A625'}}>CONFIRMAR</MDBBtn>
+                            <div className=''>
+                                <MDBBtn className="me-2 rounded-2 btn-success gradient-custom-4" style={{color:'#FFF', backgroundColor:'#69A625'}}>10 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2 btn-success gradient-custom-4" style={{color:'#FFF', backgroundColor:'#69A625'}}>25 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2 btn-success gradient-custom-4" style={{color:'#FFF', backgroundColor:'#69A625'}}>50 R$</MDBBtn>
+                                <MDBBtn className="me-2 rounded-2 btn-success gradient-custom-4" style={{color:'#FFF', backgroundColor:'#69A625'}}>Outro</MDBBtn>
+                            </div>
+                            <MDBBtn className="mt-5 btn-success gradient-custom-4" style={{color:'#FFF', backgroundColor:'#69A625'}}>CONFIRMAR</MDBBtn>
                         </div>
                     </div>
                 </div>
             </div>
-            <MDBBtn tag='a' onClick={toggleShow} style={{color:'#ececec', backgroundColor:'#3A90C3'}}>
+            <MDBBtn tag='a' onClick={toggleShow} style={{color:'#FFF', backgroundColor:'#3A90C3'}}>
                 O que faremos com sua doação?
             </MDBBtn>
             <MDBCollapse show={showShow}>
@@ -153,7 +153,7 @@ export default function Home() {
                 </div>
             </MDBCollapse>
 
-            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-5' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+            <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
                         <span>Fique conectado em nossas redes sociais:</span>
@@ -178,16 +178,16 @@ export default function Home() {
                 </section>
 
 
-                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC'}}>
+                <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
-                                    <MDBIcon icon="gem" className="me"/>
+                                    <MDBIcon className="me"/>
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                    Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
@@ -221,7 +221,7 @@ export default function Home() {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <Link to='/Donate' className='text-reset'>
                                         Apoie a Causa
                                     </Link>
                                 </p>
@@ -236,7 +236,7 @@ export default function Home() {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/History" className="text-reset">
+                                    <Link to="/EventsCalendary" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -246,14 +246,14 @@ export default function Home() {
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                    <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                    <br/>
-                                    Perto da estação Santos-Imigrantes (Linha Verde)
+                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                <br/>
+                                Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-
-                                    <strong>usinaecoculturalnaooficial@gmail.com</strong>
+                                    
+                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>
                                     <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
@@ -263,7 +263,7 @@ export default function Home() {
                     </MDBContainer>
                 </section>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
-                    © {new Date().getFullYear()} Todos os Direitos Reservados
+                    © {new Date().getFullYear()} - Todos os Direitos Reservados
                 </div>
             </MDBFooter>
         </>

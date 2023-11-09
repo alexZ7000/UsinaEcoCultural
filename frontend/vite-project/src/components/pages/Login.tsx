@@ -31,7 +31,7 @@ export default function Login() {
     return (
         <MDBContainer className="mb-5 gradient-form">
             <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' light bgColor='light'>
+                <MDBNavbar className="navbar" expand='lg' style={{backgroundColor: 'FFF'}}>
                     <MDBContainer fluid>
                         <MDBNavbarToggler
                             type='button'
@@ -95,7 +95,7 @@ export default function Login() {
                 <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image mt-5' style={{backgroundImage: ''}}>
                     <MDBCard style={{maxWidth: '600px'}}>
                         <MDBCardBody>
-                            <h2 className="text-uppercase text-center mb-5">Faça seu Login</h2>
+                            <h2 className="text-uppercase text-center mb-5"><strong>Faça seu Login</strong></h2>
                             <div className='my-5 mx-auto'>
                                 <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'darkblue' }}>
                                     <MDBIcon fab icon='facebook-f' size="lg"/>
@@ -121,9 +121,9 @@ export default function Login() {
                         </MDBCardBody>
                     </MDBCard>
                 </MDBContainer>
-                <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3     ">
+                <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3">
                     <p className="mb-0 me-2">Não tem uma conta?</p>
-                    <Link to="/SignUp" style={{ textDecoration: 'none', color: '#69A625' }} role='button'><MDBBtn outline={true} className='btn-outline-success'><MDBIcon far icon="user"/>Cadastre-se</MDBBtn></Link>
+                    <Link to="/SignUp" style={{ textDecoration: 'none', color: '#69A625', backgroundColor: '#FFF'}} role='button'><MDBBtn outline={false} className='w-100 btn-success gradient-custom-4' style={{ textDecoration: 'none', color: '#69A625', backgroundColor: '#FFF'}}><MDBIcon far icon="user"/>Cadastre-se</MDBBtn></Link>
                 </div>
                 <div className='text-center p-4 mt-5' style={{backgroundColor: '#69A625', borderRadius: '16px', color: '#ECECEC'}}>
                     © {new Date().getFullYear()} Todos os Direitos Reservados
