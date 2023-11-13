@@ -7,6 +7,7 @@ import SignUp from "./components/pages/SignUp";
 import History from "./components/pages/History";
 import About from "./components/pages/About";
 import Donate from "./components/pages/Donate";
+import Gallery from './components/pages/Gallery';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
 import './App.css';
 
@@ -22,6 +23,7 @@ export default function App() {
                 <Route path="/history" element={<History />} />
                 <Route path="/Donate" element={<Donate />} />
                 <Route path="/About" element={<About />} />
+                <Route path="/Gallery" element={<Gallery />} />
                 <Route path="*" element={<h1>Not Found 404</h1>} />'
             </Routes>
         </BrowserRouter>

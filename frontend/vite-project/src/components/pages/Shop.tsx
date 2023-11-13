@@ -281,6 +281,9 @@ export default function Loja() {
                                             <Link to="/Shop" style={{ textDecoration: 'none' }}>
                                                 <MDBDropdownItem link>Loja</MDBDropdownItem>
                                             </Link>
+                                            <Link to="/Gallery" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Galeria</MDBDropdownItem>
+                                            </Link>
                                             <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
                                                 <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
                                             </Link>
