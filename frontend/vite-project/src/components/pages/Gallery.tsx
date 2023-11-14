@@ -31,9 +31,38 @@ import imagem7 from "./Assets/images/imagem7.png";
 import imagem8 from "./Assets/images/imagem8.png";
 import imagem9 from "./Assets/images/imagem9.png";
 import { Link } from "react-router-dom";
+import instagram_logo from "./Assets/images/instagram_logo.png";
+import {Modal} from "react-bootstrap";
+
+function ImageModal({ image, onClose }: { image: string; onClose: () => void }) {
+    return (
+        <Modal show={true} onHide={onClose}>
+            <Modal.Header>
+                <MDBBtn className='close ms-auto'  outline color="danger" onClick={onClose}>
+                    &times;
+                </MDBBtn>
+            </Modal.Header>
+            <Modal.Body>
+                <img src={image} alt="Imagem" className="card-img-top item-align-center rounded-3 mx-auto"/>
+            </Modal.Body>
+        </Modal>
+    );
+}
 
 export default function Gallery() {
     const [showNavCentred, setShowNavCentred] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState(null);
+
+    const openModal = ({index}: { index: any }) => {
+        setSelectedIndex(index);
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setSelectedIndex(null);
+        setShowModal(false);
+    };
 
     const imagesData = [
         {
@@ -113,7 +142,7 @@ export default function Gallery() {
                                 <MDBNavbarNav fullWidth={true}>
                                     <MDBNavbarItem className="mx-auto">
                                         <Link to="/" style={{ textDecoration: 'none' }}>
-                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                            <MDBNavbarLink aria-current='page' href='#'>
                                                 Página Inicial
                                             </MDBNavbarLink>
                                         </Link>
@@ -123,12 +152,12 @@ export default function Gallery() {
                                             <MDBNavbarLink>Doação</MDBNavbarLink>
                                         </Link>
                                     </MDBNavbarItem>
-                                    <MDBNavbarItem className="mx-auto">
+                                    <MDBNavbarItem active className="mx-auto">
                                         <MDBDropdown>
                                             <MDBDropdownToggle tag='a' className='nav-link'>
                                                 Sobre nós
                                             </MDBDropdownToggle>
-                                            <MDBDropdownMenu>
+                                            <MDBDropdownMenu >
                                                 <Link to="/History" style={{ textDecoration: 'none' }}>
                                                     <MDBDropdownItem link>Nossa História</MDBDropdownItem>
                                                 </Link>
@@ -136,7 +165,7 @@ export default function Gallery() {
                                                     <MDBDropdownItem link>Loja</MDBDropdownItem>
                                                 </Link>
                                                 <Link to="/Gallery" style={{ textDecoration: 'none' }}>
-                                                    <MDBDropdownItem link>Galeria</MDBDropdownItem>
+                                                    <MDBDropdownItem link>Galeria de Fotos</MDBDropdownItem>
                                                 </Link>
                                                 <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
                                                     <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
@@ -166,15 +195,14 @@ export default function Gallery() {
                     </MDBNavbar>
                 </MDBRow>
             </MDBContainer>
-
-            {/* Galeria de Imagens */}
             <MDBContainer className="mb-5">
                 <h2 className="text-center mt-5 mb-3">Galeria de Imagens</h2>
                 <div className="row">
                     {imagesData.map((image, index) => (
                         <div key={index} className="col-md-4 mb-4">
                             <div className="gallery-item">
-                                <img src={image.src} alt={image.title} className="img-fluid" />
+                                <img src={image.src} alt={image.title} className="img-fluid" onClick={() => openModal({index: index})} role='button' />
+                                {showModal && selectedIndex === index && <ImageModal image={image.src} onClose={closeModal}/>}
                                 <h4>{image.title}</h4>
                                 <p>{image.caption}</p>
                             </div>
@@ -190,24 +218,16 @@ export default function Gallery() {
                     </div>
                     <div>
                         <Link to='https://www.facebook.com/usinaecocultural/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="facebook-f"/>
-                        </Link>
-                        <Link to='' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="twitter"/>
-                        </Link>
-                        <Link to='' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="google"/>
+                            <MDBIcon fab icon="facebook" style={{ color: 'darkblue' }}/>
                         </Link>
                         <Link to='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="instagram"/>
+                            <img src={instagram_logo} alt='' width='16' className='mb-1'/>
                         </Link>
                         <Link to='https://www.youtube.com/@usinaecocultural' target="_blank" className='me-4 text-reset'>
-                            <MDBIcon fab icon="youtube" />
+                            <MDBIcon fab icon="youtube" style={{ color: 'red' }}/>
                         </Link>
                     </div>
                 </section>
-
-
                 <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
@@ -217,7 +237,7 @@ export default function Gallery() {
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                    Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
@@ -227,48 +247,48 @@ export default function Gallery() {
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Produtos da Loja</u></h6>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Roupas
-                                    </Link>
+                                    <MDBIcon fas icon="tshirt"  /> <Link to='/Shop' className='text-reset'>
+                                    Roupas
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Canecas
-                                    </Link>
+                                    <MDBIcon fas icon="mug-hot" /> <Link to='/Shop' className='text-reset'>
+                                    Canecas
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Livros
-                                    </Link>
+                                    <MDBIcon fas icon="book" /> <Link to='/Shop' className='text-reset'>
+                                    Livros
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Outros
-                                    </Link>
+                                    <MDBIcon fas icon="shopping-bag" /> <Link to='/Shop' className='text-reset'>
+                                    Outros
+                                </Link>
                                 </p>
                             </MDBCol>
 
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <Link to='/Donate' className='text-reset'>
-                                        Apoie a Causa
-                                    </Link>
+                                    <MDBIcon fas icon="leaf" style={{color: 'green'}}/> <Link to='/Donate' className='text-reset'>
+                                    Apoie a Causa
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Configurações
-                                    </Link>
+                                    <MDBIcon fas icon="photo-video" /> <Link to='/Gallery' className='text-reset'>
+                                    Galeria de Fotos
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-reset">
-                                        Loja
-                                    </Link>
+                                    <MDBIcon fas icon="shopping-cart" /> <Link to="/Shop" className="text-reset">
+                                    Loja
+                                </Link>
                                 </p>
                                 <p>
-                                    <Link to="/EventsCalendary" className="text-reset">
-                                        Eventos
-                                    </Link>
+                                    <MDBIcon fas icon="calendar-alt" /> <Link to="/EventsCalendary" className="text-reset">
+                                    Eventos
+                                </Link>
                                 </p>
                             </MDBCol>
 
@@ -276,17 +296,17 @@ export default function Gallery() {
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
-                                <br/>
-                                Perto da estação Santos-Imigrantes (Linha Verde)
+                                    <i> Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                    <br/>
+                                    Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-                                    
-                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
+
+                                    <strong> exemplo@email.com</strong>
                                 </p>
                                 <p>
-                                    <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
+                                    <MDBIcon icon="phone" className="me"/> (xx) xxxxx-xxxx
                                 </p>
                             </MDBCol>
                         </MDBRow>

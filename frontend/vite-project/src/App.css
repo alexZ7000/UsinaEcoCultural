@@ -47,9 +47,34 @@
   color: #888;
 }
 
+.gallery-item{
+  transition: transform 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
 .carousel-control-prev-icon, .carousel-control-next-icon{
   background-color: black;
   border-radius: 5px;
+}
+
+.carousel-control-prev-icon::after, .carousel-control-next-icon::after{
+  content: none;
 }
 
 .container-fluid{
@@ -86,10 +111,6 @@
   border-radius: 10px;
 }
 
-#textNavBarPaginaInicial{
-  color: #000000a1;
-  padding-right: 10px;
-}
 
 .custom-center {
   display: flex;

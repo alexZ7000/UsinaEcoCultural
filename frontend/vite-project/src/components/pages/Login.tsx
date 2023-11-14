@@ -19,9 +19,12 @@ import {
     MDBDropdownToggle,
     MDBDropdownItem,
     MDBNavbarBrand,
-    MDBFooter, MDBCard, MDBCardBody, MDBCheckbox
+    MDBCard,
+    MDBCardBody,
+    MDBCheckbox
 } from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
+import google_logo from "./Assets/images/google_logo.png";
 
 export default function Login() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -57,7 +60,7 @@ export default function Login() {
                             <MDBNavbarNav fullWidth={false}>
                                 <MDBNavbarItem className="mx-2">
                                     <Link to="/" style={{ textDecoration: 'none' }}>
-                                        <MDBNavbarLink active aria-current='page' href='#'>
+                                        <MDBNavbarLink aria-current='page' href='#'>
                                             Página Inicial
                                         </MDBNavbarLink>
                                     </Link>
@@ -80,7 +83,7 @@ export default function Login() {
                                                 <MDBDropdownItem link>Loja</MDBDropdownItem>
                                             </Link>
                                             <Link to="/Gallery" style={{ textDecoration: 'none' }}>
-                                                    <MDBDropdownItem link>Galeria</MDBDropdownItem>
+                                                    <MDBDropdownItem link>Galeria de Fotos</MDBDropdownItem>
                                             </Link>
                                             <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
                                                 <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
@@ -101,11 +104,11 @@ export default function Login() {
                             <h2 className="text-uppercase text-center mb-5"><strong>Faça seu Login</strong></h2>
                             <div className='my-5 mx-auto'>
                                 <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'darkblue' }}>
-                                    <MDBIcon fab icon='facebook-f' size="lg"/>
+                                    <MDBIcon fab icon="facebook"  size='lg'/>
                                 </MDBBtn>
 
-                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'grey' }}>
-                                    <MDBIcon fab icon='google' size="lg"/>
+                                <MDBBtn tag='a' color='none' className='mx-4' style={{ color: 'red' }}>
+                                    <img src={google_logo} alt="das" width='21'></img>
                                 </MDBBtn>
                             </div>
                             <MDBInput wrapperClass='mb-4' label='Digite seu E-mail' size='lg' id='form2' type='email' onChange={handleChange}/>

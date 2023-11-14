@@ -57,7 +57,7 @@ export default function SignUp() {
                                 <MDBNavbarNav fullWidth={false}>
                                     <MDBNavbarItem className="mx-2">
                                         <Link to="/" style={{ textDecoration: 'none' }}>
-                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                            <MDBNavbarLink aria-current='page' href='#'>
                                                 Página Inicial
                                             </MDBNavbarLink>
                                         </Link>
@@ -80,7 +80,7 @@ export default function SignUp() {
                                                     <MDBDropdownItem link>Loja</MDBDropdownItem>
                                                 </Link>
                                                 <Link to="/Gallery" style={{ textDecoration: 'none' }}>
-                                                    <MDBDropdownItem link>Galeria</MDBDropdownItem>
+                                                    <MDBDropdownItem link>Galeria de Fotos</MDBDropdownItem>
                                                 </Link>
                                                 <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
                                                     <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>

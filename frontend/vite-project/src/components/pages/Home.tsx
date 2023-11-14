@@ -19,16 +19,17 @@ import {
     MDBDropdownItem,
     MDBCarousel,
     MDBCarouselItem,
-    MDBBtn,
+    MDBBtn
 } from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
 import yoga_usina from "./Assets/images/yoga.png";
-import abaixo_assinado_usina from "./Assets/images/imageAbaixoAssinado.png";
+import abaixo_assinado_usina from "./Assets/images/abaixo_assinado_usina.png";
 import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
+import instagram_logo from "./Assets/images/instagram_logo.png";
 import {Link} from "react-router-dom";
 
 export default function Home() {
@@ -36,90 +37,84 @@ export default function Home() {
     return (
         <>
             <MDBContainer className="mb-5 gradient-form">
-            <MDBRow className='container-sm'>
-                <MDBNavbar className="navbar" expand='lg' style={{color: '#000', backgroundColor: '#ffffff'}}>
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarCenteredExample'
-                            aria-controls='navbarCenteredExample'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon='bars' fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href='#' className="ms-1">
-                            <Link to="/" style={{ textDecoration: 'none' }}>
-                            <img
-                                src={icone_usina}
-                                width={100}
-                                alt=''
-                            />
-                            </Link>
-                        </MDBNavbarBrand>
+                <MDBRow className='container-sm'>
+                    <MDBNavbar className="navbar" expand='lg' style={{color: '#000', backgroundColor: '#ffffff'}}>
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type='button'
+                                data-target='#navbarCenteredExample'
+                                aria-controls='navbarCenteredExample'
+                                aria-expanded='false'
+                                aria-label='Toggle navigation'
+                                onClick={() => setShowNavCentred(!showNavCentred)}>
+                                <MDBIcon icon='bars' fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href='#' className="ms-1">
+                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                <img
+                                    src={icone_usina}
+                                    width={100}
+                                    alt='icone_usina'
+                                />
+                                </Link>
+                            </MDBNavbarBrand>
 
-                        <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
-                            <MDBNavbarNav fullWidth={true}>
-                                {/* <div className="ms-5"></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div>
-                                <div className='ms-5'></div> */}
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/" style={{ textDecoration: 'none'}}>
-                                        <MDBNavbarLink active aria-current='page' href='#'>
-                                            Página Inicial
-                                        </MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/Donate" style={{ textDecoration: 'none' }}>
-                                        <MDBNavbarLink>Doação</MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <MDBDropdown>
-                                        <MDBDropdownToggle tag='a' className='nav-link'>
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <Link to="/History" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                            <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
+                                <MDBNavbarNav fullWidth={true}>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/" style={{ textDecoration: 'none'}}>
+                                            <MDBNavbarLink active aria-current='page' href='#'>
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/Donate" style={{ textDecoration: 'none' }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link'>
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link to="/History" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Gallery" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Galeria de Fotos</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
+                                                    <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
+                                                </Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-4">
+                                        <div className='mx-auto'>
+                                            <Link to="/Login" style={{ textDecoration: 'none', color: '#69A625'}} role='button'>
+                                                <MDBBtn style={{color: '#69A625'}} outline={true} className='mb-2 btn-outline-success'>
+                                                    <MDBIcon fas icon="user"/>Login
+                                                </MDBBtn>
                                             </Link>
-                                            <Link to="/Shop" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Loja</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/Gallery" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Galeria</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/EventsCalendary" style={{ textDecoration: 'none' }}>
-                                                <MDBDropdownItem link>Calendário de Eventos</MDBDropdownItem>
-                                            </Link>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-4">
-                                    <div className='mx-auto'>
-                                        <Link to="/Login" style={{ textDecoration: 'none', color: '#69A625'}} role='button'>
-                                            <MDBBtn style={{color: '#69A625'}} outline={true} className='mb-2 btn-outline-success'>
-                                                <MDBIcon fas icon="user"/>Login
+                                        </div>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-4">
+                                        <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'>
+                                            <MDBBtn className='btn-success' style={{color: 'ECECEC', backgroundColor: '#69A625'}}>
+                                                <MDBIcon far icon="user"/>Cadastre-se
                                             </MDBBtn>
                                         </Link>
-                                    </div>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-4">
-                                    <Link to="/SignUp" style={{ textDecoration: 'none' }} role='button'>
-                                        <MDBBtn className='btn-success' style={{color: 'ECECEC', backgroundColor: '#69A625'}}>
-                                            <MDBIcon far icon="user"/>Cadastre-se
-                                        </MDBBtn>
-                                    </Link>
-                                </MDBNavbarItem>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-            </MDBRow>
+                                    </MDBNavbarItem>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
             </MDBContainer>
             <MDBContainer>
                 <MDBRow className='mb-3 pt-4 abaixoAssinado' style={{ position: 'relative' }}>
@@ -132,19 +127,10 @@ export default function Home() {
                         />
                     </MDBCol>
                     <MDBCol md='6' className='d-flex align-items-center'>
-                        <div
-                            className='me-3'
-                            style={{
-                                backgroundColor: '#69A625',
-                                borderRadius: '16px',
-                                width: '100%',
-                                height: '100%',
-                            }}>
-                            <div className='text-center'>
-                                <h3 className='mb-3'><u><strong>Venha participar</strong></u></h3>
-                                <p className='text-black'><strong>Bem-vindos à nossa petição online em prol da transformação da usina desativada <i>Usina Eco Cultural</i> em um vibrante espaço de lazer para a comunidade local. Estamos buscando o apoio de todos os residentes e interessados em criar uma mudança positiva em nossa região, revitalizando um importante patrimônio e promovendo o bem-estar de todos.</strong></p>
-                                <p className='text-black'><strong>Aqui está o link para ajudar a nossa transformação da Usina em um local mais atrativo: <Link to="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/" target="_blank">Abaixo Assinado</Link></strong></p>
-                            </div>
+                        <div className='me-3 border border-success w-100 h-100 rounded-3 p-4'>
+                            <h2 className='mb-4 border-bottom text-center text-wrap fs-2'><strong>AJUDE A USINA ECO-CULTURAL !</strong></h2>
+                            <p className='mx-4 text-center text-wrap'><strong>Bem-vindos à nossa petição online em prol da transformação da <i className='text-bg-light'>Usina Eco-Cultural </i> em um vibrante espaço de lazer para a comunidade local. Estamos buscando o apoio de todos os residentes e interessados em criar uma mudança positiva em nossa região, revitalizando um importante patrimônio e promovendo o bem-estar de todos.</strong></p>
+                            <p className='text-black text-center text-wrap'><strong>Aqui está o link para ajudar a nossa transformação da Usina em um local mais atrativo: <Link to="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/" target="_blank">Abaixo Assinado</Link></strong></p>
                         </div>
                     </MDBCol>
                 </MDBRow>
@@ -155,24 +141,25 @@ export default function Home() {
                 <Link className='btn btn-outline-success mb-5 btn-lg' to='/Donate' role='button' style={{color: '#69A625'}}>
                     APOIE A CAUSA!
                 </Link>
-                <MDBCarousel showControls>
+
+                <MDBCarousel showIndicators showControls fade >
                     <MDBCarouselItem
                         className='w-100 d-block rounded-3'
                         itemId={1}
                         src={abelha_usina}
-                        alt='...'
+                        alt='abelha_usina'
                     />
                     <MDBCarouselItem
                         className='w-100 d-block rounded-3'
                         itemId={2}
                         src={banquete_usina}
-                        alt='...'
+                        alt='banquete_usina'
                     />
                     <MDBCarouselItem
                         className='w-100 d-block rounded-3'
                         itemId={3}
                         src={yoga_usina}
-                        alt='...'
+                        alt='yoga_usina'
                     />
                 </MDBCarousel>
                 <div className="container-sm">
@@ -238,24 +225,16 @@ export default function Home() {
                     </div>
                     <div>
                         <Link to='https://www.facebook.com/usinaecocultural/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="facebook-f"/>
-                        </Link>
-                        <Link to='' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="twitter"/>
-                        </Link>
-                        <Link to='' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="google"/>
+                            <MDBIcon fab icon="facebook" style={{ color: 'darkblue' }}/>
                         </Link>
                         <Link to='https://www.instagram.com/usinaecocultural/' target={"_blank"} className='me-4 text-reset'>
-                            <MDBIcon fab icon="instagram"/>
+                            <img src={instagram_logo} alt='' width='16' className='mb-1'/>
                         </Link>
                         <Link to='https://www.youtube.com/@usinaecocultural' target="_blank" className='me-4 text-reset'>
-                            <MDBIcon fab icon="youtube" />
+                            <MDBIcon fab icon="youtube" style={{ color: 'red' }}/>
                         </Link>
                     </div>
                 </section>
-
-
                 <section className='containerInfoSite m-12' style={{borderRadius: '16px', backgroundColor: '#ECECEC', paddingTop: 10 }}>
                     <MDBContainer className='text-center text-md-start mt-10'>
                         <MDBRow className='mt-3'>
@@ -265,7 +244,7 @@ export default function Home() {
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
                                     Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
@@ -275,22 +254,22 @@ export default function Home() {
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Produtos da Loja</u></h6>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Roupas
+                                    <MDBIcon fas icon="tshirt"  /> <Link to='/Shop' className='text-reset'>
+                                         Roupas
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <MDBIcon fas icon="mug-hot" /> <Link to='/Shop' className='text-reset'>
                                         Canecas
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <MDBIcon fas icon="book" /> <Link to='/Shop' className='text-reset'>
                                         Livros
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
+                                    <MDBIcon fas icon="shopping-bag" /> <Link to='/Shop' className='text-reset'>
                                         Outros
                                     </Link>
                                 </p>
@@ -299,22 +278,22 @@ export default function Home() {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Links Úteis</u></h6>
                                 <p>
-                                    <Link to='/Donate' className='text-reset'>
+                                    <MDBIcon fas icon="leaf" style={{color: 'green'}}/> <Link to='/Donate' className='text-reset'>
                                         Apoie a Causa
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to='#!' className='text-reset'>
-                                        Configurações
+                                    <MDBIcon fas icon="photo-video" /> <Link to='/Gallery' className='text-reset'>
+                                        Galeria de Fotos
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/Shop" className="text-reset">
+                                    <MDBIcon fas icon="shopping-cart" /> <Link to="/Shop" className="text-reset">
                                         Loja
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to="/EventsCalendary" className="text-reset">
+                                    <MDBIcon fas icon="calendar-alt" /> <Link to="/EventsCalendary" className="text-reset">
                                         Eventos
                                     </Link>
                                 </p>
@@ -324,17 +303,17 @@ export default function Home() {
                                 <h6 className='text-uppercase fw-bold mb-4'><u>Contato</u></h6>
                                 <p>
                                     <MDBIcon icon="home" className="me"/>
-                                <i>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
+                                <i> Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</i>
                                 <br/>
                                 Perto da estação Santos-Imigrantes (Linha Verde)
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
 
-                                <strong>usinaecoculturalnaooficial@gmail.com</strong>
+                                <strong> exemplo@email.com</strong>
                                 </p>
                                 <p>
-                                    <MDBIcon icon="phone" className="me"/>(xx) xxxxx-xxxx
+                                    <MDBIcon icon="phone" className="me"/> (xx) xxxxx-xxxx
                                 </p>
                             </MDBCol>
                         </MDBRow>
