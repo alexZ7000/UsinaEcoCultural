@@ -25,7 +25,7 @@ import icone_usina from "./Assets/images/usina_icon.png";
 import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
 import yoga_usina from "./Assets/images/yoga.png";
-import abaixo_assinado_usina from "./Assets/images/Abaixo_Assinado.png";
+import abaixo_assinado_usina from "./Assets/images/imageAbaixoAssinado.png";
 import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
@@ -123,7 +123,7 @@ export default function Home() {
             </MDBContainer>
             <MDBRow className='mb-3 pt-4 abaixoAssinado'>
                 <h1><strong>Abaixo assinado Usina Eco-Cultural</strong></h1>
-                <img className='imageAbaixoAssinado ' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
+                <img className=' mx-auto' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
             </MDBRow>
             <div className='px-3 text-center bg-light my-5 rounded-2'>
                 <h1 className='mb-3 pt-4'><strong>Futuro Museu do Meio Ambiente!</strong></h1>
@@ -198,10 +198,10 @@ export default function Home() {
                         <h1 className="text-center border-bottom mb-3">Onde nos encontrar?</h1>
                         <iframe className="container rounded-10 border-2 border-light my-1"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.060978890611!2d-46.62206929643048!3d-23.596908939478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1693825060460!5m2!1spt-BR!2sbr"
-                            width="600" 
-                            height="400" 
-                            allowFullScreen={true} 
-                            loading="lazy" 
+                            width="600"
+                            height="400"
+                            allowFullScreen={true}
+                            loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <p className="text-center" style={{color: '#3A90C3'}}>Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo - SP, 04214-020</p>
                     </div>
@@ -306,7 +306,7 @@ export default function Home() {
                                 </p>
                                 <p>
                                     <MDBIcon icon="envelope" className="me"/>
-                                    
+
                                 <strong>usinaecoculturalnaooficial@gmail.com</strong>
                                 </p>
                                 <p>

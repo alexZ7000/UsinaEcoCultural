@@ -10,15 +10,16 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "bootstrap": "^5.3.1",
     "mdb-react-ui-kit": "^6.3.0",
     "mdbreact": "^4.27.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
+    "revo-calendar": "^3.2.3",
     "router": "^1.3.8",
-    "vlibras-react": "^1.1.0",
-    "bootstrap": "^5.3.1"
+    "vlibras-react": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
