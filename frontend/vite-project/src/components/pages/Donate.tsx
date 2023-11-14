@@ -22,7 +22,6 @@ import {
 } from 'mdb-react-ui-kit';
 import icone_usina from "./Assets/images/usina_icon.png";
 import {Link} from "react-router-dom";
-import {MDBPageNav} from "mdbreact";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -193,7 +192,7 @@ export default function Home() {
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 

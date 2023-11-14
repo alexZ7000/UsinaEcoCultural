@@ -121,10 +121,34 @@ export default function Home() {
                 </MDBNavbar>
             </MDBRow>
             </MDBContainer>
-            <MDBRow className='mb-3 pt-4 abaixoAssinado'>
-                <h1><strong>Abaixo assinado Usina Eco-Cultural</strong></h1>
-                <img className=' mx-auto' src={abaixo_assinado_usina} alt="ImagemAbaixoAssinado" />
-            </MDBRow>
+            <MDBContainer>
+                <MDBRow className='mb-3 pt-4 abaixoAssinado' style={{ position: 'relative' }}>
+                    <MDBCol md='6' className='d-flex align-items-center'>
+                        <img
+                            className='float-start'
+                            src={abaixo_assinado_usina}
+                            alt='ImagemAbaixoAssinado'
+                            style={{ position: 'relative', zIndex: '1', borderRadius: '16px', width: '100%' }}
+                        />
+                    </MDBCol>
+                    <MDBCol md='6' className='d-flex align-items-center'>
+                        <div
+                            className='me-3'
+                            style={{
+                                backgroundColor: '#69A625',
+                                borderRadius: '16px',
+                                width: '100%',
+                                height: '100%',
+                            }}>
+                            <div className='text-center'>
+                                <h3 className='mb-3'><u><strong>Venha participar</strong></u></h3>
+                                <p className='text-black'><strong>Bem-vindos à nossa petição online em prol da transformação da usina desativada <i>Usina Eco Cultural</i> em um vibrante espaço de lazer para a comunidade local. Estamos buscando o apoio de todos os residentes e interessados em criar uma mudança positiva em nossa região, revitalizando um importante patrimônio e promovendo o bem-estar de todos.</strong></p>
+                                <p className='text-black'><strong>Aqui está o link para ajudar a nossa transformação da Usina em um local mais atrativo: <Link to="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/" target="_blank">Abaixo Assinado</Link></strong></p>
+                            </div>
+                        </div>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
             <div className='px-3 text-center bg-light my-5 rounded-2'>
                 <h1 className='mb-3 pt-4'><strong>Futuro Museu do Meio Ambiente!</strong></h1>
                 <h4 className='mb-3'>ONG Destinada as causas ambientais</h4>
@@ -244,7 +268,7 @@ export default function Home() {
                                 Mobilização da comunidade para transformar o usina de lixo em Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural">Linktr.ee</Link>
+                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 
