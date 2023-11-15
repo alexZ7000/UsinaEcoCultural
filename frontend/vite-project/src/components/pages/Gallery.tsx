@@ -237,10 +237,10 @@ export default function Gallery() {
                                     <u>Usina-EcoCultural</u>
                                 </h6>
                                 <p>
-                                    Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                    <strong>Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.</strong>
                                 </p>
                                 <p>
-                                    Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
+                                    <strong>Para saber mais, acesse nosso:</strong> <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
                                 </p>
                             </MDBCol>
 

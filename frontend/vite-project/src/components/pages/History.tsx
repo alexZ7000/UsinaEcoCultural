@@ -59,7 +59,7 @@ export default function History() {
                         <MDBCollapse navbar show={showNavCentred} className="justify-content-center">
                             <MDBNavbarNav fullWidth={true}>
                                 <MDBNavbarItem className="mx-auto">
-                                    <Link to="/" style={{ textDecoration: 'none'}}>
+                                    <Link to="/" style={{ textDecoration: 'None'}}>
                                         <MDBNavbarLink aria-current='page' href='#'>
                                             Página Inicial
                                         </MDBNavbarLink>
@@ -116,38 +116,28 @@ export default function History() {
                 <MDBContainer className="my-5 gradient-form">
                      <MDBRow className='container-sm'>
                         <div className='p-5 text-center bg-light mb-5'>
-                            <h1 className='mb-3'>NOSSA HISTÓRIA</h1>
-                            <h4 className='mb-3'>O Incenerador Vergueiro</h4>
+                            <h1 className='mb-3'><strong>NOSSA HISTÓRIA</strong></h1>
+                            <h4 className='mb-3' ><strong>O Incenerador Vergueiro</strong></h4>
                             <img src={usina_caminhao_de_lixo} className="img-fluid" alt="truckTrash"/>
 
-                            <h1>Um Passado Preocupante</h1>
+                            <h1><strong>UM PASSADO PREOCUPANTE</strong></h1>
                             <p>
-                                Em 1968 o Incinerador Vergueiro foi inaugurado, inicialmente recebendo somente lixo doméstico,
-                                mas a partir de 1977 começou a receber lixo hospitalar também,
-                                e a queima desse lixo causava um odor horrível e fumaça não só para os moradores da região,
-                                já que a fumaça atingia um raio de 10km.
-                                Com isso os moradores da região começaram a fazer protestos para fechar o Inicinerador,
-                                inicialmente a prefeitura não deu ouvidos, então os moradores tomaram uma medida drástica,
-                                fizeram um protesto em forma de barreira humana em frente ao incinerador,
-                                impedindo a entrada de caminhões para a queima,e após isso um laudo das cinzas do incinerador foi feito
-                                e foi constatato que a fumaça era realmente tóxica, possuindo bacteriófagos, coliformes fecais,
-                                pseudômonas e substâncias cancerígenas, e a explicação para isso se deve ao fato de que os fornos não conseguiam atingir temperaturas
-                                altas o suficientes queimar o lixo hospitalar. E em dezembro de 2001 o Incinerador faz sua última queima, queimando 2 toneladas de
-                                medicamentos vencidos de quimioterapia e 125 kg de maconha. Em 2002 as atividades do incinerador é oficialmente encerrada, foram soltos
-                                milhares de balões coloridos de gás hélio por sua chaminé como símbolo de vitória da comunidade.
+                            <strong style={{fontSize: '1.2em'}}>Em 1968, foi inaugurado o Incinerador Vergueiro, destinado inicialmente ao descarte de resíduos domésticos. No entanto, a partir de 1977, passou a receber também lixo hospitalar, resultando em uma queima que liberava fumaça e odor desagradáveis, afetando moradores em um raio de 10 km. Diante dessa situação, a comunidade local iniciou protestos para fechar o incinerador.
+
+                            Inicialmente, a prefeitura ignorou as demandas dos moradores, levando-os a adotar uma medida drástica: formaram uma barreira humana em frente ao incinerador, impedindo a entrada de caminhões para a queima. Em seguida, um laudo das cinzas do incinerador confirmou a toxicidade da fumaça, contendo bacteriófagos, coliformes fecais, pseudômonas e substâncias cancerígenas. A explicação para isso residia na incapacidade dos fornos em atingir temperaturas suficientemente altas para queimar adequadamente o lixo hospitalar.
+
+                            Em dezembro de 2001, o incinerador realizou sua última queima, destruindo 2 toneladas de medicamentos vencidos de quimioterapia e 125 kg de maconha. No ano seguinte, em 2002, as atividades do incinerador foram oficialmente encerradas. Como símbolo da vitória da comunidade, balões coloridos de gás hélio foram liberados pela chaminé do incinerador.</strong>
                             </p>
-                            <h1 className="mt-5" >Um Futuro Verde</h1>
                             <MDBIcon className="greenFuture">
+                            <h1 className="mt-5"><strong>UM FUTURO VERDE</strong></h1>
                                 <img  src={usina_faixa_do_futuro} alt="green_future"/>
                             </MDBIcon>
-                            <p className="mt-5">O Movimento Eco-Cultural quer acabar com essa história de sofrimento, e escrever um novo capítulo,
-                                transformando esse lugar abandonado em um lugar seguro, divertido e ecológico, um verdadeiro espaço
-                                pra pessoas da comunidade e pessoas de fora poderem relaxar, seria um ponto turístico, especialmente quem
-                                vem da estação Santos Imigrantes, transformando o ambiente e a vista da região. A Usina Eco-Cultural conta com
-                                atividades ao ar livre, como: yoga, teatro, skate, banquetes e etc... O local aonde estão os fornos da Usina
-                                será transformado em um Museu, e lá será contada toda a história do incinerador com detalhes.O objetivo da Usina é fazer você cidadão
-                                de bem, tenha mais um lugar em São Paulo para passar o final de semana com a família, e o melhor de tudo, sem precisar pagar NADA!</p>
+                            <p className="mt-5"><strong style={{fontSize: '1.2em'}}>
+                            O Movimento Eco-Cultural está determinado a encerrar o capítulo de sofrimento associado a este local abandonado, iniciando uma nova narrativa que o transformará em um espaço seguro, agradável e ecologicamente responsável. Este ambiente revitalizado pretende tornar-se um verdadeiro refúgio para os residentes locais e visitantes, redefinindo a paisagem e a experiência turística na região, especialmente para aqueles que chegam da estação Santos Imigrantes.
 
+                            A Usina Eco-Cultural abraça uma variedade de atividades ao ar livre, incluindo yoga, teatro, skate, banquetes, entre outras. O local que antes abrigava os fornos do incinerador será convertido em um Museu, oferecendo uma narrativa detalhada sobre a história passada do incinerador. A intenção é preservar os acontecimentos passados e criar consciência para as gerações futuras.
+
+                            A missão da Usina é proporcionar a cidadãos de bem mais uma opção em São Paulo para desfrutar o final de semana com a família, sem custos. Este projeto não apenas redefine o espaço, mas também promove a saúde e o bem-estar da comunidade, transformando-o em um local culturalmente enriquecedor e ecologicamente sustentável na cidade.</strong></p>
                         </div>
                      </MDBRow>
                 </MDBContainer>
@@ -178,10 +168,10 @@ export default function History() {
                                         <u>Usina-EcoCultural</u>
                                     </h6>
                                     <p>
-                                        Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.
+                                        <strong>Mobilização da comunidade para transformar o antigo Incinerador na Usina Eco-Cultural com ações de educação ambiental, arte e cultura.</strong>
                                     </p>
                                     <p>
-                                        Para saber mais, acesse nosso: <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
+                                        <strong>Para saber mais, acesse nosso:</strong> <Link to="https://linktr.ee/usinaecocultural" target="_blank">Linktr.ee</Link>
                                     </p>
                                 </MDBCol>
 
