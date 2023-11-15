@@ -81,25 +81,6 @@
   border-radius: 10px;
 }
 
-
-.abaixoAssinado img{
-  width: 50%;
-}
-
-.greenFuture img {
-  margin-top: 1rem;
-  border-radius: 2rem;
-  width: 90%;
-  box-shadow: #a1a1a1 0 0 18px 10px;
-}
-
-.greenFuture img:hover{
-  transition-delay: 1s;
-  transition: width 2s;
-  cursor: pointer;
-  opacity: 0.9;
-}
-
 .navbar{
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);

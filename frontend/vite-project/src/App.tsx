@@ -1,23 +1,23 @@
-import React from 'react';
-import Home from './components/pages/Home';
-import Login from './components/pages/Login'
+import React from "react";
+import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
 import Shop from "./components/pages/Shop";
 import EventsCalendary from "./components/pages/EventsCalendary";
 import SignUp from "./components/pages/SignUp";
 import History from "./components/pages/History";
 import About from "./components/pages/About";
 import Donate from "./components/pages/Donate";
-import Gallery from './components/pages/Gallery';
-import Apoiadores from './components/pages/Apoiadores';
-import CallUs from './components/pages/CallUs';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // atributos para rotas de páginas
-import './App.css';
+import Gallery from "./components/pages/Gallery";
+import Apoiadores from "./components/pages/Apoiadores";
+import CallUs from "./components/pages/CallUs";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // atributos para rotas de páginas
+import "./App.css";
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>} />
+                <Route path="/" element={<Home />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Shop" element={<Shop />} />
                 <Route path="/EventsCalendary" element={<EventsCalendary />} />
