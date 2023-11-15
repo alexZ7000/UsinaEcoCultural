@@ -18,19 +18,86 @@ import {
     MDBDropdownMenu,
     MDBDropdownItem,
     MDBBtn,
-    MDBBtnGroup,
+    MDBModal,
+    MDBModalFooter,
+    MDBModalBody,
+    MDBModalTitle,
+    MDBModalHeader,
+    MDBModalDialog,
+    MDBModalContent,
+    MDBInput,
 } from "mdb-react-ui-kit";
 import icone_usina from "./Assets/images/usina_icon.png";
 import { Link } from "react-router-dom";
 import instagram_logo from "./Assets/images/instagram_logo.png";
+import exemplo_de_codigo_qr from "./Assets/images/exemplo_de_codigo_qr.png";
+import pix_logo from "./Assets/images/pix_logo.png";
 
 export default function Home() {
     const [showNavCentred, setShowNavCentred] = useState(false);
-    const [showShow, setShowShow] = useState(false);
+    const [show, setShow] = useState(false);
+    const [basicModal, setBasicModal] = useState(false);
+    const [valorDoacao, setValorDoacao] = useState(0);
 
-    const toggleShow = () => setShowShow(!showShow);
+    const toggleModalShow = () => {
+        setBasicModal(!basicModal);
+        const input = document.getElementById(
+            "valorDoacaoInput"
+        ) as HTMLInputElement | null;
+        if (input) {
+            input.value = "";
+            setValorDoacao(0);
+        }
+    };
+    const toggleDonationTextShow = () => setShow(!show);
+    const [showOtherCamp, setOtherCamp] = useState(false);
+    const handleDonationValue = (valor: React.SetStateAction<number>) => {
+        setValorDoacao(valor);
+        if (valor === 0) {
+            setOtherCamp(true);
+        } else {
+            setOtherCamp(false);
+        }
+    };
+
     return (
         <>
+            <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">
+                <MDBModalDialog>
+                    <MDBModalContent>
+                        <MDBModalHeader>
+                            <MDBModalTitle>Exemplo de Doação via Pix</MDBModalTitle>
+                            <MDBBtn
+                                outline={true}
+                                className="btn-close"
+                                color="danger"
+                                onClick={toggleModalShow}
+                            ></MDBBtn>
+                        </MDBModalHeader>
+                        <MDBModalBody>
+                            {showOtherCamp ? (
+                                <>
+                                    <MDBInput
+                                        className="mb-4"
+                                        id="valorDoacaoInput"
+                                        label="Digite o valor desejado"
+                                        onChange={(e) => setValorDoacao(Number(e.target.value))}
+                                    />
+                                    <h2>Doação de: {valorDoacao} R$</h2>
+                                </>
+                            ) : (
+                                <h2>Doação de: {valorDoacao} R$</h2>
+                            )}
+                            <img
+                                className="card-img-top item-align-center mx-auto"
+                                src={exemplo_de_codigo_qr}
+                                alt="exemplo_de_qr_code"
+                            ></img>
+                            <img src={pix_logo} alt="pix_logo" className="w-25"></img>
+                        </MDBModalBody>
+                    </MDBModalContent>
+                </MDBModalDialog>
+            </MDBModal>
             <MDBContainer className="mb-5 gradient-form">
                 <MDBRow className="container-sm">
                     <MDBNavbar
@@ -103,11 +170,7 @@ export default function Home() {
                                     </MDBNavbarItem>
                                     <MDBNavbarItem className="mx-4">
                                         <div className="mx-auto">
-                                            <Link
-                                                to="/Login"
-                                                style={{ textDecoration: "none", color: "#69A625" }}
-                                                role="button"
-                                            >
+                                            <Link to="/Login" role="button">
                                                 <MDBBtn
                                                     style={{ color: "#69A625" }}
                                                     outline={true}
@@ -127,7 +190,11 @@ export default function Home() {
                                         >
                                             <MDBBtn
                                                 className="btn-success"
-                                                style={{ color: "ECECEC", backgroundColor: "#69A625" }}
+                                                style={{
+                                                    color: "ECECEC",
+                                                    backgroundColor: "#69A625",
+                                                    border: "none",
+                                                }}
                                             >
                                                 <MDBIcon far icon="user" />
                                                 Cadastre-se
@@ -150,35 +217,40 @@ export default function Home() {
                             <p className="card-text">
                                 Escolha o valor que deseja doar ao movimento
                             </p>
-                            <div className="">
+                            <div>
                                 <MDBBtn
                                     className="me-2 rounded-2 btn-success gradient-custom-4"
-                                    style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                                    onClick={() => handleDonationValue(10)}
                                 >
                                     10 R$
                                 </MDBBtn>
                                 <MDBBtn
                                     className="me-2 rounded-2 btn-success gradient-custom-4"
-                                    style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                                    onClick={() => handleDonationValue(25)}
                                 >
                                     25 R$
                                 </MDBBtn>
                                 <MDBBtn
                                     className="me-2 rounded-2 btn-success gradient-custom-4"
-                                    style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                                    onClick={() => handleDonationValue(50)}
                                 >
                                     50 R$
                                 </MDBBtn>
                                 <MDBBtn
                                     className="me-2 rounded-2 btn-success gradient-custom-4"
-                                    style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                                    onClick={() => handleDonationValue(0)}
                                 >
                                     Outro
                                 </MDBBtn>
                             </div>
                             <MDBBtn
                                 className="mt-5 btn-success gradient-custom-4"
-                                style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                                style={{
+                                    color: "#FFF",
+                                    backgroundColor: "#69A625",
+                                    border: "none",
+                                }}
+                                onClick={toggleModalShow}
                             >
                                 CONFIRMAR
                             </MDBBtn>
@@ -188,12 +260,12 @@ export default function Home() {
             </div>
             <MDBBtn
                 tag="a"
-                onClick={toggleShow}
-                style={{ color: "#FFF", backgroundColor: "#3A90C3" }}
+                onClick={toggleDonationTextShow}
+                style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none" }}
             >
                 O que faremos com sua doação?
             </MDBBtn>
-            <MDBCollapse show={showShow}>
+            <MDBCollapse show={show}>
                 <div className="row">
                     <div className="col-md-6 mx-auto mt-3">
                         <div className="card">

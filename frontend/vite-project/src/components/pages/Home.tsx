@@ -132,7 +132,11 @@ export default function Home() {
                                         >
                                             <MDBBtn
                                                 className="btn-success"
-                                                style={{ color: "ECECEC", backgroundColor: "#69A625" }}
+                                                style={{
+                                                    color: "ECECEC",
+                                                    backgroundColor: "#69A625",
+                                                    border: "none",
+                                                }}
                                             >
                                                 <MDBIcon far icon="user" />
                                                 Cadastre-se
@@ -146,10 +150,7 @@ export default function Home() {
                 </MDBRow>
             </MDBContainer>
             <MDBContainer>
-                <MDBRow
-                    className="mb-3 pt-4"
-                    style={{ position: "relative" }}
-                >
+                <MDBRow className="mb-3 pt-4" style={{ position: "relative" }}>
                     <MDBCol md="6" className="d-flex align-items-center">
                         <img
                             className="float-start w-100"
@@ -434,7 +435,8 @@ export default function Home() {
                                     <u>Contato</u>
                                 </h6>
                                 <p>
-                                    <MDBIcon icon="home" className="me" /> <i>
+                                    <MDBIcon icon="home" className="me" />{" "}
+                                    <i>
                                         Rua Breno De Ferraz do Amaral 415 B - Ipiranga, São Paulo -
                                         SP, 04214-020
                                     </i>

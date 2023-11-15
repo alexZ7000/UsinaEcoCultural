@@ -169,7 +169,11 @@ function renderProduct(products: Product) {
                 role="button"
             />
             {showModal && (
-                <ImageModal image={products.imageLink} name={products.name} onClose={closeModal} />
+                <ImageModal
+                    image={products.imageLink}
+                    name={products.name}
+                    onClose={closeModal}
+                />
             )}
             <div className="card-body">
                 <h5 className="card-title text-center">{products.name}</h5>
@@ -189,7 +193,7 @@ function renderProduct(products: Product) {
                     href="#"
                     className="btn btn-success"
                     onClick={() => adicionarAoCarrinho(products)}
-                    style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                    style={{ color: "#FFF", backgroundColor: "#69A625", border: "none" }}
                 >
                     Adicionar ao Carrinho
                 </a>
@@ -254,7 +258,11 @@ function CarrinhoDaLoja({
                     <a
                         href="#"
                         className="btn btn-success mt-3"
-                        style={{ color: "#FFF", backgroundColor: "#69A625" }}
+                        style={{
+                            color: "#FFF",
+                            backgroundColor: "#69A625",
+                            border: "none",
+                        }}
                     >
                         Continuar com o pagamento
                     </a>
@@ -369,7 +377,11 @@ export default function Loja() {
                                         >
                                             <MDBBtn
                                                 className="btn-success"
-                                                style={{ color: "ECECEC", backgroundColor: "#69A625" }}
+                                                style={{
+                                                    color: "ECECEC",
+                                                    backgroundColor: "#69A625",
+                                                    border: "none",
+                                                }}
                                             >
                                                 <MDBIcon far icon="user" />
                                                 Cadastre-se

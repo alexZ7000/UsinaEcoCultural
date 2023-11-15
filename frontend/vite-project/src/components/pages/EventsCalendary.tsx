@@ -158,7 +158,11 @@ export default function Home() {
                                         >
                                             <MDBBtn
                                                 className="btn-success"
-                                                style={{ color: "ECECEC", backgroundColor: "#69A625" }}
+                                                style={{
+                                                    color: "ECECEC",
+                                                    backgroundColor: "#69A625",
+                                                    border: "none",
+                                                }}
                                             >
                                                 <MDBIcon far icon="user" />
                                                 Cadastre-se

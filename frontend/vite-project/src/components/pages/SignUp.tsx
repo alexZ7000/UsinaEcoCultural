@@ -160,7 +160,7 @@ export default function SignUp() {
                         <MDBBtn
                             className="w-100 btn-success gradient-custom-4"
                             size="lg"
-                            style={{ backgroundColor: "#69A625" }}
+                            style={{ backgroundColor: "#69A625", border: "none" }}
                         >
                             Registrar-se
                         </MDBBtn>
@@ -169,10 +169,9 @@ export default function SignUp() {
             </MDBContainer>
             <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3">
                 <p className="mb-0 me-2">Já tem uma conta?</p>
-                <Link to="/Login" style={{ color: "#69A625" }} role="button">
+                <Link to="/Login" role="button">
                     <MDBBtn
-                        outline={false}
-                        className="btn-outline-success"
+                        className="btn-success"
                         style={{ color: "#69A625", backgroundColor: "#FFF" }}
                     >
                         <MDBIcon far icon="user" style={{ color: "#69A625" }} />

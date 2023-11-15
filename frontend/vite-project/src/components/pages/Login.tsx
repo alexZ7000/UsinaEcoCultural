@@ -22,6 +22,7 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCheckbox,
+    MDBFooter,
 } from "mdb-react-ui-kit";
 import icone_usina from "./Assets/images/usina_icon.png";
 import google_logo from "./Assets/images/google_logo.png";
@@ -34,171 +35,164 @@ export default function Login() {
     };
 
     return (
-        <MDBContainer className="mb-5 gradient-form">
-            <MDBRow className="container-sm">
-                <MDBNavbar
-                    className="navbar"
-                    expand="lg"
-                    style={{ backgroundColor: "FFF" }}
-                >
-                    <MDBContainer fluid>
-                        <MDBNavbarToggler
-                            type="button"
-                            data-target="#navbarCenteredExample"
-                            aria-controls="navbarCenteredExample"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                            onClick={() => setShowNavCentred(!showNavCentred)}
-                        >
-                            <MDBIcon icon="bars" fas />
-                        </MDBNavbarToggler>
-                        <MDBNavbarBrand href="#" className="ms-1">
-                            <Link to="/" style={{ textDecoration: "none" }}>
-                                <img src={icone_usina} width={100} alt="" />
-                            </Link>
-                        </MDBNavbarBrand>
-
-                        <MDBCollapse
-                            navbar
-                            show={showNavCentred}
-                            className="justify-content-center my-4"
-                        >
-                            <MDBNavbarNav fullWidth={false}>
-                                <MDBNavbarItem className="mx-2">
-                                    <Link to="/" style={{ textDecoration: "none" }}>
-                                        <MDBNavbarLink aria-current="page" href="#">
-                                            Página Inicial
-                                        </MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
-                                    <Link to="/Donate" style={{ textDecoration: "none" }}>
-                                        <MDBNavbarLink>Doação</MDBNavbarLink>
-                                    </Link>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-2">
-                                    <MDBDropdown>
-                                        <MDBDropdownToggle tag="a" className="nav-link">
-                                            Sobre nós
-                                        </MDBDropdownToggle>
-                                        <MDBDropdownMenu>
-                                            <Link to="/History" style={{ textDecoration: "none" }}>
-                                                <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/Shop" style={{ textDecoration: "none" }}>
-                                                <MDBDropdownItem link>Loja</MDBDropdownItem>
-                                            </Link>
-                                            <Link to="/Gallery" style={{ textDecoration: "none" }}>
-                                                <MDBDropdownItem link>Galeria de Fotos</MDBDropdownItem>
-                                            </Link>
-                                            <Link
-                                                to="/EventsCalendary"
-                                                style={{ textDecoration: "none" }}
-                                            >
-                                                <MDBDropdownItem link>
-                                                    Calendário de Eventos
-                                                </MDBDropdownItem>
-                                            </Link>
-                                        </MDBDropdownMenu>
-                                    </MDBDropdown>
-                                </MDBNavbarItem>
-                                <div className="me-5"></div>
-                                <div className="me-5"></div>
-                                <div className="me-5"></div>
-                            </MDBNavbarNav>
-                        </MDBCollapse>
-                    </MDBContainer>
-                </MDBNavbar>
-                <MDBContainer
-                    fluid
-                    className="d-flex align-items-center justify-content-center bg-image mt-5"
-                    style={{ backgroundImage: "" }}
-                >
-                    <MDBCard style={{ maxWidth: "600px" }}>
-                        <MDBCardBody>
-                            <h2 className="text-uppercase text-center mb-5">
-                                <strong>Faça seu Login</strong>
-                            </h2>
-                            <div className="my-5 mx-auto">
-                                <MDBBtn
-                                    tag="a"
-                                    color="none"
-                                    className="mx-4"
-                                    style={{ color: "darkblue" }}
-                                >
-                                    <MDBIcon fab icon="facebook" size="lg" />
-                                </MDBBtn>
-
-                                <MDBBtn
-                                    tag="a"
-                                    color="none"
-                                    className="mx-4"
-                                    style={{ color: "red" }}
-                                >
-                                    <img src={google_logo} alt="das" width="21"></img>
-                                </MDBBtn>
-                            </div>
-                            <MDBInput
-                                wrapperClass="mb-4"
-                                label="Digite seu E-mail"
-                                size="lg"
-                                id="form2"
-                                type="email"
-                                onChange={handleChange}
-                            />
-                            <MDBInput
-                                wrapperClass="mb-4"
-                                label="Digite sua Senha"
-                                size="lg"
-                                id="form3"
-                                type="password"
-                                onChange={handleChange}
-                            />
-                            <p>{valor}</p> {/* Apenas para testar o valor do input */}
-                            <div className="d-flex flex-row justify-content-center mb-4">
-                                <MDBCheckbox name="flexCheck" id="flexCheckDefault" />
-                                <p>Lembrar meus dados para próximo login</p>
-                            </div>
-                            <MDBBtn
-                                className="mb-4 w-100 btn-success gradient-custom-4 mx-auto"
-                                size="lg"
-                                style={{ backgroundColor: "#69A625" }}
-                            >
-                                Login
-                            </MDBBtn>
-                            <div className="text-center pt-1 pb-1">
-                                <Link className="text-primary" to="#!">
-                                    Esqueceu sua senha?
-                                </Link>
-                            </div>
-                        </MDBCardBody>
-                    </MDBCard>
-                </MDBContainer>
-                <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3">
-                    <p className="mb-0 me-2">Não tem uma conta?</p>
-                    <Link
-                        to="/SignUp"
-                        style={{
-                            textDecoration: "none",
-                            color: "#69A625",
-                            backgroundColor: "#FFF",
-                        }}
-                        role="button"
+        <>
+            <MDBContainer className="mb-5 gradient-form">
+                <MDBRow className="container-sm">
+                    <MDBNavbar
+                        className="navbar"
+                        expand="lg"
+                        style={{ backgroundColor: "FFF" }}
                     >
+                        <MDBContainer fluid>
+                            <MDBNavbarToggler
+                                type="button"
+                                data-target="#navbarCenteredExample"
+                                aria-controls="navbarCenteredExample"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                                onClick={() => setShowNavCentred(!showNavCentred)}
+                            >
+                                <MDBIcon icon="bars" fas />
+                            </MDBNavbarToggler>
+                            <MDBNavbarBrand href="#" className="ms-1">
+                                <Link to="/" style={{ textDecoration: "none" }}>
+                                    <img src={icone_usina} width={100} alt="" />
+                                </Link>
+                            </MDBNavbarBrand>
+
+                            <MDBCollapse
+                                navbar
+                                show={showNavCentred}
+                                className="justify-content-center my-4"
+                            >
+                                <MDBNavbarNav fullWidth={false}>
+                                    <MDBNavbarItem className="mx-2">
+                                        <Link to="/" style={{ textDecoration: "none" }}>
+                                            <MDBNavbarLink aria-current="page" href="#">
+                                                Página Inicial
+                                            </MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-auto">
+                                        <Link to="/Donate" style={{ textDecoration: "none" }}>
+                                            <MDBNavbarLink>Doação</MDBNavbarLink>
+                                        </Link>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem className="mx-2">
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag="a" className="nav-link">
+                                                Sobre nós
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <Link to="/History" style={{ textDecoration: "none" }}>
+                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Shop" style={{ textDecoration: "none" }}>
+                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
+                                                </Link>
+                                                <Link to="/Gallery" style={{ textDecoration: "none" }}>
+                                                    <MDBDropdownItem link>
+                                                        Galeria de Fotos
+                                                    </MDBDropdownItem>
+                                                </Link>
+                                                <Link
+                                                    to="/EventsCalendary"
+                                                    style={{ textDecoration: "none" }}
+                                                >
+                                                    <MDBDropdownItem link>
+                                                        Calendário de Eventos
+                                                    </MDBDropdownItem>
+                                                </Link>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <div className="me-5"></div>
+                                    <div className="me-5"></div>
+                                    <div className="me-5"></div>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBContainer>
+                    </MDBNavbar>
+                </MDBRow>
+            </MDBContainer>
+            <MDBContainer
+                fluid
+                className="d-flex align-items-center justify-content-center bg-image mt-5"
+                style={{ backgroundImage: "" }}
+            >
+                <MDBCard style={{ maxWidth: "600px" }}>
+                    <MDBCardBody>
+                        <h2 className="text-uppercase text-center mb-5">
+                            <strong>Faça seu Login</strong>
+                        </h2>
+                        <div className="my-5 mx-auto">
+                            <MDBBtn
+                                tag="a"
+                                color="none"
+                                className="mx-4"
+                                style={{ color: "darkblue" }}
+                            >
+                                <MDBIcon fab icon="facebook" size="lg" />
+                            </MDBBtn>
+
+                            <MDBBtn
+                                tag="a"
+                                color="none"
+                                className="mx-4"
+                                style={{ color: "red" }}
+                            >
+                                <img src={google_logo} alt="das" width="21"></img>
+                            </MDBBtn>
+                        </div>
+                        <MDBInput
+                            wrapperClass="mb-4"
+                            label="Digite seu E-mail"
+                            size="lg"
+                            id="form2"
+                            type="email"
+                            onChange={handleChange}
+                        />
+                        <MDBInput
+                            wrapperClass="mb-4"
+                            label="Digite sua Senha"
+                            size="lg"
+                            id="form3"
+                            type="password"
+                            onChange={handleChange}
+                        />
+                        <div className="d-flex flex-row justify-content-center mb-4">
+                            <MDBCheckbox name="flexCheck" id="flexCheckDefault" />
+                            <p>Lembrar meus dados para próximo login</p>
+                        </div>
                         <MDBBtn
-                            outline={false}
-                            className="w-100 btn-success gradient-custom-4"
-                            style={{
-                                textDecoration: "none",
-                                color: "#69A625",
-                                backgroundColor: "#FFF",
-                            }}
+                            className="mb-4 w-100 btn-success gradient-custom-4 mx-auto"
+                            size="lg"
+                            style={{ backgroundColor: "#69A625", border: "none" }}
                         >
-                            <MDBIcon far icon="user" />
-                            Cadastre-se
+                            Login
                         </MDBBtn>
-                    </Link>
-                </div>
+                        <div className="text-center pt-1 pb-1">
+                            <Link className="text-primary" to="#!">
+                                Esqueceu sua senha?
+                            </Link>
+                        </div>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBContainer>
+
+            <div className="d-flex flex-row align-items-center justify-content-center pb-4 mt-3">
+                <p className="mb-0 me-2">Não tem uma conta?</p>
+                <Link to="/SignUp" role="button">
+                    <MDBBtn
+                        className="btn-success"
+                        style={{ color: "#69A625", backgroundColor: "#FFF" }}
+                    >
+                        <MDBIcon far icon="user" />
+                        Cadastre-se
+                    </MDBBtn>
+                </Link>
+            </div>
+            <MDBFooter>
                 <div
                     className="text-center p-4 mt-5"
                     style={{
@@ -209,7 +203,7 @@ export default function Login() {
                 >
                     © {new Date().getFullYear()} Todos os Direitos Reservados
                 </div>
-            </MDBRow>
-        </MDBContainer>
+            </MDBFooter>
+        </>
     );
 }

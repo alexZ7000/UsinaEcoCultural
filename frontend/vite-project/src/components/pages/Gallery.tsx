@@ -109,7 +109,7 @@ export default function Gallery() {
         onClose: () => void;
     }) {
         return (
-            <Modal show={true} onHide={onClose} className='modal-xl mx-auto'>
+            <Modal show={true} onHide={onClose} className="modal-xl mx-auto">
                 <Modal.Header>
                     <Modal.Title>{title}</Modal.Title>
                     <MDBBtn
@@ -233,7 +233,11 @@ export default function Gallery() {
                                         >
                                             <MDBBtn
                                                 className="btn-success"
-                                                style={{ color: "ECECEC", backgroundColor: "#69A625" }}
+                                                style={{
+                                                    color: "ECECEC",
+                                                    backgroundColor: "#69A625",
+                                                    border: "none",
+                                                }}
                                             >
                                                 <MDBIcon far icon="user" />
                                                 Cadastre-se
@@ -260,7 +264,12 @@ export default function Gallery() {
                                     role="button"
                                 />
                                 {showModal && selectedIndex === index && (
-                                    <ImageModal image={image.src} caption={image.caption} title={image.title} onClose={closeModal} />
+                                    <ImageModal
+                                        image={image.src}
+                                        caption={image.caption}
+                                        title={image.title}
+                                        onClose={closeModal}
+                                    />
                                 )}
                                 <h4>{image.title}</h4>
                                 <p>{image.caption}</p>
