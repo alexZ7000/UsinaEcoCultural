@@ -1,4 +1,4 @@
-# Usina Eco-Cultural
+# Usina Eco-Cultural <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f331/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f331/512.gif" alt="🌱" width="32" height="32"></picture><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f41d/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f41d/512.gif" alt="🐝" width="32" height="32"></picture>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/alexZ7000/UsinaEcoCultural?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/alexZ7000/UsinaEcoCultural?style=for-the-badge)
@@ -7,15 +7,43 @@
 
 > Projeto universitário, no qual tem-se por objetivo construir um site para a <b>Usina Eco-Cultural</b> de acordo com as demandas requisitadas.
 
-## 🛠️ Ajustes e melhorias 
+## Tecnologias Utilizadas <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9be/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9be/512.gif" alt="🦾" width="32" height="32"></picture>
+<ul>
+  <li>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>  React
+  </li>
+  <br>
+  <li>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> TypeScript
+  </li>
+  <br>
+  <li>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> Postgresql hospedado no Aiven <img src="https://aiven.io/build/_assets/logo-aiven-LCUTM5RU.svg" alt="aiven console" width="80">
+  </li>
+  <li>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> NodeJS
+  </li>
+</ul>
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+## Página por página <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.gif" alt="🧐" width="32" height="32"></picture>📄 
 
-- [x] BrainStorm🧠 e econtro com o cliente para reunir ideias💡 
-- [x] Criação do protótipo do projeto e modelagem ✍🏼
-- [x] Começo do desenvolvimento 👨🏼‍💻
-- [ ] Revisão do Projeto ♾️
-- [ ] Projeto Entregue ✅
+<ol>
+  <li>
+    <h2>Página Inicial</h2>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/c695d63e-0054-4d2d-b378-b14ff3565bd9" alt="Header Página Inicial"/>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/d026648d-758b-4a89-8eae-6fd401d288ad" alt="Body Página incial"/>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/1805e5ac-ed60-4d24-8ee6-74a1af43b53d" alt="Footer Incial 3"/>
+  </li>
+  <li>
+    <h2>Doação</h2>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/2434efbb-9abd-4a2a-a10f-db93ee7668b3" alt="página da Doação"/>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/0dd0a9ef-b870-45d2-a161-409353c4da28" alt="Exemplo de Doação pix"/>
+  </li>
+  <li>
+    <h2>Loja</h2>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/e1f04efc-14c6-4d94-880c-838512fd5121" alt="Exemplo de loja"/>
+  </li>
+</ol>
 
 ## 📫 Contribuindo para Usina Eco-Cultural
 
