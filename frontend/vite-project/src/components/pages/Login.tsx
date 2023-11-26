@@ -7,28 +7,16 @@ import {
     MDBBtn,
     MDBIcon,
     MDBInput,
-    MDBRow,
-    MDBNavbar,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBDropdown,
-    MDBDropdownMenu,
-    MDBDropdownToggle,
-    MDBDropdownItem,
-    MDBNavbarBrand,
     MDBCard,
     MDBCardBody,
-    MDBCheckbox,
-    MDBFooter,
+    MDBCheckbox
 } from "mdb-react-ui-kit";
-import icone_usina from "./Assets/images/usina_icon.png";
 import google_logo from "./Assets/images/google_logo.png";
+import { FooterLogin } from "./footer/FooterLogin";
+import { NavLogin } from "./navbars/NavLogin";
 
 export default function Login() {
-    const [showNavCentred, setShowNavCentred] = useState(false);
+
     const [valor, setValor] = useState("");
     const handleChange = (event: any) => {
         setValor(event.target.value);
@@ -36,85 +24,7 @@ export default function Login() {
 
     return (
         <>
-            <MDBContainer className="mb-5 gradient-form">
-                <MDBRow className="container-sm">
-                    <MDBNavbar
-                        className="navbar"
-                        expand="lg"
-                        style={{ backgroundColor: "FFF" }}
-                    >
-                        <MDBContainer fluid>
-                            <MDBNavbarToggler
-                                type="button"
-                                data-target="#navbarCenteredExample"
-                                aria-controls="navbarCenteredExample"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation"
-                                onClick={() => setShowNavCentred(!showNavCentred)}
-                            >
-                                <MDBIcon icon="bars" fas />
-                            </MDBNavbarToggler>
-                            <MDBNavbarBrand href="#" className="ms-1">
-                                <Link to="/" style={{ textDecoration: "none" }}>
-                                    <img src={icone_usina} width={100} alt="" />
-                                </Link>
-                            </MDBNavbarBrand>
-
-                            <MDBCollapse
-                                navbar
-                                show={showNavCentred}
-                                className="justify-content-center my-4"
-                            >
-                                <MDBNavbarNav fullWidth={false}>
-                                    <MDBNavbarItem className="mx-2">
-                                        <Link to="/" style={{ textDecoration: "none" }}>
-                                            <MDBNavbarLink aria-current="page" href="#">
-                                                Página Inicial
-                                            </MDBNavbarLink>
-                                        </Link>
-                                    </MDBNavbarItem>
-                                    <MDBNavbarItem className="mx-auto">
-                                        <Link to="/Donate" style={{ textDecoration: "none" }}>
-                                            <MDBNavbarLink>Doação</MDBNavbarLink>
-                                        </Link>
-                                    </MDBNavbarItem>
-                                    <MDBNavbarItem className="mx-2">
-                                        <MDBDropdown>
-                                            <MDBDropdownToggle tag="a" className="nav-link">
-                                                Sobre nós
-                                            </MDBDropdownToggle>
-                                            <MDBDropdownMenu>
-                                                <Link to="/History" style={{ textDecoration: "none" }}>
-                                                    <MDBDropdownItem link>Nossa História</MDBDropdownItem>
-                                                </Link>
-                                                <Link to="/Shop" style={{ textDecoration: "none" }}>
-                                                    <MDBDropdownItem link>Loja</MDBDropdownItem>
-                                                </Link>
-                                                <Link to="/Gallery" style={{ textDecoration: "none" }}>
-                                                    <MDBDropdownItem link>
-                                                        Galeria de Fotos
-                                                    </MDBDropdownItem>
-                                                </Link>
-                                                <Link
-                                                    to="/EventsCalendary"
-                                                    style={{ textDecoration: "none" }}
-                                                >
-                                                    <MDBDropdownItem link>
-                                                        Calendário de Eventos
-                                                    </MDBDropdownItem>
-                                                </Link>
-                                            </MDBDropdownMenu>
-                                        </MDBDropdown>
-                                    </MDBNavbarItem>
-                                    <div className="me-5"></div>
-                                    <div className="me-5"></div>
-                                    <div className="me-5"></div>
-                                </MDBNavbarNav>
-                            </MDBCollapse>
-                        </MDBContainer>
-                    </MDBNavbar>
-                </MDBRow>
-            </MDBContainer>
+            <NavLogin />
             <MDBContainer
                 fluid
                 className="d-flex align-items-center justify-content-center bg-image mt-5"
@@ -192,18 +102,7 @@ export default function Login() {
                     </MDBBtn>
                 </Link>
             </div>
-            <MDBFooter>
-                <div
-                    className="text-center p-4 mt-5"
-                    style={{
-                        backgroundColor: "#69A625",
-                        borderRadius: "16px",
-                        color: "#ECECEC",
-                    }}
-                >
-                    © {new Date().getFullYear()} Todos os Direitos Reservados
-                </div>
-            </MDBFooter>
+            <FooterLogin />
         </>
     );
-}
+};
