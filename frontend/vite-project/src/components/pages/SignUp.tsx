@@ -32,28 +32,28 @@ export default function SignUp() {
                             wrapperClass="mb-4"
                             label="Digite seu Nome"
                             size="lg"
-                            id="form1"
+                            id="name"
                             type="text"
                         />
                         <MDBInput
                             wrapperClass="mb-4"
                             label="Digite seu E-mail"
                             size="lg"
-                            id="form2"
+                            id="email"
                             type="email"
                         />
                         <MDBInput
                             wrapperClass="mb-4"
                             label="Digite sua Senha"
                             size="lg"
-                            id="form3"
+                            id="password"
                             type="password"
                         />
                         <MDBInput
                             wrapperClass="mb-4"
                             label="Repita sua Senha"
                             size="lg"
-                            id="form4"
+                            id="confirm-password"
                             type="password"
                         />
                         <div className="d-flex flex-row justify-content-center mb-4">
