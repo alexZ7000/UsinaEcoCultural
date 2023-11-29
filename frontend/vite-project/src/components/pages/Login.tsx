@@ -29,13 +29,11 @@ export default function Login() {
     };
 
     function App() {
-        // Criando o estado para armazenar os dados do usuário
         const [user, setUser] = useState<User>({
             email: "",
             password: "",
         });
 
-        // Criando a função que atualiza os dados do usuário de acordo com os inputs
         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             const { name, value } = e.target;
             setUser((prevUser) => ({
@@ -48,7 +46,7 @@ export default function Login() {
             e.preventDefault();
             try {
                 const response = await axios.post(
-                    "http://localhost:3000/users",
+                    "http://localhost:3000/login",
                     user
                 );
                 console.log(response.data);
