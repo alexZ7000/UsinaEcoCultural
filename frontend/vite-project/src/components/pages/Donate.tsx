@@ -32,6 +32,7 @@ export default function Home() {
         }
     };
     const toggleDonationTextShow = () => setShow(!show);
+    const toggleWhyDonationTextShow = () => setShow(!show);
     const [showOtherCamp, setOtherCamp] = useState(false);
     const handleDonationValue = (valor: React.SetStateAction<number>) => {
         setValorDoacao(valor);
@@ -140,9 +141,9 @@ export default function Home() {
             <MDBBtn
                 tag="a"
                 onClick={toggleDonationTextShow}
-                style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none" }}
+                style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none", marginBottom: "10px" }}
             >
-                O que faremos com sua doação?
+                Porque importante a doação?
             </MDBBtn>
             <MDBCollapse show={show}>
                 <div className="row">
@@ -153,15 +154,51 @@ export default function Home() {
                                     <h4>Sua doação é muito importante para nós!</h4>
                                 </div>
                                 <p className="card-text mt-1">
-                                    Com sua doação o movimento Usina Eco-Cultural poderá continuar
-                                    com suas atividades de educação ambiental, arte e cultura.
+                                    Cada doação que recebemos não é apenas uma contribuição financeira, mas sim um investimento no nosso futuro coletivo. A Usina é mais do que um local; é um epicentro de possibilidades. Com a sua ajuda, queremos aprimorar esse espaço para que possamos utilizá-lo de maneiras ainda mais incríveis e benéficas para todos.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </MDBCollapse>
-            <FooterMain />
+
+            <MDBBtn
+                tag="a"
+                onClick={toggleDonationTextShow}
+                style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none", marginBottom: "10px" }}
+            >
+                Sua doação pode ajudar destas seguintes formas
+            </MDBBtn>
+            <MDBCollapse show={show}>
+                <div className="row">
+                    <div className="col-md-6 mx-auto mt-3">
+                        <div className="card">
+                            <div className="card-body">
+                                <div className="card-title">
+                                    <h4>Sua doação é muito importante para nós!</h4>
+                                </div>
+                                <p className="card-text mt-1">
+                                    <ol>
+                                        <strong>Sustentabilidade Ambiental</strong>
+                                        <p>Com a sua ajuda, implementaremos práticas sustentáveis, como energia renovável e gestão de resíduos, tornando a Usina um exemplo de responsabilidade ambiental.</p>
+                                    </ol>
+
+                                    <ol>
+                                        <strong>Reutilização da área</strong>
+                                        <p>Esta área poderá transformar a Usina em um espaço de convivência e aprendizado para a comunidade</p>
+                                    </ol>
+
+                                    <ol>
+                                        <strong>Eventos Comunitários</strong>
+                                        <p>O espaço renovado será palco de eventos comunitários regulares, como feiras locais, festivais e encontros culturais. Sua doação contribuirá para a criação de espaços adequados e atrativos para a realização desses eventos que unem a comunidade.</p>
+                                    </ol>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </MDBCollapse>
+            <FooterMain/>
         </>
     );
 };
