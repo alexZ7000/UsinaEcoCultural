@@ -10,7 +10,6 @@ import Donate from "./components/pages/Donate";
 import Gallery from "./components/pages/Gallery";
 import Apoiadores from "./components/pages/Apoiadores";
 import CallUs from "./components/pages/CallUs";
-import ServiceTerm from "./components/pages/ServiceTerm";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; // atributos para rotas de páginas
 import "./App.css";
 
@@ -29,7 +28,6 @@ export default function App() {
                 <Route path="/Gallery" element={<Gallery />} />
                 <Route path="/Apoiadores" element={<Apoiadores />} />
                 <Route path="/FaleConosco" element={<CallUs />} />
-                <Route path="ServiceTerm" element={<ServiceTerm />} />
                 <Route path="*" element={<h1>Not Found 404</h1>} />'
             </Routes>
         </BrowserRouter>
