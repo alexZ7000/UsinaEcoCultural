@@ -100,25 +100,28 @@ export default function Home() {
                             </p>
                             <div>
                                 <MDBBtn
-                                    className="me-2 rounded-2 btn-success gradient-custom-4"
+                                    className="rounded-2 btn-success gradient-custom-4"
                                     onClick={() => handleDonationValue(10)}
                                 >
                                     10 R$
                                 </MDBBtn>
+                                &nbsp;&nbsp;
                                 <MDBBtn
-                                    className="me-2 rounded-2 btn-success gradient-custom-4"
+                                    className="rounded-2 btn-success gradient-custom-4"
                                     onClick={() => handleDonationValue(25)}
                                 >
                                     25 R$
                                 </MDBBtn>
+                                &nbsp;&nbsp;
                                 <MDBBtn
-                                    className="me-2 rounded-2 btn-success gradient-custom-4"
+                                    className="rounded-2 btn-success gradient-custom-4"
                                     onClick={() => handleDonationValue(50)}
                                 >
                                     50 R$
                                 </MDBBtn>
+                                &nbsp;&nbsp;
                                 <MDBBtn
-                                    className="me-2 rounded-2 btn-success gradient-custom-4"
+                                    className="rounded-2 btn-success gradient-custom-4"
                                     onClick={() => handleDonationValue(0)}
                                 >
                                     Outro

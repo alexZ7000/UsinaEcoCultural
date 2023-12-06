@@ -4,7 +4,7 @@ import {
     MDBRow,
     MDBCol,
     MDBCarousel,
-    MDBCarouselItem
+    MDBCarouselItem, MDBBtn
 } from "mdb-react-ui-kit";
 import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
@@ -16,8 +16,16 @@ import usina_donate from "./Assets/images/donate.png";
 import { Link } from "react-router-dom";
 import { NavHome } from "./navbars/NavHome";
 import { FooterMain } from "./footer/FooterMain";
+import React, {useState} from "react";
+import {Button, Modal} from "react-bootstrap";
 
 export default function Home() {
+    const [show, setShow] = useState(false);
+
+    const toggleModal = () => {
+        setShow(!show);
+    };
+
     return (
         <>
             <NavHome />
@@ -73,15 +81,39 @@ export default function Home() {
                 </h1>
                 <h4 className="mb-3">ONG Destinada as causas ambientais</h4>
                 <Link
-                    className="btn btn-outline-success mb-5 btn-lg"
+                    className="btn btn-outline-success col-md-3 btn-lg"
                     to="/Donate"
                     role="button"
                     style={{ color: "#69A625" }}
                 >
                     APOIE A CAUSA!
                 </Link>
-
-                <MDBCarousel showIndicators showControls fade>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <MDBBtn
+                    className={"btn-success col-md-3 btn-lg border-0"}
+                    style={{ backgroundColor: "#69A625" }}
+                    onClick={toggleModal}
+                >
+                    Nossos Apoiadores
+                </MDBBtn>
+                <Modal show={show} onHide={toggleModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Nossos Apoiadores</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            apoiadores estarão aqui
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={toggleModal}>
+                            Fechar
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+                <MDBCarousel showIndicators showControls fade className={"mt-5"}>
                     <MDBCarouselItem
                         className="w-100 d-block rounded-3"
                         itemId={1}
