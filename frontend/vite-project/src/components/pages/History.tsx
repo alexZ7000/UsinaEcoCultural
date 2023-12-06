@@ -278,7 +278,7 @@ export default function History() {
                     <img
                         src={usinaImagem}
                         alt="green_future"
-                        className="img-fluid rounded-5 mx-auto"
+                        className="img-fluid rounded-4 mx-auto"
                         style={{ maxWidth: "80%" }}
                     />
                     <p className={"mt-4 px-5 col-md-10 mx-auto"}>
@@ -311,10 +311,14 @@ export default function History() {
                     <img
                         src={chamine_da_usina_preto_branco}
                         alt="green_future"
-                        className="img-fluid rounded-5 mx-auto"
+                        className="img-fluid rounded-4 mx-auto"
                         style={{ maxWidth: "80%" }}
                     />
-                    <h2><strong>Linha do tempo:</strong></h2>
+                    <h1 className={"mt-5 mb-3 fs-1"}>
+                        <strong>
+                            Linha do tempo:
+                        </strong>
+                    </h1>
 
                 </MDBRow>
                 <MDBContainer fluid className="py-5">
