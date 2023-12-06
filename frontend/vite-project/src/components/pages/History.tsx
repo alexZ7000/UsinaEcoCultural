@@ -54,7 +54,7 @@ export default function History() {
             <NavAboutUs />
             <MDBContainer className="my-5 gradient-form">
                 <MDBRow className="container-sm">
-                    <div className="p-5 text-center bg-light mb-5">
+                    <div className="p-5 bg-light mb-5">
                         <h1 className="mb-3">
                             <strong className={"fs-1 border-bottom border-2"}>O Coletivo</strong>
                         </h1>
@@ -224,11 +224,116 @@ export default function History() {
                                     no nosso hino.
                                     O museu fará parte do Corredor Verde, projeto que busca fazer um parque linear que passa ao
                                     lado do terreno da Usina, na Av. Ricardo Jafet.
-
                                 </strong>
                             </p>
                         </MDBCollapse>
+                        <h1 className={"mt-5 mb-3"}>
+                            <strong className="border-bottom border-2">
+                                Programa Ruas Abertas
+                            </strong>
+                        </h1>
+                        <p className="mt-4 px-5">
+                            <strong style={{ fontSize: "1.2em" }}>
+                                Política pública que fecha a rua aos domingos e permite que a população use para
+                                brincadeiras, a ideia é que a Rua Breno Ferraz do Amaral em frente a Usina seja uma via
+                                dentro do programa Ruas Abertas.
+                            </strong>
+                        </p>
                     </div>
+                    <h1 className={"mb-3"}>
+                        <strong className={"fs-1"}>
+                            História
+                        </strong>
+                    </h1>
+                    <h2>
+                        <strong className={"fs-2 border-bottom border-2"}>
+                            O Incinerador Vergueiro
+                        </strong>
+
+                    </h2>
+                    <p className={"mt-4 px-5 col-md-10 mx-auto"}>
+                        <strong style={{ fontSize: "1.2em" }}>
+                            O Incinerador Vergueiro, localizado no Ipiranga, zona sul de São Paulo, foi um dos três
+                            incineradores da cidade. Iniciou suas atividades em 1968, a princípio para lixo doméstico,
+                            posteriormente incluindo lixo hospitalar a partir de 1977. Ativo até 2002, o Incinerador Vergueiro
+                            desempenhou um papel significativo na história da coleta de lixo em São Paulo, chegando a
+                            incinerar cerca de 50 toneladas diárias.
+                        </strong>
+                    </p>
+                    <p className={"px-5 col-md-10 mx-auto"}>
+                        <strong style={{ fontSize: "1.2em" }}>
+                            O bairro do Ipiranga, predominantemente industrial, testemunhou o crescimento do
+                            descontentamento com o Incinerador, cujas fumaças atingiam um raio de 10km, afetando até
+                            cidades vizinhas. A população protestou intensamente na década de 90 e início dos anos 2000,
+                            destacando a inadequação ambiental do Incinerador. Em 2000, um protesto bloqueou a entrada
+                            de caminhões, levando o poder público a avaliar o incinerador.
+                        </strong>
+                    </p>
+                    <p className={"px-5 col-md-10 mx-auto"}>
+                        <strong style={{ fontSize: "1.2em" }}>
+                            O laudo de dezembro de 2000 revelou a presença de coliformes fecais, bacteriófagos e
+                            substâncias tóxicas nas cinzas, invalidando sua eficácia na esterilização do lixo. Detectou-se
+                            também a liberação de substâncias cancerígenas nas fumaças. Pressionada, a prefeitura
+                            assinou um Termo de Ajustamento de Conduta Ambiental, reduzindo a média diária de lixo para
+                            6 toneladas. Em dezembro de 2001, ocorreu a última queima.
+                        </strong>
+                    </p>
+
+
+                    <h2>Linha do tempo:</h2>
+                    <ul>
+                        <li className={"me-auto"}>
+                            <strong>
+                                1968 - Início das atividades do Incinerador Vergueiro
+                            </strong>
+                        </li>
+                        <li>
+                            2002 - Encerramento da queima de lixo
+                        </li>
+                    </ul>
+                    TODO:TerminarEstilização
+                    2004 -Concessão das operações do Transbordo Vergueiro por 20 anos para a empresa
+                    EcoUrbis Ambiental
+                    07/05/2021 - Início da obra de modernização do Transbordo Vergueiro
+                    Agosto / 2022 - Término da obra de modernização do Transbordo Vergueiro
+                    2019 - Primeira reunião da comunidade para propor o Centro Cultural no antigo Incinerador,
+                    iniciativa do CADES Ipiranga.
+                    maio / 2022 - Visita oficial no antigo Incinerador, do CADES Ipiranga, com o Subprefeito
+                    Adnilson Almeida.
+                    31/07/2022 - Comunidade começa a ocupar o antigo espaço Incinerador, iniciativa do CADES
+                    Ipiranga, inicia a o movimento da Usina Eco-Cultural.
+                    10
+                    17/12/2022 - Primeiro Festival da Usina Eco-Cultural, chamado Lado B do B, com repercussão
+                    na imprensa.
+                    12/01/2023 - Visita surpresa do Prefeito de São Paulo, Ricardo Nunes, na Usina Eco-Cultural.
+                    19/01/2023 - Tentativa da prefeitura de expulsar o movimento da Usina Eco-Cultural, o
+                    movimento resistiu.
+                    09/05/2023 - Movimento da Usina Eco-Cultural, representado pelo CADES Ipiranga apresenta
+                    a proposta de revitalização da área com Museu do Meio-Ambiente e Mercado de alimentação
+                    orgânica na Subprefeitura do Ipiranga para pleitear a verba municipal de 6 milhões de reais, a
+                    convite do Conselho Participativo do Ipiranga.
+                    27/05/2023 - Evento em parceria com a Umapaz na Usina com o tema de Resíduos Sólidos, o
+                    movimento recebeu multa de 42 mil reais da subprefeitura do Ipiranga, a autuação foi por
+                    motivo de evento sem autorização, a multa foi aplicada a integrante Débora Machado, o que
+                    caracterizou perseguição política.
+                    14/07/2023 - Movimento entrega a chave e deixa o território da Usina para subprefeitura em
+                    negociação para retirada da multa. Subprefeitura não cumpriu o acordo.
+                    29/07/2023 - Comemoração na rua de 1 ano do movimento. Evento contou com o apoio do
+                    Vereador Aurélio Nomura - PSDB e a presença da escola de Samba Brinco da Marquesa.
+                    24/07/2023 - Festa Junina da Usina Eco-Cultural, com o show do Ó do Forró, evento com 2 mil
+                    pessoas na rua.
+                    12/08/2023 - Audiência Pública sobre a Usina, realizada nas escola ao lado E.E. Raul Humaitá
+                    Villa Nova, com os mandatos dos vereadores Silvia Ferraro e Aurélio Nomura.
+                    19/09/2023 - Cassação do Vereador Camilo Cristófaro, mais influente sobre a subprefeitura do
+                    Ipiranga, que perseguiu o movimento. A Usina Eco-Cultural se posicionou publicamente em
+                    apoio à cassação.
+                    14/11/2023 - Troca do Subprefeito do Ipiranga, Adnilson Almeida, antigo subprefeito ligada ao
+                    vereador cassado Camilo Cristófaro é substituído por Rodrigo Bagnatori Ribeiro, ligado ao
+                    Vereador Aurélio Nomura - PSDB.
+                    09/12/2023 - Evento de Festa Junina da Usina Eco-Cultural, com o show do Ó do Forró, evento
+                    com 2 mil pessoas na rua.
+                    2024 - Será a renovação do contrato de Concessão das operações do Transbordo Vergueiro
+                    (atualmente da EcoUrbis Ambiental)
                 </MDBRow>
             </MDBContainer>
             <FooterMain />

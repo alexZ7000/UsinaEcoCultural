@@ -17,7 +17,8 @@ import {FooterMain} from "./footer/FooterMain";
 import {NavDonate} from "./navbars/NavDonate";
 
 export default function Home() {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
+    const [show2, setShow2] = useState(false);
     const [basicModal, setBasicModal] = useState(false);
     const [valorDoacao, setValorDoacao] = useState(0);
 
@@ -32,6 +33,7 @@ export default function Home() {
         }
     };
     const toggleDonationTextShow = () => setShow(!show);
+    const toggleDonationTextShow2 = () => setShow2(!show2);
     const toggleWhyDonationTextShow = () => setShow(!show);
     const [showOtherCamp, setOtherCamp] = useState(false);
     const handleDonationValue = (valor: React.SetStateAction<number>) => {
@@ -138,66 +140,80 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className={"row"}>
             <MDBBtn
                 tag="a"
                 onClick={toggleDonationTextShow}
+                className={"col-md-4 mx-auto mt-3"}
                 style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none", marginBottom: "10px" }}
             >
-                Porque importante a doação?
+                Porque é importante sua doação?
             </MDBBtn>
             <MDBCollapse show={show}>
-                <div className="row">
-                    <div className="col-md-6 mx-auto mt-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="card-title">
-                                    <h4>Sua doação é muito importante para nós!</h4>
-                                </div>
-                                <p className="card-text mt-1">
-                                    Cada doação que recebemos não é apenas uma contribuição financeira, mas sim um investimento no nosso futuro coletivo. A Usina é mais do que um local; é um epicentro de possibilidades. Com a sua ajuda, queremos aprimorar esse espaço para que possamos utilizá-lo de maneiras ainda mais incríveis e benéficas para todos.
-                                </p>
+                <div className="col-md-6 mx-auto">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="card-title">
+                                <h4>Sua doação é muito importante para nós!</h4>
                             </div>
+                            <p className="card-text mt-1">
+                                Cada doação que recebemos não é apenas uma contribuição financeira,
+                                mas sim um investimento no nosso futuro coletivo.
+                                A Usina é mais do que um local é um epicentro de possibilidades.
+                                Com a sua ajuda, queremos aprimorar esse espaço para que possamos
+                                utilizá-lo de maneiras ainda mais incríveis e benéficas para todos.
+                            </p>
                         </div>
                     </div>
                 </div>
             </MDBCollapse>
-
+            </div>
+            <div className={"row"}>
             <MDBBtn
                 tag="a"
-                onClick={toggleDonationTextShow}
+                onClick={toggleDonationTextShow2}
+                className={"col-md-4 mx-auto mt-5"}
                 style={{ color: "#FFF", backgroundColor: "#3A90C3", border: "none", marginBottom: "10px" }}
             >
-                Sua doação pode ajudar destas seguintes formas
+                Como sua doação nos ajuda?
             </MDBBtn>
-            <MDBCollapse show={show}>
-                <div className="row">
-                    <div className="col-md-6 mx-auto mt-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="card-title">
-                                    <h4>Sua doação é muito importante para nós!</h4>
-                                </div>
-                                <p className="card-text mt-1">
-                                    <ol>
-                                        <strong>Sustentabilidade Ambiental</strong>
-                                        <p>Com a sua ajuda, implementaremos práticas sustentáveis, como energia renovável e gestão de resíduos, tornando a Usina um exemplo de responsabilidade ambiental.</p>
-                                    </ol>
-
-                                    <ol>
-                                        <strong>Reutilização da área</strong>
-                                        <p>Esta área poderá transformar a Usina em um espaço de convivência e aprendizado para a comunidade</p>
-                                    </ol>
-
-                                    <ol>
-                                        <strong>Eventos Comunitários</strong>
-                                        <p>O espaço renovado será palco de eventos comunitários regulares, como feiras locais, festivais e encontros culturais. Sua doação contribuirá para a criação de espaços adequados e atrativos para a realização desses eventos que unem a comunidade.</p>
-                                    </ol>
-                                </p>
+            <MDBCollapse show={show2}>
+                <div className="col-md-6 mx-auto">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="card-title">
+                                <h4>Sua doação é muito importante para nós!</h4>
                             </div>
+                            <p className="card-text mt-1">
+                                <ol>
+                                    <strong>Sustentabilidade Ambiental</strong>
+                                    <p>
+                                        Com a sua ajuda, implementaremos práticas sustentáveis,
+                                        como energia renovável e gestão de resíduos,
+                                        tornando a Usina um exemplo de responsabilidade ambiental.
+                                    </p>
+                                </ol>
+
+                                <ol>
+                                    <strong>Reutilização da área</strong>
+                                    <p>Esta área poderá transformar a Usina em um espaço de convivência e aprendizado para a comunidade</p>
+                                </ol>
+
+                                <ol>
+                                    <strong>Eventos Comunitários</strong>
+                                    <p>
+                                        O espaço renovado será palco de eventos comunitários regulares,
+                                        como feiras locais, festivais e encontros culturais.
+                                        Sua doação contribuirá para a criação de espaços adequados
+                                        e atrativos para a realização desses eventos que unem a comunidade.
+                                    </p>
+                                </ol>
+                            </p>
                         </div>
                     </div>
                 </div>
             </MDBCollapse>
+            </div>
             <FooterMain/>
         </>
     );
