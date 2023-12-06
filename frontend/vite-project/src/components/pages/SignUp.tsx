@@ -60,7 +60,7 @@ export default function SignUp() {
                             <MDBCheckbox name="flexCheck" id="flexCheckDefault" />
                             <p>
                                 Eu concordo com os{" "}
-                                <Link to="#">
+                                <Link to="/ServiceTerm">
                                     <i>
                                         <u>Termos de Serviço</u>
                                     </i>

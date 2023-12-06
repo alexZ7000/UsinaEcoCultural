@@ -3,13 +3,19 @@ import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import usina_faixa_do_futuro from "./Assets/images/faixa_do_futuro.jpeg";
 import usina_caminhao_de_lixo from "./Assets/images/caminhao-de-lixo-vai-incinerar-residuos-em-uma-usina-de-incineracao_124715-1127-removebg-preview(1).png";
-
+import feira_usina from "./Assets/images/feira_usina.jpg";
+import usinaImagem from "./Assets/images/usina.png";
+import contando_historia_usina from "./Assets/images/contando_historia_usina.jpeg";
+import gral_unido_usina from "./Assets/images/gral_unido_usina.jpeg";
+import chamine_da_usina_preto_branco from "./Assets/images/chamine_da_usina_preto_branco.jpeg";
 import {
     MDBBtn,
     MDBCollapse,
     MDBContainer,
     MDBIcon,
-    MDBRow
+    MDBRow,
+    MDBCol,
+    MDBTypography,
 } from "mdb-react-ui-kit";
 import {FooterMain} from "./footer/FooterMain";
 import {NavAboutUs} from "./navbars/NavAboutUs";
@@ -112,6 +118,7 @@ export default function History() {
                             src={usina_faixa_do_futuro}
                             alt="green_future"
                             className="img-fluid rounded-4"
+                            style={{ maxWidth: "80%" }}
                         />
                         <div className="mt-5">
                             <p className="mt-4 px-5">
@@ -151,6 +158,12 @@ export default function History() {
                                     Polo Cultural do Ipiranga
                                 </strong>
                             </h1>
+                            <img
+                                src={feira_usina}
+                                alt="green_future"
+                                className="img-fluid rounded-4"
+                                style={{ maxWidth: "80%" }}
+                            />
                             <p className="mt-4 px-5">
                                 <strong style={{ fontSize: "1.2em" }}>
                                     No primeiro ano de nossa atuação, percebemos uma carência de cultura e ações voltadas para
@@ -166,6 +179,12 @@ export default function History() {
                                 Melhorias para a região
                             </strong>
                         </h1>
+                        <img
+                            src={contando_historia_usina}
+                            alt="green_future"
+                            className="img-fluid rounded-4"
+                            style={{ maxWidth: "80%" }}
+                        />
                         <p className="mt-4 px-5">
                             <strong style={{ fontSize: "1.2em" }}>
                                 O espaço abandonado há mais de 20 anos gera uma sensação de insegurança em seu
@@ -195,6 +214,12 @@ export default function History() {
                                 Museu do Meio Ambiente
                             </strong>
                         </h1>
+                        <img
+                            src={gral_unido_usina}
+                            alt="green_future"
+                            className="img-fluid rounded-4"
+                            style={{ maxWidth: "80%" }}
+                        />
                         <p className="mt-4 px-5">
                             <strong style={{ fontSize: "1.2em" }}>
                                 Na Usina, a educação ambiental é protagonista. A ideia é que a área da Usina seja um local
@@ -249,8 +274,13 @@ export default function History() {
                         <strong className={"fs-2 border-bottom border-2"}>
                             O Incinerador Vergueiro
                         </strong>
-
                     </h2>
+                    <img
+                        src={usinaImagem}
+                        alt="green_future"
+                        className="img-fluid rounded-5 mx-auto"
+                        style={{ maxWidth: "80%" }}
+                    />
                     <p className={"mt-4 px-5 col-md-10 mx-auto"}>
                         <strong style={{ fontSize: "1.2em" }}>
                             O Incinerador Vergueiro, localizado no Ipiranga, zona sul de São Paulo, foi um dos três
@@ -278,63 +308,184 @@ export default function History() {
                             6 toneladas. Em dezembro de 2001, ocorreu a última queima.
                         </strong>
                     </p>
+                    <img
+                        src={chamine_da_usina_preto_branco}
+                        alt="green_future"
+                        className="img-fluid rounded-5 mx-auto"
+                        style={{ maxWidth: "80%" }}
+                    />
+                    <h2><strong>Linha do tempo:</strong></h2>
 
-
-                    <h2>Linha do tempo:</h2>
-                    <ul>
-                        <li className={"me-auto"}>
-                            <strong>
-                                1968 - Início das atividades do Incinerador Vergueiro
-                            </strong>
-                        </li>
-                        <li>
-                            2002 - Encerramento da queima de lixo
-                        </li>
-                    </ul>
-                    TODO:TerminarEstilização
-                    2004 -Concessão das operações do Transbordo Vergueiro por 20 anos para a empresa
-                    EcoUrbis Ambiental
-                    07/05/2021 - Início da obra de modernização do Transbordo Vergueiro
-                    Agosto / 2022 - Término da obra de modernização do Transbordo Vergueiro
-                    2019 - Primeira reunião da comunidade para propor o Centro Cultural no antigo Incinerador,
-                    iniciativa do CADES Ipiranga.
-                    maio / 2022 - Visita oficial no antigo Incinerador, do CADES Ipiranga, com o Subprefeito
-                    Adnilson Almeida.
-                    31/07/2022 - Comunidade começa a ocupar o antigo espaço Incinerador, iniciativa do CADES
-                    Ipiranga, inicia a o movimento da Usina Eco-Cultural.
-                    10
-                    17/12/2022 - Primeiro Festival da Usina Eco-Cultural, chamado Lado B do B, com repercussão
-                    na imprensa.
-                    12/01/2023 - Visita surpresa do Prefeito de São Paulo, Ricardo Nunes, na Usina Eco-Cultural.
-                    19/01/2023 - Tentativa da prefeitura de expulsar o movimento da Usina Eco-Cultural, o
-                    movimento resistiu.
-                    09/05/2023 - Movimento da Usina Eco-Cultural, representado pelo CADES Ipiranga apresenta
-                    a proposta de revitalização da área com Museu do Meio-Ambiente e Mercado de alimentação
-                    orgânica na Subprefeitura do Ipiranga para pleitear a verba municipal de 6 milhões de reais, a
-                    convite do Conselho Participativo do Ipiranga.
-                    27/05/2023 - Evento em parceria com a Umapaz na Usina com o tema de Resíduos Sólidos, o
-                    movimento recebeu multa de 42 mil reais da subprefeitura do Ipiranga, a autuação foi por
-                    motivo de evento sem autorização, a multa foi aplicada a integrante Débora Machado, o que
-                    caracterizou perseguição política.
-                    14/07/2023 - Movimento entrega a chave e deixa o território da Usina para subprefeitura em
-                    negociação para retirada da multa. Subprefeitura não cumpriu o acordo.
-                    29/07/2023 - Comemoração na rua de 1 ano do movimento. Evento contou com o apoio do
-                    Vereador Aurélio Nomura - PSDB e a presença da escola de Samba Brinco da Marquesa.
-                    24/07/2023 - Festa Junina da Usina Eco-Cultural, com o show do Ó do Forró, evento com 2 mil
-                    pessoas na rua.
-                    12/08/2023 - Audiência Pública sobre a Usina, realizada nas escola ao lado E.E. Raul Humaitá
-                    Villa Nova, com os mandatos dos vereadores Silvia Ferraro e Aurélio Nomura.
-                    19/09/2023 - Cassação do Vereador Camilo Cristófaro, mais influente sobre a subprefeitura do
-                    Ipiranga, que perseguiu o movimento. A Usina Eco-Cultural se posicionou publicamente em
-                    apoio à cassação.
-                    14/11/2023 - Troca do Subprefeito do Ipiranga, Adnilson Almeida, antigo subprefeito ligada ao
-                    vereador cassado Camilo Cristófaro é substituído por Rodrigo Bagnatori Ribeiro, ligado ao
-                    Vereador Aurélio Nomura - PSDB.
-                    09/12/2023 - Evento de Festa Junina da Usina Eco-Cultural, com o show do Ó do Forró, evento
-                    com 2 mil pessoas na rua.
-                    2024 - Será a renovação do contrato de Concessão das operações do Transbordo Vergueiro
-                    (atualmente da EcoUrbis Ambiental)
                 </MDBRow>
+                <MDBContainer fluid className="py-5">
+                    <MDBRow>
+                        <MDBCol lg="12">
+                        <div className="horizontal-timeline">
+                            <MDBTypography listInLine className="items">
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-info">1968</div>
+                                        <h5 className="pt-2">Inicio das atividades</h5>
+                                        <p className="text-muted">
+                                            Início das atividades do Incinerador Vergueiro para lixo doméstico e hospitalar  
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-success">2002</div>
+                                        <h5 className="pt-2">Queima de Lixo</h5>
+                                        <p className="text-muted">
+                                            Ano em que ocorreu o encerramento da queima de lixo na Usina
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-danger">2004</div>
+                                        <h5 className="pt-2">Operações transbordo</h5>
+                                        <p className="text-muted">
+                                        Início da obra de modernização do Transbordo Vergueiro Agosto / 2022 - Término da obra de modernização do Transbordo Vergueiro
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-warning">2019</div>
+                                        <h5 className="pt-2">Centro Cultural</h5>
+                                        <p className="text-muted">
+                                            Primeira reunião da comunidade para propor o Centro Cultural no antigo Incinerador, iniciativa do CADES Ipiranga.
+                                        </p>
+                                    </div>
+                                </li>
+                            </MDBTypography>
+
+                            <br /><br /><br />
+                            
+                            <MDBTypography listInLine className="items">
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-info">05/2022</div>
+                                        <h5 className="pt-2">Visita do Subprefeito</h5>
+                                        <p className="text-muted">
+                                        Visita oficial no antigo Incinerador da Usina Eco Cultural, do CADES Ipiranga, com o Subprefeito Adnilson Almeida 
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-success">31/07/22</div>
+                                        <h5 className="pt-2">Ocupação</h5>
+                                        <p className="text-muted">
+                                        Comunidade começa a ocupar o antigo espaço Incinerador, iniciativa do CADES Ipiranga, inicia a o movimento da Usina Eco-Cultura
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-danger">17/12/22</div>
+                                        <h5 className="pt-2">Lado B do B</h5>
+                                        <p className="text-muted">
+                                        Primeiro Festival da Usina Eco-Cultural, chamado Lado B do B, com repercussão na imprensa e apoio de diversos artistas e políticos.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-warning">12/01/23</div>
+                                        <h5 className="pt-2">Visita do prefeito</h5>
+                                        <p className="text-muted">
+                                        Visita surpresa do Prefeito de São Paulo, Ricardo Nunes, na Usina Eco-Cultural e prometeu apoio ao movimento e a revitalização do espaço.
+                                        </p>
+                                    </div>
+                                </li>
+                            </MDBTypography>
+
+                            <br /><br /><br />
+
+                            <MDBTypography listInLine className="items">
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-info">19/01/23</div>
+                                        <h5 className="pt-2">Rebelião</h5>
+                                        <p className="text-muted">
+                                        Tentativa da prefeitura de expulsar o movimento da Usina Eco-Cultural, o movimento resistiu e a prefeitura recuou. O movimento recebeu apoio de diversas pessoas da área local
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-success">09/05/23</div>
+                                        <h5 className="pt-2">Revitalização</h5>
+                                        <p className="text-muted">
+                                        O CADES Ipiranga, representando o Movimento da Usina Eco-Cultural, propõe a revitalização da área do Ipiranga com um Museu do Meio-Ambiente e um Mercado de alimentação orgânica, buscando uma verba municipal de 6 milhões de reais.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-danger">27/05/23</div>
+                                        <h5 className="pt-2">Resíduos Sólidos</h5>
+                                        <p className="text-muted">
+                                        A Umapaz e o movimento realizaram um evento na Usina sobre Resíduos Sólidos em parceria, mas receberam uma multa de R$42 mil da subprefeitura do Ipiranga por falta de autorização. A integrante Débora Machado foi multada, alegando-se perseguição política.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-warning">14/07/23</div>
+                                        <h5 className="pt-2">Descumprimento de acordo</h5>
+                                        <p className="text-muted">
+                                        Movimento entrega a chave e deixa o território da Usina para subprefeitura em negociação para retirada da multa. Subprefeitura não cumpriu o acordo.
+                                        </p>
+                                    </div>
+                                </li>
+                            </MDBTypography>
+                            
+                            <br /><br /><br />
+
+                            <MDBTypography listInLine className="items">
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-info">24/07/23</div>
+                                        <h5 className="pt-2">Comemoração</h5>
+                                        <p className="text-muted">
+                                        Comemoração na rua de 1 ano do movimento. Evento contou com o apoio do Vereador Aurélio Nomura - PSDB e a presença da escola de Samba Brinco da Marquesa
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-success">12/08/23</div>
+                                        <h5 className="pt-2">Audiência da Usina</h5>
+                                        <p className="text-muted">
+                                        Audiência Pública sobre a Usina, realizada nas escola ao lado E.E. Raul Humaitá Villa Nova, com os mandatos dos vereadores Silvia Ferraro e Aurélio Nomura.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-danger">19/09/23</div>
+                                        <h5 className="pt-2">Cassação</h5>
+                                        <p className="text-muted">
+                                        Cassação do Vereador Camilo Cristófaro, mais influente sobre a subprefeitura do Ipiranga, que perseguiu o movimento. A Usina Eco-Cultural se posicionou publicamente em apoio à cassação.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="items-list">
+                                    <div className="px-4">
+                                        <div className="event-date badge bg-warning">2024</div>
+                                        <h5 className="pt-2">Renovação</h5>
+                                        <p className="text-muted">
+                                        Será a renovação do contrato de Concessão das operações do Transbordo Vergueiro (atualmente da EcoUrbis Ambiental)
+                                        </p>
+                                    </div>
+                                </li>
+                            </MDBTypography>
+                        </div>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
             </MDBContainer>
             <FooterMain />
         </>

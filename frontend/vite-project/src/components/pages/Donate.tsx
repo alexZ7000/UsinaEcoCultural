@@ -34,7 +34,6 @@ export default function Home() {
     };
     const toggleDonationTextShow = () => setShow(!show);
     const toggleDonationTextShow2 = () => setShow2(!show2);
-    const toggleWhyDonationTextShow = () => setShow(!show);
     const [showOtherCamp, setOtherCamp] = useState(false);
     const handleDonationValue = (valor: React.SetStateAction<number>) => {
         setValorDoacao(valor);
