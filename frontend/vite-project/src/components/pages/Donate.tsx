@@ -184,7 +184,7 @@ export default function Home() {
                     <div className="card">
                         <div className="card-body">
                             <div className="card-title">
-                                <h4>Sua doação é muito importante para nós!</h4>
+                                <h4>Sua doação nos ajudará na:</h4>
                             </div>
                             <p className="card-text mt-1">
                                 <ol>
