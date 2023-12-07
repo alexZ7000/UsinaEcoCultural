@@ -65,6 +65,11 @@ export const NavHome = () => {
                                     </Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem className="mx-auto">
+                                    <Link to="/News" style={{ textDecoration: "none" }}>
+                                        <MDBNavbarLink>Notícias</MDBNavbarLink>
+                                    </Link>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag="a" className="nav-link">
                                             Sobre nós

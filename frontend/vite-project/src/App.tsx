@@ -4,6 +4,7 @@ import Login from "./components/pages/Login";
 import Shop from "./components/pages/Shop";
 import EventsCalendary from "./components/pages/EventsCalendary";
 import SignUp from "./components/pages/SignUp";
+import News from "./components/pages/News"
 import History from "./components/pages/History";
 import About from "./components/pages/About";
 import Donate from "./components/pages/Donate";
@@ -24,6 +25,7 @@ export default function App() {
                 <Route path="/Donate" element={<Donate />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Gallery" element={<Gallery />} />
+                <Route path="/News" element={<News />} />
                 <Route path="*" element={<h1>Not Found 404</h1>} />'
             </Routes>
         </BrowserRouter>

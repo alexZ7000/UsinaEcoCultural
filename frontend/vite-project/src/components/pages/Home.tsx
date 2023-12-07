@@ -13,6 +13,56 @@ import abaixo_assinado_usina from "./Assets/images/abaixo_assinado_usina.png";
 import usina_schedule from "./Assets/images/schedule.png";
 import usina_parchment from "./Assets/images/parchment.png";
 import usina_donate from "./Assets/images/donate.png";
+import img1 from "./Assets/images/parceiros/amazonia_passa_aqui_parceiro.png"
+import img2 from "./Assets/images/parceiros/aurelio_nomura_parceiro.jpg"
+import img3 from "./Assets/images/parceiros/banda_o_do_forro_parceiro.jpg"
+import img4 from "./Assets/images/parceiros/banda_trio_alvorada_parceiro.png"
+import img5 from "./Assets/images/parceiros/bar_do_trecao_parceiro.jpg"
+import img6 from "./Assets/images/parceiros/bloco_feminista_parceiro.jpg"
+import img7 from "./Assets/images/parceiros/brinco_da_marquesa_parceiro.png"
+import img8 from "./Assets/images/parceiros/cades_parceiro.png"
+import img9 from "./Assets/images/parceiros/cades_vila_mariana_parceiro.jpg"
+import img10 from "./Assets/images/parceiros/carlos_giannazi_parceiro.jpg"
+import img11 from "./Assets/images/parceiros/casa_das_caldeiras_parceiro.png"
+import img12 from "./Assets/images/parceiros/celso_giannazi_parceiro.jpg"
+import img13 from "./Assets/images/parceiros/chao_parceiro.png"
+import img14 from "./Assets/images/parceiros/ciclocidade_parceiro.png"
+import img15 from "./Assets/images/parceiros/cine_favela_parceiro.jpg"
+import img16 from "./Assets/images/parceiros/ediane_maria_parceiro.jpg"
+import img17 from "./Assets/images/parceiros/eduardo_suplicy_parceiro.jpg"
+import img18 from "./Assets/images/parceiros/escola_da_cidade_parceiro.png"
+import img19 from "./Assets/images/parceiros/escola_nacional_paulo_freire_parceiro.png"
+import img20 from "./Assets/images/parceiros/etec_gv_parceiro.jpg"
+import img21 from "./Assets/images/parceiros/fau_usp_parceiro.jpg"
+import img22 from "./Assets/images/parceiros/fps_parceiro.png"
+import img23 from "./Assets/images/parceiros/gepem_parceiro.png"
+import img24 from "./Assets/images/parceiros/guilherme_cortez_parceiro.jpg"
+import img25 from "./Assets/images/parceiros/instituto_de_engenharia.jpg"
+import img26 from "./Assets/images/parceiros/instituto_maua_de_tecnologia_parceiro.png"
+import img27 from "./Assets/images/parceiros/luana_alves_parceiro.jpg"
+import img28 from "./Assets/images/parceiros/luciene_giannazi_parceiro.jpg"
+import img29 from "./Assets/images/parceiros/luna_zarattini_parceiro.jpg"
+import img30 from "./Assets/images/parceiros/marina_helou_parceiro.jpg"
+import img31 from "./Assets/images/parceiros/missao_ambiental_parceria.jpg"
+import img32 from "./Assets/images/parceiros/miuc_parceiro.png"
+import img33 from "./Assets/images/parceiros/mst_parceiro.png"
+import img34 from "./Assets/images/parceiros/mtst_parceiro.png"
+import img35 from "./Assets/images/parceiros/muda_ipiranga_parceiro.jpg"
+import img36 from "./Assets/images/parceiros/muda_mooca_parceiro.png"
+import img37 from "./Assets/images/parceiros/museu_do_ipiranga_parceiro.png"
+import img38 from "./Assets/images/parceiros/nabil_bonduki_parceiro.jpg"
+import img39 from "./Assets/images/parceiros/nunes_peixeiro_parceiro.jpg"
+import img40 from "./Assets/images/parceiros/portela_parceiro.jpg"
+import img41 from "./Assets/images/parceiros/psol_parceiro.png"
+import img42 from "./Assets/images/parceiros/pt_parceiro.png"
+import img43 from "./Assets/images/parceiros/partido_verde_parceiro.jpg"
+import img44 from "./Assets/images/parceiros/samia_bomfim_parceiro.jpg"
+import img45 from "./Assets/images/parceiros/sao_camilo_parceiro.jpg"
+import img46 from "./Assets/images/parceiros/silvia_ferrado_parceiro.jpeg"
+import img47 from "./Assets/images/parceiros/soninha_francine_parceiro.jpg"
+import img48 from "./Assets/images/parceiros/sos_abelhas_sem_ferrao_parceiro.jpg"
+import img49 from "./Assets/images/parceiros/uscs.png"
+
 import { Link } from "react-router-dom";
 import { NavHome } from "./navbars/NavHome";
 import { FooterMain } from "./footer/FooterMain";
@@ -98,14 +148,195 @@ export default function Home() {
                 >
                     Nossos Apoiadores
                 </MDBBtn>
-                <Modal show={show} onHide={toggleModal}>
+                <Modal show={show} onHide={toggleModal} className={"modal-full-height"}>
                     <Modal.Header closeButton>
                         <Modal.Title>Nossos Apoiadores</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>
-                            apoiadores estarão aqui
-                        </p>
+                        <div className={"row justify-content-center"}>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img1} alt={"img1"} className={" img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img2} alt={"img2"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img3} alt={"img3"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img4} alt={"img4"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img5} alt={"img5"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img6} alt={"img6"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img7} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img8} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img9} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img10} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img11} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img12} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3 bg-black"}>
+                                <img src={img13} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img14} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img15} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img16} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img17} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img18} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img19} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img20} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img21} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img22} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img23} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img24} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img25} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img26} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img27} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img28} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img29} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img30} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img31} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img32} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img33} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img34} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img35} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img36} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img37} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img38} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img39} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img40} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img41} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img42} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img43} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img44} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img45} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img46} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img47} alt={"img8"} className={"card-img img-fluid"}></img>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img48} alt={"img9"} className={"card-img img-fluid"}></img>
+                            </div>
+                            <div className={"col-md-3 card border-0 mb-3"}>
+                                <img src={img49} alt={"img7"} className={"card-img img-fluid"}></img>
+                            </div>
+
+
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={toggleModal}>
