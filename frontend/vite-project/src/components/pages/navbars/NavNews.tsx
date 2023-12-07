@@ -1,4 +1,5 @@
 import {
+    MDBBtn,
     MDBCollapse,
     MDBContainer,
     MDBDropdown,
@@ -18,7 +19,7 @@ import { Link } from "react-router-dom";
 import icone_usina from "../Assets/images/usina_icon.png";
 import React, { useState } from "react";
 
-export const NavLogin = () => {
+export const NavNews = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
         <MDBContainer className="mb-5 gradient-form">
@@ -26,7 +27,7 @@ export const NavLogin = () => {
                 <MDBNavbar
                     className="navbar"
                     expand="lg"
-                    style={{ backgroundColor: "FFF" }}
+                    style={{ color: "#000", backgroundColor: "#ffffff" }}
                 >
                     <MDBContainer fluid>
                         <MDBNavbarToggler
@@ -41,17 +42,17 @@ export const NavLogin = () => {
                         </MDBNavbarToggler>
                         <MDBNavbarBrand href="#" className="ms-1">
                             <Link to="/" style={{ textDecoration: "none" }}>
-                                <img src={icone_usina} width={100} alt="" />
+                                <img src={icone_usina} width={100} alt="icone_usina" />
                             </Link>
                         </MDBNavbarBrand>
 
                         <MDBCollapse
                             navbar
                             show={showNavCentred}
-                            className="justify-content-center my-4"
+                            className="justify-content-center"
                         >
-                            <MDBNavbarNav fullWidth={false}>
-                                <MDBNavbarItem className="mx-2">
+                            <MDBNavbarNav fullWidth={true}>
+                                <MDBNavbarItem className="mx-auto">
                                     <Link to="/" style={{ textDecoration: "none" }}>
                                         <MDBNavbarLink aria-current="page" href="#">
                                             Página Inicial
@@ -63,12 +64,12 @@ export const NavLogin = () => {
                                         <MDBNavbarLink>Doação</MDBNavbarLink>
                                     </Link>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-auto">
+                                <MDBNavbarItem active className="mx-auto">
                                     <Link to="/News" style={{ textDecoration: "none" }}>
                                         <MDBNavbarLink>Notícias</MDBNavbarLink>
                                     </Link>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem className="mx-2">
+                                <MDBNavbarItem className="mx-auto">
                                     <MDBDropdown>
                                         <MDBDropdownToggle tag="a" className="nav-link">
                                             Sobre nós
@@ -96,9 +97,43 @@ export const NavLogin = () => {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavbarItem>
-                                <div className="me-5"></div>
-                                <div className="me-5"></div>
-                                <div className="me-5"></div>
+                                <MDBNavbarItem className="mx-4">
+                                    <div className="mx-auto">
+                                        <Link
+                                            to="/Login"
+                                            style={{ textDecoration: "none", color: "#69A625" }}
+                                            role="button"
+                                        >
+                                            <MDBBtn
+                                                style={{ color: "#69A625" }}
+                                                outline={true}
+                                                className="mb-2 btn-outline-success"
+                                            >
+                                                <MDBIcon fas icon="user" />
+                                                Login
+                                            </MDBBtn>
+                                        </Link>
+                                    </div>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="mx-4">
+                                    <Link
+                                        to="/SignUp"
+                                        style={{ textDecoration: "none" }}
+                                        role="button"
+                                    >
+                                        <MDBBtn
+                                            className="btn-success"
+                                            style={{
+                                                color: "ECECEC",
+                                                backgroundColor: "#69A625",
+                                                border: "none",
+                                            }}
+                                        >
+                                            <MDBIcon far icon="user" />
+                                            Cadastre-se
+                                        </MDBBtn>
+                                    </Link>
+                                </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
                     </MDBContainer>

@@ -15,9 +15,9 @@ import {
     MDBNavbarToggler,
     MDBRow
 } from "mdb-react-ui-kit";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import icone_usina from "../Assets/images/usina_icon.png";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export const NavHome = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);

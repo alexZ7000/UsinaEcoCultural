@@ -4,7 +4,8 @@ import {
     MDBRow,
     MDBCol,
     MDBCarousel,
-    MDBCarouselItem, MDBBtn
+    MDBCarouselItem,
+    MDBBtn
 } from "mdb-react-ui-kit";
 import abelha_usina from "./Assets/images/abelha.jpeg";
 import banquete_usina from "./Assets/images/banquete.png";
@@ -66,8 +67,8 @@ import img49 from "./Assets/images/parceiros/uscs.png"
 import { Link } from "react-router-dom";
 import { NavHome } from "./navbars/NavHome";
 import { FooterMain } from "./footer/FooterMain";
-import React, {useState} from "react";
-import {Button, Modal} from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 
 export default function Home() {
     const [show, setShow] = useState(false);

@@ -13,8 +13,8 @@ import {
 } from "mdb-react-ui-kit";
 import exemplo_de_codigo_qr from "./Assets/images/exemplo_de_codigo_qr.png";
 import pix_logo from "./Assets/images/pix_logo.png";
-import {FooterMain} from "./footer/FooterMain";
-import {NavDonate} from "./navbars/NavDonate";
+import { FooterMain } from "./footer/FooterMain";
+import { NavDonate } from "./navbars/NavDonate";
 
 export default function Home() {
     const [show, setShow] = useState(true);

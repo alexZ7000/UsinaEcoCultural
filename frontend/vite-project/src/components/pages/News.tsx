@@ -3,20 +3,19 @@ import {
     MDBBtn,
     MDBContainer,
     MDBCol,
-    MDBIcon,
     MDBPagination,
     MDBPaginationItem,
     MDBPaginationLink,
     MDBRipple,
     MDBRow
 } from "mdb-react-ui-kit";
-import { NavHome } from "./navbars/NavHome";
+import { NavNews } from "./navbars/NavNews"
 import { FooterMain } from "./footer/FooterMain";
 
 export default function App() {
     return (
         <>
-            <NavHome />
+            <NavNews />
             <MDBContainer className="py-5">
                 <MDBRow className="gx-5 border-bottom pb-4 mb-5">
                     <MDBCol md="6" className="mb-4">
@@ -40,7 +39,7 @@ export default function App() {
                     </MDBCol>
                     <MDBCol md="6" className="mb-4">
               <span className="badge bg-danger px-2 py-1 shadow-1-strong mb-3">
-                News of the day
+                Notícia do Dia!
               </span>
                         <h4>
                             <strong>Facilis consequatur eligendi</strong>
@@ -75,18 +74,12 @@ export default function App() {
                                 </a>
                             </MDBRipple>
                             <MDBRow className="mb-3">
-                                <MDBCol col="6">
-                                    <a href="" className="text-info">
-                                        <MDBIcon fas icon="plane" className="me-1" />
-                                        Travels
-                                    </a>
-                                </MDBCol>
                                 <MDBCol col="6" className="text-end">
-                                    <u> 15.07.2020</u>
+                                    <u> 01/12/2023</u>
                                 </MDBCol>
                             </MDBRow>
                             <a href="#" className="text-dark">
-                                <h5>This is title of the news</h5>
+                                <h5>Título da notícia</h5>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
                                     iste aliquid. Sed id nihil magni, sint vero provident esse
@@ -117,18 +110,12 @@ export default function App() {
                                 </a>
                             </MDBRipple>
                             <MDBRow className="mb-3">
-                                <MDBCol col="6">
-                                    <a href="" className="text-danger">
-                                        <MDBIcon fas icon="chart-pie" className="me-1" />
-                                        Business
-                                    </a>
-                                </MDBCol>
                                 <MDBCol col="6" className="text-end">
-                                    <u> 15.07.2020</u>
+                                    <u> 15/09/2023</u>
                                 </MDBCol>
                             </MDBRow>
                             <a href="#" className="text-dark">
-                                <h5>This is title of the news</h5>
+                                <h5>Título da notícia</h5>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
                                     iste aliquid. Sed id nihil magni, sint vero provident esse
@@ -159,18 +146,12 @@ export default function App() {
                                 </a>
                             </MDBRipple>
                             <MDBRow className="mb-3">
-                                <MDBCol col="6">
-                                    <a href="" className="text-warning">
-                                        <MDBIcon fas icon="code" className="me-1" />
-                                        Technology
-                                    </a>
-                                </MDBCol>
                                 <MDBCol col="6" className="text-end">
-                                    <u> 15.07.2020</u>
+                                    <u> 25/07/2023</u>
                                 </MDBCol>
                             </MDBRow>
                             <a href="#" className="text-dark">
-                                <h5>This is title of the news</h5>
+                                <h5>Título da notícia</h5>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
                                     iste aliquid. Sed id nihil magni, sint vero provident esse
@@ -189,18 +170,18 @@ export default function App() {
                                 Previous
                             </MDBPaginationLink>
                         </MDBPaginationItem>
-                        <MDBPaginationItem>
+                        <MDBPaginationItem active className={"ms-2"}>
                             <MDBPaginationLink href="#">1</MDBPaginationLink>
                         </MDBPaginationItem>
-                        <MDBPaginationItem active>
+                        <MDBPaginationItem className={"ms-2"}>
                             <MDBPaginationLink href="#">
                                 2 <span className="visually-hidden">(current)</span>
                             </MDBPaginationLink>
                         </MDBPaginationItem>
-                        <MDBPaginationItem>
+                        <MDBPaginationItem className={"ms-2"}>
                             <MDBPaginationLink href="#">3</MDBPaginationLink>
                         </MDBPaginationItem>
-                        <MDBPaginationItem>
+                        <MDBPaginationItem className={"ms-2"}>
                             <MDBPaginationLink href="#">Next</MDBPaginationLink>
                         </MDBPaginationItem>
                     </MDBPagination>

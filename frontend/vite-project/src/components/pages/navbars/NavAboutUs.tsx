@@ -1,16 +1,20 @@
 import {
     MDBBtn,
     MDBCollapse,
-    MDBContainer, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle,
+    MDBContainer,
+    MDBDropdown,
+    MDBDropdownItem,
+    MDBDropdownMenu,
+    MDBDropdownToggle,
     MDBIcon,
     MDBNavbar,
     MDBNavbarBrand, MDBNavbarItem, MDBNavbarLink, MDBNavbarNav,
     MDBNavbarToggler,
     MDBRow
 } from "mdb-react-ui-kit";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import icone_usina from "../Assets/images/usina_icon.png";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export const NavAboutUs = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -55,6 +59,11 @@ export const NavAboutUs = () => {
                                 <MDBNavbarItem className="mx-auto">
                                     <Link to="/Donate" style={{ textDecoration: "none" }}>
                                         <MDBNavbarLink>Doação</MDBNavbarLink>
+                                    </Link>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem className="mx-auto">
+                                    <Link to="/News" style={{ textDecoration: "none" }}>
+                                        <MDBNavbarLink>Notícias</MDBNavbarLink>
                                     </Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem active className="mx-auto">

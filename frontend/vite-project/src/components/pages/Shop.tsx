@@ -13,8 +13,8 @@ import CanetaUsina from "./Assets/images/CanetaUsina.png";
 import CalendarioUsina from "./Assets/images/CalendarioUsina.png";
 import LivroUsina from "./Assets/images/LivroUsina.png";
 import { Modal } from "react-bootstrap";
-import {FooterMain} from "./footer/FooterMain";
-import {NavAboutUs} from "./navbars/NavAboutUs";
+import { FooterMain } from "./footer/FooterMain";
+import { NavAboutUs } from "./navbars/NavAboutUs";
 
 interface Product {
     idProduto: number;

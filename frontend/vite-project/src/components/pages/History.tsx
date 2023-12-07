@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import usina_faixa_do_futuro from "./Assets/images/faixa_do_futuro.jpeg";
@@ -17,8 +17,8 @@ import {
     MDBCol,
     MDBTypography,
 } from "mdb-react-ui-kit";
-import {FooterMain} from "./footer/FooterMain";
-import {NavAboutUs} from "./navbars/NavAboutUs";
+import { FooterMain } from "./footer/FooterMain";
+import { NavAboutUs } from "./navbars/NavAboutUs";
 
 export default function History() {
     const [show1, setShow1] = useState(false);
