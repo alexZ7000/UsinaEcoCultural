@@ -149,9 +149,15 @@ export default function Home() {
                 >
                     Nossos Apoiadores
                 </MDBBtn>
-                <Modal show={show} onHide={toggleModal} className={"modal-full-height"}>
-                    <Modal.Header closeButton>
+                <Modal show={show} onHide={toggleModal} className={"modal-full-height modal-lg"}>
+                    <Modal.Header >
                         <Modal.Title>Nossos Apoiadores</Modal.Title>
+                        <MDBBtn
+                            outline={true}
+                            className="btn-close"
+                            color="danger"
+                            onClick={toggleModal}
+                        ></MDBBtn>
                     </Modal.Header>
                     <Modal.Body>
                         <div className={"row justify-content-center"}>
@@ -335,12 +341,10 @@ export default function Home() {
                             <div className={"col-md-3 card border-0 mb-3"}>
                                 <img src={img49} alt={"img7"} className={"card-img img-fluid"}></img>
                             </div>
-
-
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={toggleModal}>
+                        <Button variant="danger" onClick={toggleModal}>
                             Fechar
                         </Button>
                     </Modal.Footer>

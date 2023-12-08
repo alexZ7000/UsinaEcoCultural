@@ -271,13 +271,11 @@ export default function Gallery() {
                 <Modal.Header>
                     <Modal.Title>{title}</Modal.Title>
                     <MDBBtn
-                        className="close ms-auto"
-                        outline
+                        outline={true}
+                        className="btn-close"
                         color="danger"
                         onClick={onClose}
-                    >
-                        &times;
-                    </MDBBtn>
+                    ></MDBBtn>
                 </Modal.Header>
                 <Modal.Body>
                     <img
