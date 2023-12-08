@@ -81,17 +81,17 @@ export const NavDonate = () => {
                                             <Link to="/Shop" style={{ textDecoration: "none" }}>
                                                 <MDBDropdownItem link>Loja</MDBDropdownItem>
                                             </Link>
-                                            <Link to="/Gallery" style={{ textDecoration: "none" }}>
-                                                <MDBDropdownItem link>
-                                                    Galeria de Fotos
-                                                </MDBDropdownItem>
-                                            </Link>
                                             <Link
                                                 to="/EventsCalendary"
                                                 style={{ textDecoration: "none" }}
                                             >
                                                 <MDBDropdownItem link>
-                                                    Calendário de Eventos
+                                                    Eventos
+                                                </MDBDropdownItem>
+                                            </Link>
+                                            <Link to="/Gallery" style={{ textDecoration: "none" }}>
+                                                <MDBDropdownItem link>
+                                                    Galeria de Fotos
                                                 </MDBDropdownItem>
                                             </Link>
                                         </MDBDropdownMenu>

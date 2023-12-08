@@ -1,10 +1,14 @@
 import RevoCalendar from "revo-calendar";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
+    MDBBtn,
     MDBRow
 } from "mdb-react-ui-kit";
 import { FooterMain } from "./footer/FooterMain";
 import { NavAboutUs } from "./navbars/NavAboutUs";
+import banquete from "./Assets/images/banquete.png"
+import crianca from "./Assets/images/crianca_pintando_usina.jpg"
+import uniao from "./Assets/images/gral_unido_usina.jpeg"
 
 export default function Home() {
     const events = [
@@ -42,6 +46,85 @@ export default function Home() {
             <NavAboutUs/>
             <MDBRow>
                 <div className="mb-3 mb-3 ">
+                    <h1>
+                        <strong>Eventos</strong>
+                    </h1>
+                </div>
+            </MDBRow>
+            <div className="mb-2 text-center position-relative top-0 w-100">
+                <div className="card mb-2">
+                    <h5 className="card-header bg-white">Nome do Evento 1</h5>
+                    <div className="card-body d-flex align-items-center">
+                        <img src={banquete} alt={"banquete"} className={"card-img w-25 mr-3"}></img>
+                        <div>
+                            <p className="card-text">
+                                &nbsp;<strong>Explicações do Evento 1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                            </p>
+                            <p className="card-footer bg-white col-md-11 mx-auto"><i>8 de Dezembro de 2023</i></p>
+                            <MDBBtn
+                                className={"col-md-4 btn-success"}
+                                style={{
+                                    color: "ECECEC",
+                                    backgroundColor: "#69A625",
+                                    border: "none",
+                                }}
+                            >
+                                INSCREVER-SE!
+                            </MDBBtn>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mb-2 text-center position-relative top-0 w-100">
+                <div className="card mb-2">
+                    <h5 className="card-header bg-white">Nome do Evento 2</h5>
+                    <div className="card-body d-flex align-items-center">
+                        <img src={crianca} alt={"crianca"} className={"card-img w-25 mr-3"}></img>
+                        <div>
+                            <p className="card-text">
+                                &nbsp;<strong>Explicações do Evento 2:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                            </p>
+                            <p className="card-footer bg-white col-md-11 mx-auto"><i>8 de Dezembro de 2023</i></p>
+                            <MDBBtn
+                                className={"col-md-4 btn-success"}
+                                style={{
+                                    color: "ECECEC",
+                                    backgroundColor: "#69A625",
+                                    border: "none",
+                                }}
+                            >
+                                INSCREVER-SE!
+                            </MDBBtn>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mb-2 text-center border-bottom border-2 position-relative top-0 w-100">
+                <div className="card mb-2">
+                    <h5 className="card-header bg-white">Nome do Evento 3</h5>
+                    <div className="card-body d-flex align-items-center">
+                        <img src={uniao} alt={"uniao"} className={"card-img w-25 mr-3"}></img>
+                        <div>
+                            <p className="card-text">
+                                &nbsp;<strong>Explicações do Evento 3:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                            </p>
+                            <p className="card-footer bg-white col-md-11 mx-auto"><i>8 de Dezembro de 2023</i></p>
+                            <MDBBtn
+                                className={"col-md-4 btn-success"}
+                                style={{
+                                    color: "ECECEC",
+                                    backgroundColor: "#69A625",
+                                    border: "none",
+                                }}
+                            >
+                                INSCREVER-SE!
+                            </MDBBtn>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <MDBRow>
+                <div className="mb-3 mb-3 mt-4">
                     <h1>
                         <strong>Calendário de Eventos</strong>
                     </h1>
