@@ -72,6 +72,17 @@ import { Button, Modal } from "react-bootstrap";
 
 export default function Home() {
     const [show, setShow] = useState(false);
+    const [hover, setHover] = useState(false);
+
+    const handleMouseOver = () => {
+        setHover(true);
+    };
+
+    const handleMouseOut = () => {
+        setHover(false);
+    };
+    const corDoBotao = hover ? '#69A625' : '';
+
 
     const toggleModal = () => {
         setShow(!show);
@@ -135,7 +146,9 @@ export default function Home() {
                     className="btn btn-outline-success col-md-3 btn-lg"
                     to="/Donate"
                     role="button"
-                    style={{ color: "#69A625" }}
+                    style={{ borderColor: "#69A625", backgroundColor: corDoBotao }}
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                 >
                     APOIE A CAUSA!
                 </Link>

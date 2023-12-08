@@ -21,6 +21,16 @@ import React, { useState } from "react";
 
 export const NavHome = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
+    const [hover, setHover] = useState(false);
+
+    const handleMouseOver = () => {
+        setHover(true);
+    };
+
+    const handleMouseOut = () => {
+        setHover(false);
+    };
+    const corDoBotao = hover ? '#69A625' : '';
     return (
         <MDBContainer className="mb-5 gradient-form">
             <MDBRow className="container-sm">
@@ -101,13 +111,18 @@ export const NavHome = () => {
                                     <div className="mx-auto">
                                         <Link
                                             to="/Login"
-                                            style={{ textDecoration: "none", color: "#69A625" }}
+                                            style={{ textDecoration: "none" }}
                                             role="button"
                                         >
                                             <MDBBtn
-                                                style={{ color: "#69A625" }}
                                                 outline={true}
                                                 className="mb-2 btn-outline-success"
+                                                style={{
+                                                    borderColor: "#69A625",
+                                                    backgroundColor: corDoBotao
+                                                }}
+                                                onMouseOver={handleMouseOver}
+                                                onMouseOut={handleMouseOut}
                                             >
                                                 <MDBIcon fas icon="user" />
                                                 Login
