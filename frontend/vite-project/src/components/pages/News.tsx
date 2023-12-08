@@ -9,6 +9,7 @@ import {
     MDBRipple,
     MDBRow
 } from "mdb-react-ui-kit";
+import image from "./Assets/images/pexels-buro-millennial-1438072.jpg"
 import { NavNews } from "./navbars/NavNews"
 import { FooterMain } from "./footer/FooterMain";
 
@@ -25,7 +26,7 @@ export default function App() {
                             rippleColor="light"
                         >
                             <img
-                                src="https://mdbcdn.b-cdn.net/img/new/slides/080.webp"
+                                src={image}
                                 className="w-100"
                                 alt={"sla"}
                             />
@@ -42,13 +43,12 @@ export default function App() {
                 Notícia do Dia!
               </span>
                         <h4>
-                            <strong>Facilis consequatur eligendi</strong>
+                            <strong>Apresentação do PII</strong>
                         </h4>
                         <p className="text-muted">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                            consequatur eligendi quisquam doloremque vero ex debitis veritatis
-                            placeat unde animi laborum sapiente illo possimus, commodi
-                            dignissimos obcaecati illum maiores corporis.
+                            Estudantes do Instituto Mauá de Tecnologia - IMT, estão apresentando projeto
+                            para a Usina Eco cultural, com o intuito de ajudar o
+                            parceiro e adiquir conhecimento, por parte dos alunos,
                         </p>
                         <MDBBtn>Leia Mais</MDBBtn>
                     </MDBCol>
