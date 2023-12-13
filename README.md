@@ -112,6 +112,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
+<img src="https://github.com/alexZ7000/DevQuiz/assets/78627928/f65a1b19-7a26-469f-9b7a-aded4bf68c72" align="center" alt="nota10"/>
 
 ## 📝 Licença
 
