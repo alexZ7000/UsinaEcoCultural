@@ -14,6 +14,14 @@
   </li>
   <br>
   <li>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/b82095b6-48ad-42c2-90a3-a2d0ea890da1" alt="vite" width="40" height="40"/> Vite
+  </li>
+  <br>
+  <li>
+    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/424c2f19-6b62-427c-b138-7d86ce56cec2" alt="MDB" width="60" height="25"/> MDB
+  </li>
+  <br>
+  <li>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> TypeScript
   </li>
   <br>
@@ -25,25 +33,12 @@
   </li>
 </ul>
 
-## Página por página <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.gif" alt="🧐" width="32" height="32"></picture>📄 
+<h1>Como acessar o site? <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f914/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f914/512.gif" alt="🤔" width="32" height="32"></picture></h1>
+<h3>Para acessar o site basta acessar o link <a href="https://alexz7000.github.io/UsinaEcoCultural/">aqui</a>👈🏼<h3>
 
-<ol>
-  <li>
-    <h2>Página Inicial</h2>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/c695d63e-0054-4d2d-b378-b14ff3565bd9" alt="Header Página Inicial"/>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/d026648d-758b-4a89-8eae-6fd401d288ad" alt="Body Página incial"/>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/1805e5ac-ed60-4d24-8ee6-74a1af43b53d" alt="Footer Incial 3"/>
-  </li>
-  <li>
-    <h2>Doação</h2>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/2434efbb-9abd-4a2a-a10f-db93ee7668b3" alt="página da Doação"/>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/0dd0a9ef-b870-45d2-a161-409353c4da28" alt="Exemplo de Doação pix"/>
-  </li>
-  <li>
-    <h2>Loja</h2>
-    <img src="https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/e1f04efc-14c6-4d94-880c-838512fd5121" alt="Exemplo de loja"/>
-  </li>
-</ol>
+![image](https://github.com/alexZ7000/UsinaEcoCultural/assets/78627928/c52aaf4e-42bf-4261-baca-53fa0fa4956c)
+<br>
+
 
 ## 📫 Contribuindo para Usina Eco-Cultural
 
